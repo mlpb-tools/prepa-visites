@@ -414,45 +414,30 @@
     transform: scale(1.15);
   }
 
-  /* ───── CODE CONDUITE ───── */
-  .code-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    margin-top: 14px;
+  /* ───── JEU DU TRI (PHASE 4) ───── */
+  .sort-game { display: flex; flex-direction: column; gap: 16px; align-items: center; background: #f9f9f9; padding: 24px 16px; border-radius: 12px; border: 2px dashed #bbb; margin-top: 10px; }
+  .sort-card { background: #fff; border: 3px solid var(--black); border-radius: 12px; padding: 24px 16px; text-align: center; font-family: 'Poppins', sans-serif; font-size: 1.05rem; font-weight: 700; width: 100%; max-width: 450px; box-shadow: var(--shadow); transition: transform 0.2s, border-color 0.2s; line-height: 1.4; }
+  .sort-card.shake { animation: shake 0.4s; }
+  .sort-actions { display: flex; gap: 14px; width: 100%; max-width: 450px; }
+  .sort-btn { flex: 1; padding: 12px; border: 3px solid var(--black); border-radius: 10px; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 0.95rem; cursor: pointer; box-shadow: 3px 3px 0 var(--black); transition: transform 0.1s; }
+  .sort-btn:active { transform: translateY(3px); box-shadow: 0px 0px 0 var(--black); }
+  .sort-btn.do { background: var(--mint); color: #fff; }
+  .sort-btn.dont { background: var(--red); color: #fff; }
+  
+  .sorted-lists { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; width: 100%; margin-top: 20px; }
+  @media(max-width: 560px) { .sorted-lists { grid-template-columns: 1fr; } }
+  .sorted-col { background: #fff; border: 2px solid var(--black); border-radius: 10px; padding: 14px; }
+  .sorted-col h4 { font-family: 'Poppins', sans-serif; font-size: 0.9rem; margin-bottom: 12px; text-align: center; padding-bottom: 8px; border-bottom: 2px dashed #ccc; }
+  .sorted-col.col-do h4 { color: #2E7D32; }
+  .sorted-col.col-dont h4 { color: #C62828; }
+  .sorted-col ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+  .sorted-col ul li { font-size: 0.78rem; padding: 8px 10px; border-radius: 6px; background: #f5f5f5; border: 1px solid #ddd; animation: bounce-in 0.3s ease; line-height: 1.3; }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-6px) rotate(-2deg); }
+    75% { transform: translateX(6px) rotate(2deg); }
   }
-  @media (max-width: 560px) { .code-grid { grid-template-columns: 1fr; } }
-  .code-item {
-    border: 2px solid var(--black);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 3px 3px 0 var(--black);
-  }
-  .code-item-header {
-    padding: 9px 14px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    font-size: 0.82rem;
-    display: flex; align-items: center; gap: 8px;
-    border-bottom: 2px solid var(--black);
-  }
-  .code-item-header.do   { background: var(--mint); color: #fff; }
-  .code-item-header.dont { background: var(--red);  color: #fff; }
-  .code-item ul {
-    padding: 10px 14px;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  .code-item ul li {
-    font-size: 0.79rem;
-    line-height: 1.4;
-    display: flex; align-items: flex-start; gap: 6px;
-    padding: 4px 0;
-    border-bottom: 1px dashed #e0e0e0;
-  }
-  .code-item ul li:last-child { border-bottom: none; }
 
   /* ───── TIP BOX ───── */
   .tip-box {
@@ -1010,47 +995,41 @@
   <!-- PHASE 4 -->
   <div class="phase" id="phase4">
     <div class="phase-header mint">
-      <div class="phase-icon">📋</div>
+      <div class="phase-icon">🕹️</div>
       <div class="phase-title">
-        <h3>Phase 4 · Mon code de conduite personnel</h3>
-        <small>Co-construction collective d'un guide de visite</small>
+        <h3>Phase 4 · Le Défi du Savoir-Être</h3>
+        <small>Jeu interactif — Construisons notre code de conduite</small>
       </div>
       <div class="phase-duration">20 min</div>
     </div>
     <div class="phase-body">
 
       <div style="font-size:0.84rem; line-height:1.5; margin-bottom:16px;">
-        👉 <strong>Consigne :</strong> En groupe, construisez votre propre liste des <strong>"je fais"</strong> et des <strong>"j'évite"</strong>
-        pour les enquêtes professionnelles. Chacun contribue avec ses idées.
-        L'animateur synthétise sur paperboard ou tableau.
+        👉 <strong>Consigne :</strong> Pour chaque comportement qui s'affiche, le groupe doit débattre : est-ce une bonne pratique (✅) ou un comportement à proscrire (❌) en milieu professionnel ?
       </div>
 
-      <div class="code-grid">
-        <div class="code-item">
-          <div class="code-item-header do">✅ Ce que je fais</div>
-          <ul>
-            <li>✅ J'arrive 5 minutes avant l'heure prévue</li>
-            <li>✅ Je dis bonjour à chaque personne que je croise</li>
-            <li>✅ Je tutoie… non : je vouvoie tout le monde</li>
-            <li>✅ J'ai préparé mes questions à l'avance</li>
-            <li>✅ Je prends des notes pendant la visite</li>
-            <li>✅ J'écoute sans interrompre</li>
-            <li>✅ Je remercie à la fin et je serre la main</li>
-            <li>✅ Ma tenue est propre et adaptée au secteur</li>
-          </ul>
+      <!-- JEU INTERACTIF -->
+      <div class="sort-game" id="sort-game-container">
+        <div class="sort-card" id="sort-current-card">Chargement...</div>
+        <div class="sort-actions">
+          <button class="sort-btn do" onclick="handleSort('do')">✅ À FAIRE</button>
+          <button class="sort-btn dont" onclick="handleSort('dont')">❌ À ÉVITER</button>
         </div>
-        <div class="code-item">
-          <div class="code-item-header dont">❌ Ce que j'évite</div>
-          <ul>
-            <li>❌ Sortir mon téléphone pendant la visite</li>
-            <li>❌ Parler en argot ou utiliser des grossièretés</li>
-            <li>❌ Regarder mes pieds ou croiser les bras</li>
-            <li>❌ Parler trop fort ou rire bruyamment</li>
-            <li>❌ Mâcher du chewing-gum</li>
-            <li>❌ Couper la parole à l'interlocuteur</li>
-            <li>❌ Faire semblant de comprendre quand je ne comprends pas</li>
-            <li>❌ Me moquer d'un collègue du groupe devant l'entreprise</li>
-          </ul>
+      </div>
+
+      <div id="sort-done-msg" style="display:none; text-align:center; padding:20px; background:var(--yellow); border:3px solid var(--black); border-radius:12px; font-family:'Poppins',sans-serif; font-weight:800; box-shadow:var(--shadow); margin-top:10px;">
+        🎉 Bravo ! Votre code de conduite est prêt !
+      </div>
+
+      <!-- COLONNES RÉSULTATS -->
+      <div class="sorted-lists">
+        <div class="sorted-col col-do">
+          <h4>✅ Ce que je fais</h4>
+          <ul id="list-do"></ul>
+        </div>
+        <div class="sorted-col col-dont">
+          <h4>❌ Ce que j'évite</h4>
+          <ul id="list-dont"></ul>
         </div>
       </div>
 
@@ -1058,10 +1037,9 @@
         <div class="tip-box-header">🎓 Pour l'animateur · Animation de la phase</div>
         <div class="tip-box-body">
           <ul>
-            <li>📌 Affichez les "je fais / j'évite" sur un paperboard visible par tous. Laissez les participants bonifier la liste.</li>
-            <li>📌 Valorisez les propositions originales, même imparfaites. L'important est l'appropriation.</li>
-            <li>📌 Si un participant propose quelque chose de discutable, questionnez le groupe plutôt que de le reprendre directement.</li>
-            <li>📌 Ce code sera rappelé le matin des visites comme un rituel de groupe.</li>
+            <li>📌 Ne cliquez pas tout de suite ! Laissez les participants argumenter s'ils ne sont pas d'accord.</li>
+            <li>📌 S'ils se trompent, la carte tremblera et rougira : c'est l'occasion de demander <em>"Pourquoi l'outil refuse votre choix à votre avis ?"</em></li>
+            <li>📌 Ce tableau final sera votre charte de groupe pour les visites à venir.</li>
           </ul>
         </div>
       </div>
@@ -1690,6 +1668,67 @@ function chooseScenario(el, scenId, isGood) {
   // update progress
   updateProgress();
 }
+
+// ─── Jeu du Tri Interactif (Phase 4) ───
+const sortItems = [
+  { text: "Arriver 5 minutes avant l'heure prévue", type: "do" },
+  { text: "Garder son téléphone posé sur la table", type: "dont" },
+  { text: "Dire bonjour à chaque personne croisée", type: "do" },
+  { text: "Regarder ses chaussures quand on s'adresse à nous", type: "dont" },
+  { text: "Préparer 3 ou 4 questions à l'avance", type: "do" },
+  { text: "Mâcher un chewing-gum (même discrètement)", type: "dont" },
+  { text: "Vouvoyer son interlocuteur d'office", type: "do" },
+  { text: "Faire semblant d'avoir compris", type: "dont" },
+  { text: "Prendre des notes pendant la visite", type: "do" },
+  { text: "S'affaler sur sa chaise pour montrer qu'on est à l'aise", type: "dont" }
+];
+let currentSortIndex = 0;
+
+function renderSortCard() {
+  const card = document.getElementById('sort-current-card');
+  const container = document.getElementById('sort-game-container');
+  const doneMsg = document.getElementById('sort-done-msg');
+  
+  if (currentSortIndex >= sortItems.length) {
+    container.style.display = 'none';
+    doneMsg.style.display = 'block';
+    doneMsg.classList.add('bounce');
+    return;
+  }
+  card.textContent = sortItems[currentSortIndex].text;
+}
+
+function handleSort(choice) {
+  const item = sortItems[currentSortIndex];
+  const card = document.getElementById('sort-current-card');
+  
+  if (choice === item.type) {
+    // Bonne réponse
+    const ul = document.getElementById(choice === 'do' ? 'list-do' : 'list-dont');
+    const li = document.createElement('li');
+    li.textContent = (choice === 'do' ? '✅ ' : '❌ ') + item.text;
+    ul.appendChild(li);
+    
+    currentSortIndex++;
+    renderSortCard();
+  } else {
+    // Mauvaise réponse (Erreur)
+    card.classList.remove('shake');
+    void card.offsetWidth; // Force le reflow pour relancer l'animation CSS
+    card.classList.add('shake');
+    card.style.borderColor = 'var(--red)';
+    card.style.color = 'var(--red)';
+    setTimeout(() => {
+      card.style.borderColor = 'var(--black)';
+      card.style.color = 'inherit';
+    }, 400);
+  }
+}
+
+// Initialisation au chargement
+document.addEventListener('DOMContentLoaded', () => {
+  renderSortCard();
+});
 
 // ─── Engagement ───
 function submitEngagement() {
