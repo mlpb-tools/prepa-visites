@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LS4YOU – Réseau, image de soi et posture professionnelle</title>
+<title>LS4YOU – Se connaître, image de soi et posture professionnelle</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -304,179 +304,6 @@
     gap: 6px;
   }
 
-  .network-hero {
-    background:#FFF3E0;
-    border:2px solid var(--black);
-    border-radius:12px;
-    padding:14px 16px;
-    box-shadow:var(--shadow);
-    font-size:0.83rem;
-    line-height:1.6;
-    margin-bottom:16px;
-  }
-
-  .network-grid {
-    display:grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap:16px;
-  }
-  @media (max-width: 760px) {
-    .network-grid { grid-template-columns: 1fr; }
-  }
-
-  .network-map {
-    background:#fff;
-    border:3px solid var(--black);
-    border-radius:14px;
-    padding:18px;
-    box-shadow:var(--shadow);
-  }
-
-  .network-center {
-    width:140px;
-    height:140px;
-    border-radius:50%;
-    margin:0 auto 18px;
-    background:var(--turq);
-    color:#fff;
-    border:3px solid var(--black);
-    box-shadow:var(--shadow);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    font-family:'Poppins',sans-serif;
-    font-weight:900;
-    font-size:0.95rem;
-    line-height:1.2;
-  }
-
-  .network-rings {
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-  }
-
-  .network-ring {
-    border:2px dashed var(--black);
-    border-radius:12px;
-    padding:12px;
-    background:#fafafa;
-  }
-
-  .network-ring h4 {
-    font-family:'Poppins',sans-serif;
-    font-size:0.8rem;
-    font-weight:800;
-    margin-bottom:8px;
-  }
-
-  .network-tags {
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-  }
-
-  .network-tag {
-    padding:6px 10px;
-    border:2px solid var(--black);
-    border-radius:999px;
-    background:#fff;
-    font-size:0.74rem;
-    font-weight:700;
-    box-shadow:2px 2px 0 var(--black);
-  }
-
-  .network-side {
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-  }
-
-  .support-card {
-    background:#fff;
-    border:2px solid var(--black);
-    border-radius:12px;
-    padding:14px;
-    box-shadow:var(--shadow);
-  }
-
-  .support-card h4 {
-    font-family:'Poppins',sans-serif;
-    font-size:0.82rem;
-    font-weight:800;
-    margin-bottom:8px;
-  }
-
-  .support-list {
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-    margin-top:8px;
-  }
-
-  .support-row {
-    display:grid;
-    grid-template-columns: 1.1fr 1fr 1fr auto;
-    gap:8px;
-    align-items:center;
-  }
-  @media (max-width: 760px) {
-    .support-row { grid-template-columns: 1fr; }
-  }
-
-  .support-mini {
-    font-size:0.73rem;
-    color:#555;
-    line-height:1.5;
-  }
-
-  .support-btn-add {
-    width:100%;
-    background:#fff;
-    border:2px dashed var(--black);
-    border-radius:8px;
-    padding:9px 12px;
-    font-family:'Poppins',sans-serif;
-    font-weight:700;
-    font-size:0.78rem;
-    cursor:pointer;
-    margin-top:10px;
-  }
-
-  .support-del {
-    width:34px;
-    height:34px;
-    border-radius:8px;
-    border:2px solid var(--black);
-    background:#FFEBEE;
-    box-shadow:2px 2px 0 var(--black);
-    cursor:pointer;
-    font-weight:900;
-  }
-
-  .network-summary {
-    background:#E8F5E9;
-    border:2px solid var(--black);
-    border-radius:12px;
-    padding:12px 14px;
-    box-shadow:var(--shadow);
-    font-size:0.79rem;
-    line-height:1.6;
-  }
-
-  .network-action-box {
-    display:none;
-    background:var(--yellow);
-    border:2px solid var(--black);
-    border-radius:12px;
-    padding:14px;
-    box-shadow:var(--shadow);
-    font-size:0.82rem;
-    line-height:1.6;
-    margin-top:12px;
-  }
-
   .miroir-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -688,135 +515,6 @@
   .choice-feedback.good { background: #E8F5E9; display: block; }
   .choice-feedback.bad  { background: #FFEBEE; display: block; }
 
-  .sort-game {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
-    background: #f9f9f9;
-    padding: 24px 16px;
-    border-radius: 12px;
-    border: 2px dashed #bbb;
-    margin-top: 10px;
-  }
-  .sort-card {
-    background: #fff;
-    border: 3px solid var(--black);
-    border-radius: 12px;
-    padding: 24px 16px;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.05rem;
-    font-weight: 700;
-    width: 100%;
-    max-width: 450px;
-    box-shadow: var(--shadow);
-    transition: transform 0.2s, border-color 0.2s;
-    line-height: 1.4;
-  }
-  .sort-card.shake { animation: shake 0.4s; }
-  .sort-actions { display: flex; gap: 14px; width: 100%; max-width: 450px; }
-  .sort-btn {
-    flex: 1;
-    padding: 12px;
-    border: 3px solid var(--black);
-    border-radius: 10px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    font-size: 0.95rem;
-    cursor: pointer;
-    box-shadow: 3px 3px 0 var(--black);
-    transition: transform 0.1s;
-  }
-  .sort-btn.do { background: var(--mint); color: #fff; }
-  .sort-btn.dont { background: var(--red); color: #fff; }
-
-  .sorted-lists {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    width: 100%;
-    margin-top: 20px;
-  }
-  @media (max-width: 760px) {
-    .sorted-lists { grid-template-columns: 1fr; }
-  }
-  .sorted-col {
-    background: #fff;
-    border: 2px solid var(--black);
-    border-radius: 10px;
-    padding: 14px;
-  }
-  .sorted-col h4 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.9rem;
-    margin-bottom: 12px;
-    text-align: center;
-    padding-bottom: 8px;
-    border-bottom: 2px dashed #ccc;
-  }
-  .sorted-col ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .sorted-col ul li {
-    font-size: 0.78rem;
-    padding: 8px 10px;
-    border-radius: 6px;
-    background: #f5f5f5;
-    border: 1px solid #ddd;
-  }
-
-  .engagement-card {
-    background: var(--red);
-    border: 3px solid var(--black);
-    border-radius: 16px;
-    box-shadow: var(--shadow-lg);
-    padding: 24px;
-    margin-top: 10px;
-    text-align: center;
-    color: #fff;
-  }
-  .engagement-card h3 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 900;
-    font-size: 1.1rem;
-    margin-bottom: 16px;
-  }
-  .engagement-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  .engagement-form input {
-    border: 2px solid #fff;
-    border-radius: 8px;
-    padding: 10px 14px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.85rem;
-    background: rgba(255,255,255,0.15);
-    color: #fff;
-    font-weight: 600;
-    outline: none;
-  }
-  .engagement-form input::placeholder { color: rgba(255,255,255,0.72); }
-  .engagement-result {
-    display: none;
-    background: var(--yellow);
-    color: var(--black);
-    border: 2px solid var(--black);
-    border-radius: 10px;
-    padding: 14px;
-    margin-top: 14px;
-    font-size: 0.85rem;
-    font-weight: 700;
-  }
-
   .struct-btn { background:#fff; border:2px solid var(--black); border-radius:8px; padding:8px 14px; font-family:'Poppins',sans-serif; font-weight:700; font-size:0.78rem; cursor:pointer; box-shadow:2px 2px 0 var(--black); transition:all 0.15s; }
   .struct-btn:hover { transform:translateY(-1px); box-shadow:3px 3px 0 var(--black); }
   .struct-btn.selected { background:var(--turq); color:#fff; }
@@ -865,18 +563,6 @@
     text-transform: uppercase;
   }
 
-  @keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-6px) rotate(-2deg); }
-    75% { transform: translateX(6px) rotate(2deg); }
-  }
-
-  @keyframes bounce-in {
-    0%   { transform: scale(0.8); opacity: 0; }
-    70%  { transform: scale(1.05); }
-    100% { transform: scale(1); opacity: 1; }
-  }
-  .bounce { animation: bounce-in 0.4s ease forwards; }
   .hidden { display:none !important; }
 </style>
 </head>
@@ -884,18 +570,18 @@
 
 <div class="header">
   <div class="header-inner">
-    <div class="header-badge">🕸️</div>
+    <div class="header-badge">🧭</div>
     <div class="header-text">
-      <h1>Réseau, image de soi<br><span>et posture professionnelle</span></h1>
+      <h1>Se connaître, image de soi<br><span>et posture professionnelle</span></h1>
       <div class="header-meta">
         <span class="tag solid">LS4YOU</span>
-        <span class="tag">Réseau de soutien</span>
+        <span class="tag">Connaissance de soi</span>
         <span class="tag">Auto-marketing</span>
         <span class="tag">Entreprise</span>
       </div>
     </div>
   </div>
-  <div class="header-deco">🤝</div>
+  <div class="header-deco">💼</div>
 </div>
 
 <div class="main">
@@ -904,11 +590,13 @@
     <div>
       <h2>🎯 Description de l'atelier</h2>
       <p>
-        Les participants comprennent d’abord l’importance du <strong>réseau social et professionnel</strong>
-        pour accéder à l’entreprise, puis identifient les personnes ressources qui peuvent les soutenir.
+        Les participants commencent par mieux se connaître à travers un travail sur leur <strong>personnalité</strong>,
+        leurs <strong>besoins</strong>, leurs <strong>forces</strong> et leurs <strong>valeurs</strong>,
+        afin de clarifier une première direction de projet.
         Ils travaillent ensuite leur <strong>image de soi</strong>, leur <strong>marque personnelle</strong>
-        et leur <strong>posture professionnelle</strong> afin de préparer au mieux une visite,
+        et leur <strong>posture professionnelle</strong> pour préparer au mieux une visite,
         une immersion, un stage ou une rencontre avec un employeur.
+        L’atelier se prolonge enfin par une phase complète de <strong>préparation à l’enquête métier</strong>.
       </p>
     </div>
     <div>
@@ -917,73 +605,129 @@
         <div class="meta-pill red">🕐 2h00 + enquête métier</div>
         <div class="meta-pill yellow">👥 Groupe</div>
         <div class="meta-pill turq">🏢 Présentiel / distanciel</div>
-        <div class="meta-pill mint">🎓 Réseau + posture + auto-marketing</div>
+        <div class="meta-pill mint">🎓 Connaissance de soi + posture + auto-marketing</div>
       </div>
       <div style="margin-top:12px; font-size:0.82rem; line-height:1.6; color:#444;">
-        Réseau social et professionnel · réseau de soutien · image de soi · marque personnelle · savoir-être · scénarios · engagement · enquête métier
+        Se connaître · image de soi · marque personnelle · savoir-être · scénarios · enquête métier
       </div>
     </div>
   </div>
 
   <!-- PHASE 0 -->
   <div class="phase" id="phase0">
-    <div class="phase-header red">
-      <div class="phase-icon">🕸️</div>
+    <div class="phase-header violet">
+      <div class="phase-icon">🧭</div>
       <div class="phase-title">
-        <h3>Phase 0 · Pourquoi le réseau compte</h3>
-        <small>Comprendre que l’accès à l’entreprise passe aussi par les relations</small>
+        <h3>Phase 0 · Se connaître pour définir son projet</h3>
+        <small>Personnalité, besoins, forces et valeurs comme base de direction</small>
       </div>
-      <div class="phase-duration">10 min</div>
+      <div class="phase-duration">25 min</div>
     </div>
     <div class="phase-body">
       <div class="phase-intro">
-        Cette phase permet de comprendre qu’on n’accède pas à l’entreprise uniquement avec un CV ou une motivation personnelle.
-        Le réseau social et professionnel joue un rôle important pour obtenir des informations, être conseillé, rencontrer des personnes ressources
-        et accéder plus facilement à des opportunités.
-      </div>
-      <div class="phase-goal">🎯 Objectif : comprendre l’importance du réseau</div>
-      <div class="phase-consigne yellow">
-        👉 <strong>Consigne :</strong> Réfléchis aux moments où quelqu’un t’a déjà aidé à avancer :
-        pour comprendre un métier, reprendre confiance, obtenir une information, trouver un stage, te déplacer ou rencontrer une bonne personne.
-        L’objectif est de voir que le réseau est déjà présent dans la vie quotidienne, même quand on ne le nomme pas comme ça.
+        Cette première phase aide à mieux se connaître avant de parler d’entreprise ou de posture professionnelle.
+        L’idée est de partir de quatre dimensions complémentaires :
+        <strong>comment je fonctionne</strong>, <strong>ce que je fais bien</strong>,
+        <strong>ce qui compte pour moi</strong> et <strong>ce dont j’ai besoin</strong>.
+        Ensemble, elles permettent de mieux comprendre vers quels environnements, métiers ou projets je pourrais m’orienter.
       </div>
 
-      <div class="network-hero">
-        👉 <strong>Idée clé :</strong> on n’avance pas seul.
-        Pour découvrir un métier, trouver une immersion, être rassuré, obtenir un conseil,
-        poser une question ou rebondir après un refus, on s’appuie souvent sur des personnes autour de soi.
+      <div class="phase-goal">🎯 Objectif : construire une première base de projet à partir de la connaissance de soi</div>
+
+      <div class="phase-consigne violet">
+        👉 <strong>Consigne :</strong> Réfléchis à ces 4 dimensions :
+        <br><br>
+        • <strong>Ma personnalité</strong> : comment je fonctionne naturellement<br>
+        • <strong>Mes forces</strong> : ce que je fais bien ou facilement<br>
+        • <strong>Mes valeurs</strong> : ce qui compte pour moi dans la vie et au travail<br>
+        • <strong>Mes besoins</strong> : ce qui m’aide à me sentir bien, à avancer et à tenir dans la durée
+        <br><br>
+        Puis demande-toi : <strong>qu’est-ce que cela me dit sur mon projet, mon environnement idéal ou ma prochaine étape ?</strong>
       </div>
 
       <div class="cards-grid">
-        <div class="card yellow">
-          <div class="card-icon">💬</div>
-          <h4>Soutien émotionnel</h4>
-          <p>Des personnes qui encouragent, rassurent et redonnent confiance quand on doute.</p>
-        </div>
         <div class="card turq">
-          <div class="card-icon">🛠️</div>
-          <h4>Soutien pratique</h4>
-          <p>Des personnes qui aident concrètement : transport, relecture, accompagnement, organisation.</p>
+          <div class="card-icon">🧠</div>
+          <h4>Ma personnalité</h4>
+          <p>Comment je fonctionne : rythme, relation aux autres, autonomie, façon de réagir.</p>
         </div>
         <div class="card mint">
-          <div class="card-icon">🧭</div>
-          <h4>Soutien conseil</h4>
-          <p>Des personnes qui donnent des idées, des infos, des retours ou orientent vers une opportunité.</p>
+          <div class="card-icon">💪</div>
+          <h4>Mes forces</h4>
+          <p>Ce que je sais faire, ce qui me vient naturellement, ce sur quoi je peux m’appuyer.</p>
+        </div>
+        <div class="card pink">
+          <div class="card-icon">💎</div>
+          <h4>Mes valeurs</h4>
+          <p>Ce qui me guide : respect, sécurité, liberté, utilité, entraide, créativité…</p>
         </div>
         <div class="card orange">
-          <div class="card-icon">🚪</div>
-          <h4>Ouverture vers l’entreprise</h4>
-          <p>Un contact, une recommandation, une rencontre ou une mise en relation peuvent tout changer.</p>
+          <div class="card-icon">🌱</div>
+          <h4>Mes besoins</h4>
+          <p>Ce dont j’ai besoin pour apprendre, travailler, tenir, progresser ou me sentir à ma place.</p>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px;">
+        <div class="tip-box" style="margin-top:0;">
+          <div class="tip-box-header">1️⃣ Ma personnalité</div>
+          <div class="tip-box-body">
+            <label class="enq-label">Je me décris en 3 mots</label>
+            <input class="enq-input" id="profil-personnalite" placeholder="Ex : calme, curieux, sociable">
+
+            <label class="enq-label" style="margin-top:12px;">Je suis plus à l’aise…</label>
+            <textarea class="enq-textarea" id="profil-fonctionnement" rows="3" placeholder="Ex : en petit groupe, avec des repères clairs, quand je peux prendre mon temps, quand il y a du mouvement..."></textarea>
+          </div>
+        </div>
+
+        <div class="tip-box" style="margin-top:0;">
+          <div class="tip-box-header">2️⃣ Mes forces</div>
+          <div class="tip-box-body">
+            <label class="enq-label">Mes 3 forces principales</label>
+            <input class="enq-input" id="profil-force1" placeholder="Ex : écouter">
+            <input class="enq-input" id="profil-force2" placeholder="Ex : organiser" style="margin-top:8px;">
+            <input class="enq-input" id="profil-force3" placeholder="Ex : persévérer" style="margin-top:8px;">
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px;">
+        <div class="tip-box" style="margin-top:0;">
+          <div class="tip-box-header">3️⃣ Mes valeurs</div>
+          <div class="tip-box-body">
+            <label class="enq-label">3 valeurs importantes pour moi</label>
+            <input class="enq-input" id="profil-valeurs" placeholder="Ex : respect, autonomie, entraide">
+
+            <label class="enq-label" style="margin-top:12px;">Je serais mal à l’aise dans un projet ou un travail si…</label>
+            <textarea class="enq-textarea" id="profil-valeurs-contre" rows="3" placeholder="Ex : il n’y a pas de respect, je ne comprends pas le sens, je suis trop seul, c’est trop rigide..."></textarea>
+          </div>
+        </div>
+
+        <div class="tip-box" style="margin-top:0;">
+          <div class="tip-box-header">4️⃣ Mes besoins</div>
+          <div class="tip-box-body">
+            <label class="enq-label">J’ai besoin de…</label>
+            <textarea class="enq-textarea" id="profil-besoins" rows="4" placeholder="Ex : encouragement, cadre, autonomie, mouvement, temps d’adaptation, relation humaine, soutien..."></textarea>
+          </div>
         </div>
       </div>
 
       <div class="tip-box">
-        <div class="tip-box-header">💬 Questions d’ouverture</div>
+        <div class="tip-box-header">🧩 Ce que cela dit de mon projet</div>
+        <div class="tip-box-body">
+          <label class="enq-label">Au regard de tout ça, quel type d’environnement, de projet ou de métier pourrait me convenir ?</label>
+          <textarea class="enq-textarea" id="profil-direction" rows="4" placeholder="Ex : un métier avec du contact, un cadre clair, un travail utile, une équipe présente, des tâches variées..."></textarea>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <div class="tip-box-header">🔗 Lien avec la suite de l’atelier</div>
         <div class="tip-box-body">
           <ul>
-            <li>✦ Quand tu as besoin d’un conseil, vers qui vas-tu ?</li>
-            <li>✦ Qui pourrait t’aider à mieux comprendre le monde du travail ?</li>
-            <li>✦ As-tu déjà obtenu une info ou une opportunité grâce à quelqu’un ?</li>
+            <li>✦ Je comprends mieux qui je suis avant de parler de mon image</li>
+            <li>✦ Je peux mieux identifier ce que je veux mettre en avant</li>
+            <li>✦ Je commence à définir un projet ou au moins une direction</li>
+            <li>✦ Je peux ensuite travailler ma présentation et ma posture de façon plus cohérente</li>
           </ul>
         </div>
       </div>
@@ -991,115 +735,11 @@
   </div>
 
   <!-- PHASE 1 -->
-  <div class="phase" id="phase-support">
-    <div class="phase-header pink">
-      <div class="phase-icon">🤝</div>
-      <div class="phase-title">
-        <h3>Phase 1 · Mon réseau de soutien</h3>
-        <small>Identifier les personnes ressources et définir comment renforcer son réseau</small>
-      </div>
-      <div class="phase-duration">25 min</div>
-    </div>
-    <div class="phase-body">
-      <div class="phase-intro">
-        Cette activité t’aide à repérer les personnes qui peuvent te soutenir dans ton parcours,
-        sur le plan émotionnel, pratique ou en matière de conseil.
-        Elle permet aussi d’identifier les manques dans ton réseau et de réfléchir à des actions concrètes pour le renforcer.
-      </div>
-      <div class="phase-goal">🎯 Objectif : repérer mes personnes ressources</div>
-      <div class="phase-consigne pink">
-        👉 <strong>Consigne :</strong> Note les personnes qui peuvent t’aider aujourd’hui ou demain dans ton parcours.
-        Pour chacune, demande-toi :
-        <strong>qui est cette personne ?</strong>,
-        <strong>quel type de soutien peut-elle m’apporter ?</strong>
-        et <strong>dans quel cercle se situe-t-elle ?</strong>
-        Puis choisis une action concrète pour renforcer ou élargir ton réseau dans le mois qui vient.
-      </div>
-
-      <div class="network-grid">
-        <div class="network-map">
-          <div class="network-center">MOI<br>& MON<br>PROJET</div>
-
-          <div class="network-rings">
-            <div class="network-ring">
-              <h4>🟢 Cercle proche</h4>
-              <div class="network-tags">
-                <span class="network-tag">Famille</span>
-                <span class="network-tag">Amis proches</span>
-                <span class="network-tag">Personne de confiance</span>
-              </div>
-            </div>
-
-            <div class="network-ring">
-              <h4>🔵 Cercle d’appui</h4>
-              <div class="network-tags">
-                <span class="network-tag">Conseiller</span>
-                <span class="network-tag">Prof / formateur</span>
-                <span class="network-tag">Coach / éducateur</span>
-              </div>
-            </div>
-
-            <div class="network-ring">
-              <h4>🟠 Cercle d’ouverture</h4>
-              <div class="network-tags">
-                <span class="network-tag">Pro rencontré</span>
-                <span class="network-tag">Association</span>
-                <span class="network-tag">Club / sport</span>
-                <span class="network-tag">Événement / stage</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="network-side">
-          <div class="support-card">
-            <h4>➕ Mes personnes ressources</h4>
-            <div class="support-mini">
-              Ajoute ici les personnes qui peuvent t’aider.
-              Tu peux indiquer si elles t’apportent surtout :
-              de l’encouragement, de l’aide concrète ou des conseils.
-            </div>
-
-            <div id="support-list" class="support-list"></div>
-
-            <button class="support-btn-add" onclick="addSupportRow()">＋ Ajouter une personne ressource</button>
-          </div>
-
-          <div class="network-summary" id="network-summary">
-            <strong>Lecture rapide :</strong><br>
-            Ajoute quelques personnes pour voir où ton réseau est déjà solide
-            et où tu pourrais le développer.
-          </div>
-        </div>
-      </div>
-
-      <div class="tip-box">
-        <div class="tip-box-header">🧠 Moment stratégie</div>
-        <div class="tip-box-body">
-          <ul>
-            <li>✦ Où ton réseau est-il déjà fort ?</li>
-            <li>✦ Où te manque-t-il un appui : encouragement, aide pratique ou conseil ?</li>
-            <li>✦ Quelle relation pourrais-tu entretenir davantage ?</li>
-            <li>✦ Quelle nouvelle personne pourrais-tu rencontrer ?</li>
-          </ul>
-        </div>
-      </div>
-
-      <div style="margin-top:16px;">
-        <label class="enq-label">🎯 Mon action du mois pour renforcer mon réseau</label>
-        <input class="enq-input" id="networkAction" placeholder="Ex : recontacter mon ancien tuteur, demander conseil à mon conseiller, participer à un événement, remercier une personne ressource…">
-        <button class="btn-engage" onclick="saveNetworkAction()" style="margin-top:10px;">Valider mon action réseau</button>
-        <div id="network-action-result" class="network-action-box"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- PHASE 2 -->
-  <div class="phase" id="phase2">
+  <div class="phase" id="phase1">
     <div class="phase-header turq">
       <div class="phase-icon">🪞</div>
       <div class="phase-title">
-        <h3>Phase 2 · Le jeu du miroir</h3>
+        <h3>Phase 1 · Le jeu du miroir</h3>
         <small>Prendre conscience de l’image que j’envoie</small>
       </div>
       <div class="phase-duration">15 min</div>
@@ -1143,12 +783,12 @@
     </div>
   </div>
 
-  <!-- PHASE 3 -->
-  <div class="phase" id="phase-brand">
+  <!-- PHASE 2 -->
+  <div class="phase" id="phase2">
     <div class="phase-header pink">
       <div class="phase-icon">🌟</div>
       <div class="phase-title">
-        <h3>Phase 3 · Mon image de marque personnelle</h3>
+        <h3>Phase 2 · Mon image de marque personnelle</h3>
         <small>Transformer mes points forts en valeur utile</small>
       </div>
       <div class="phase-duration">20 min</div>
@@ -1224,12 +864,12 @@
     </div>
   </div>
 
-  <!-- PHASE 4 -->
-  <div class="phase" id="phase4">
+  <!-- PHASE 3 -->
+  <div class="phase" id="phase3">
     <div class="phase-header yellow">
       <div class="phase-icon">🔍</div>
       <div class="phase-title">
-        <h3>Phase 4 · Le savoir-être en entreprise</h3>
+        <h3>Phase 3 · Le savoir-être en entreprise</h3>
         <small>Identifier les attentes concrètes des professionnels</small>
       </div>
       <div class="phase-duration">20 min</div>
@@ -1291,12 +931,12 @@
     </div>
   </div>
 
-  <!-- PHASE 5 -->
-  <div class="phase" id="phase5">
+  <!-- PHASE 4 -->
+  <div class="phase" id="phase4">
     <div class="phase-header turq">
       <div class="phase-icon">🎭</div>
       <div class="phase-title">
-        <h3>Phase 5 · Scénarios : bonne ou mauvaise posture ?</h3>
+        <h3>Phase 4 · Scénarios : bonne ou mauvaise posture ?</h3>
         <small>Mise en situation — débat collectif</small>
       </div>
       <div class="phase-duration">25 min</div>
@@ -1380,91 +1020,9 @@
     </div>
   </div>
 
-  <!-- PHASE 6 -->
-  <div class="phase" id="phase6">
-    <div class="phase-header mint">
-      <div class="phase-icon">🕹️</div>
-      <div class="phase-title">
-        <h3>Phase 6 · Le défi du savoir-être</h3>
-        <small>Construisons notre code de conduite</small>
-      </div>
-      <div class="phase-duration">15 min</div>
-    </div>
-    <div class="phase-body">
-      <div class="phase-intro">
-        Cette phase permet de transformer les apprentissages précédents en règles d’action concrètes.
-        Le groupe distingue les comportements à adopter de ceux à éviter,
-        afin de construire un repère simple et collectif pour les futures visites en entreprise.
-      </div>
-      <div class="phase-goal">🎯 Objectif : construire un repère collectif simple</div>
-      <div class="phase-consigne mint">
-        👉 <strong>Consigne :</strong> Pour chaque comportement proposé, discutez en groupe avant de choisir.
-        L’objectif est de construire ensemble un code de conduite simple :
-        <strong>ce que je fais</strong> et <strong>ce que j’évite</strong>
-        quand je rencontre un professionnel ou que je vais dans une entreprise.
-      </div>
-
-      <div class="sort-game" id="sort-game-container">
-        <div class="sort-card" id="sort-current-card">Chargement…</div>
-        <div class="sort-actions">
-          <button class="sort-btn do" onclick="handleSort('do')">✅ À FAIRE</button>
-          <button class="sort-btn dont" onclick="handleSort('dont')">❌ À ÉVITER</button>
-        </div>
-      </div>
-
-      <div class="sorted-lists">
-        <div class="sorted-col">
-          <h4>✅ Ce que je fais</h4>
-          <ul id="list-do"></ul>
-        </div>
-        <div class="sorted-col">
-          <h4>❌ Ce que j’évite</h4>
-          <ul id="list-dont"></ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- PHASE 7 -->
-  <div class="phase" id="phase7">
-    <div class="phase-header orange">
-      <div class="phase-icon">🌟</div>
-      <div class="phase-title">
-        <h3>Phase 7 · Mon engagement personnel</h3>
-        <small>Formaliser un objectif concret</small>
-      </div>
-      <div class="phase-duration">10 min</div>
-    </div>
-    <div class="phase-body">
-      <div class="phase-intro">
-        Cette dernière phase permet de transformer la réflexion en action.
-        Chaque participant identifie ce qu’il apporte déjà et ce qu’il veut améliorer,
-        afin de repartir avec un engagement concret, réaliste et utile pour la prochaine étape.
-      </div>
-      <div class="phase-goal">🎯 Objectif : repartir avec une action concrète</div>
-      <div class="phase-consigne orange">
-        👉 <strong>Consigne :</strong> Écris ton prénom, un point fort que tu veux mobiliser,
-        un point que tu veux améliorer et un objectif concret pour la prochaine visite ou rencontre professionnelle.
-        Ton engagement doit être simple, précis et réalisable.
-      </div>
-
-      <div class="engagement-card">
-        <h3>🎯 Mon engagement pour la visite</h3>
-        <div class="engagement-form">
-          <input type="text" id="prenom" placeholder="Mon prénom…">
-          <input type="text" id="force" placeholder="✅ Mon point fort que j’apporte…">
-          <input type="text" id="amelio" placeholder="📈 Ce que je vais travailler…">
-          <input type="text" id="objectif" placeholder="🎯 Mon objectif concret…">
-          <button class="btn-engage" onclick="submitEngagement()">Je m’engage 🤝</button>
-        </div>
-        <div class="engagement-result" id="engResult"></div>
-      </div>
-    </div>
-  </div>
-
 </div>
 
-<!-- PHASE 8 : ENQUÊTE MÉTIER -->
+<!-- PHASE 5 : ENQUÊTE MÉTIER -->
 <div style="background:var(--black); padding:0; margin-top:0;">
   <div style="max-width:960px; margin:0 auto; padding:28px 20px 12px; display:flex; align-items:center; gap:16px;">
     <div style="background:var(--turq); border:3px solid rgba(255,255,255,0.3); border-radius:50%; width:56px; height:56px; display:flex; align-items:center; justify-content:center; font-size:1.6rem; flex-shrink:0;">🔍</div>
@@ -1490,11 +1048,11 @@
 
 <div style="max-width:960px; margin:0 auto; padding:28px 20px 60px;">
 
-  <div class="phase" style="margin-bottom:20px;">
+  <div class="phase" id="phase5" style="margin-bottom:20px;">
     <div class="phase-header violet">
       <div class="phase-icon">🧭</div>
       <div class="phase-title">
-        <h3>Phase 8 · Préparer mon enquête métier</h3>
+        <h3>Phase 5 · Préparer mon enquête métier</h3>
         <small>Transformer l’atelier en action concrète vers l’entreprise</small>
       </div>
       <div class="phase-duration">30 à 45 min</div>
@@ -1512,7 +1070,6 @@
         puis ce que tu retiendras après la visite.
       </div>
 
-      <!-- TABS NAVIGATION -->
       <div style="display:flex; gap:0; border:3px solid var(--black); border-radius:12px; overflow:hidden; box-shadow:var(--shadow-lg); margin-bottom:28px;">
         <button class="enq-tab active" onclick="switchTab('tab-info')" id="btn-tab-info">
           <span>1</span> Infos structure
@@ -1531,7 +1088,6 @@
         </button>
       </div>
 
-      <!-- TAB 1 -->
       <div id="tab-info" class="enq-panel">
         <div class="phase-goal">🎯 Objectif : identifier clairement où je vais et qui je rencontre</div>
         <div class="phase-consigne turq">
@@ -1596,7 +1152,6 @@
         </div>
       </div>
 
-      <!-- TAB 2 -->
       <div id="tab-questions" class="enq-panel hidden">
         <div class="phase-goal">🎯 Objectif : sélectionner les questions les plus utiles</div>
         <div class="phase-consigne yellow">
@@ -1711,7 +1266,6 @@
         </div>
       </div>
 
-      <!-- TAB 3 -->
       <div id="tab-checklist" class="enq-panel hidden">
         <div class="phase-goal">🎯 Objectif : vérifier que tout est prêt avant le départ</div>
         <div class="phase-consigne mint">
@@ -1755,7 +1309,6 @@
         </div>
       </div>
 
-      <!-- TAB 4 -->
       <div id="tab-notes" class="enq-panel hidden">
         <div class="phase-goal">🎯 Objectif : garder une trace utile de la visite</div>
         <div class="phase-consigne orange">
@@ -1797,7 +1350,6 @@
         </div>
       </div>
 
-      <!-- TAB 5 -->
       <div id="tab-bilan" class="enq-panel hidden">
         <div class="phase-goal">🎯 Objectif : relier la visite à la suite de mon parcours</div>
         <div class="phase-consigne pink">
@@ -1847,7 +1399,7 @@
   </div>
 </div>
 
-<div class="footer">LS4YOU · Mission Locale Pays Basque · Réseau de soutien, image de soi, posture professionnelle et enquête métier</div>
+<div class="footer">LS4YOU · Mission Locale Pays Basque · Se connaître, image de soi, posture professionnelle et enquête métier</div>
 
 <script>
 document.querySelectorAll('.star-row').forEach(row => {
@@ -1862,123 +1414,6 @@ document.querySelectorAll('.star-row').forEach(row => {
     });
   });
 });
-
-let supportCount = 0;
-
-function addSupportRow(name = "", support = "", circle = "") {
-  supportCount++;
-  const list = document.getElementById('support-list');
-
-  const row = document.createElement('div');
-  row.className = 'support-row';
-  row.id = 'support-row-' + supportCount;
-
-  row.innerHTML = `
-    <input class="enq-input support-name" placeholder="Nom / rôle" value="${name}">
-    <select class="enq-input support-type">
-      <option value="">Type de soutien</option>
-      <option value="émotionnel" ${support === 'émotionnel' ? 'selected' : ''}>Émotionnel</option>
-      <option value="pratique" ${support === 'pratique' ? 'selected' : ''}>Pratique</option>
-      <option value="conseil" ${support === 'conseil' ? 'selected' : ''}>Conseil</option>
-    </select>
-    <select class="enq-input support-circle">
-      <option value="">Cercle</option>
-      <option value="personnel" ${circle === 'personnel' ? 'selected' : ''}>Personnel</option>
-      <option value="professionnel" ${circle === 'professionnel' ? 'selected' : ''}>Professionnel</option>
-      <option value="social" ${circle === 'social' ? 'selected' : ''}>Social</option>
-    </select>
-    <button class="support-del" onclick="removeSupportRow(${supportCount})">✕</button>
-  `;
-
-  list.appendChild(row);
-
-  row.querySelectorAll('input, select').forEach(el => {
-    el.addEventListener('input', updateSupportSummary);
-    el.addEventListener('change', updateSupportSummary);
-  });
-
-  updateSupportSummary();
-}
-
-function removeSupportRow(id) {
-  const row = document.getElementById('support-row-' + id);
-  if (row) row.remove();
-  updateSupportSummary();
-}
-
-function updateSupportSummary() {
-  const rows = document.querySelectorAll('#support-list .support-row');
-
-  let emotional = 0;
-  let practical = 0;
-  let advice = 0;
-  let personnel = 0;
-  let professionnel = 0;
-  let social = 0;
-  let filled = 0;
-
-  rows.forEach(row => {
-    const name = row.querySelector('.support-name')?.value.trim();
-    const type = row.querySelector('.support-type')?.value;
-    const circle = row.querySelector('.support-circle')?.value;
-
-    if (name || type || circle) filled++;
-
-    if (type === 'émotionnel') emotional++;
-    if (type === 'pratique') practical++;
-    if (type === 'conseil') advice++;
-
-    if (circle === 'personnel') personnel++;
-    if (circle === 'professionnel') professionnel++;
-    if (circle === 'social') social++;
-  });
-
-  const summary = document.getElementById('network-summary');
-
-  if (filled === 0) {
-    summary.innerHTML = `
-      <strong>Lecture rapide :</strong><br>
-      Ajoute quelques personnes pour voir où ton réseau est déjà solide
-      et où tu pourrais le développer.
-    `;
-    return;
-  }
-
-  let weakPoints = [];
-  if (emotional === 0) weakPoints.push("soutien émotionnel");
-  if (practical === 0) weakPoints.push("aide pratique");
-  if (advice === 0) weakPoints.push("conseil");
-  if (professionnel === 0) weakPoints.push("cercle professionnel");
-
-  summary.innerHTML = `
-    <strong>Ton réseau actuel :</strong><br>
-    • ${filled} personne(s) repérée(s)<br>
-    • Soutien émotionnel : <strong>${emotional}</strong><br>
-    • Soutien pratique : <strong>${practical}</strong><br>
-    • Soutien conseil : <strong>${advice}</strong><br>
-    • Cercle personnel : <strong>${personnel}</strong> · professionnel : <strong>${professionnel}</strong> · social : <strong>${social}</strong><br><br>
-    ${
-      weakPoints.length
-        ? `👉 À renforcer en priorité : <strong>${weakPoints.join(", ")}</strong>.`
-        : `✅ Ton réseau est déjà diversifié. L’enjeu maintenant est de l’entretenir et de l’activer.`
-    }
-  `;
-}
-
-function saveNetworkAction() {
-  const action = document.getElementById('networkAction').value.trim();
-  if (!action) {
-    alert("Écris une action concrète pour renforcer ton réseau.");
-    return;
-  }
-
-  const box = document.getElementById('network-action-result');
-  box.style.display = 'block';
-  box.innerHTML = `
-    <strong>✅ Action validée</strong><br>
-    Dans le mois qui vient, je m’engage à : <em>${action}</em>
-  `;
-}
 
 function generatePitch() {
   const f1 = document.getElementById('force1').value.trim();
@@ -2040,6 +1475,18 @@ function copyPitch() {
   navigator.clipboard.writeText(text)
     .then(() => alert("Pitch copié."))
     .catch(() => alert("Impossible de copier automatiquement."));
+}
+
+function generateProfilMiniSynthese() {
+  const p = document.getElementById('profil-personnalite')?.value || '';
+  const f1 = document.getElementById('profil-force1')?.value || '';
+  const f2 = document.getElementById('profil-force2')?.value || '';
+  const f3 = document.getElementById('profil-force3')?.value || '';
+  const v = document.getElementById('profil-valeurs')?.value || '';
+  const b = document.getElementById('profil-besoins')?.value || '';
+  const d = document.getElementById('profil-direction')?.value || '';
+
+  return `Je me décris comme : ${p}. Mes forces principales sont : ${f1}, ${f2}, ${f3}. Mes valeurs importantes sont : ${v}. J’ai besoin de : ${b}. Une direction possible pour mon projet serait : ${d}.`;
 }
 
 const feedbacks = {
@@ -2111,67 +1558,6 @@ function shuffleScenarios() {
     [blocks[i], blocks[j]] = [blocks[j], blocks[i]];
   }
   blocks.forEach(block => container.appendChild(block));
-}
-
-const sortItems = [
-  { text: "Arriver 5 minutes avant l’heure prévue", type: "do" },
-  { text: "Garder son téléphone posé sur la table", type: "dont" },
-  { text: "Dire bonjour à chaque personne croisée", type: "do" },
-  { text: "Faire semblant d’avoir compris", type: "dont" },
-  { text: "Préparer quelques questions à l’avance", type: "do" },
-  { text: "Mâcher un chewing-gum", type: "dont" },
-  { text: "Vouvoyer son interlocuteur", type: "do" },
-  { text: "S’affaler sur sa chaise", type: "dont" }
-];
-let currentSortIndex = 0;
-
-function renderSortCard() {
-  const card = document.getElementById('sort-current-card');
-  if (!card) return;
-  if (currentSortIndex >= sortItems.length) {
-    card.textContent = "🎉 Bravo ! Votre code de conduite est prêt.";
-    const actions = document.querySelector('.sort-actions');
-    if (actions) actions.style.display = 'none';
-    return;
-  }
-  card.textContent = sortItems[currentSortIndex].text;
-}
-
-function handleSort(choice) {
-  const item = sortItems[currentSortIndex];
-  const card = document.getElementById('sort-current-card');
-
-  if (choice === item.type) {
-    const ul = document.getElementById(choice === 'do' ? 'list-do' : 'list-dont');
-    const li = document.createElement('li');
-    li.textContent = (choice === 'do' ? '✅ ' : '❌ ') + item.text;
-    ul.appendChild(li);
-    currentSortIndex++;
-    renderSortCard();
-  } else {
-    card.classList.remove('shake');
-    void card.offsetWidth;
-    card.classList.add('shake');
-  }
-}
-
-function submitEngagement() {
-  const p = document.getElementById('prenom').value.trim();
-  const f = document.getElementById('force').value.trim();
-  const a = document.getElementById('amelio').value.trim();
-  const o = document.getElementById('objectif').value.trim();
-
-  if (!p) {
-    alert("Écris ton prénom.");
-    return;
-  }
-
-  const res = document.getElementById('engResult');
-  res.innerHTML = `🤝 <strong>${p}</strong>, tu t’engages !<br>
-    ✅ Tu apportes : <em>${f || '…'}</em><br>
-    📈 Tu travailles : <em>${a || '…'}</em><br>
-    🎯 Ton objectif : <em>${o || '…'}</em>`;
-  res.style.display = 'block';
 }
 
 function switchTab(id) {
@@ -2303,10 +1689,19 @@ function generateRecap() {
 
   const out = document.getElementById('recap-output');
   out.style.display = 'block';
+
+  const syntheseProfil = generateProfilMiniSynthese();
+
   out.innerHTML = `
     <div style="background:var(--black); color:var(--yellow); font-family:'Poppins',sans-serif; font-weight:900; font-size:0.95rem; padding:12px 16px; border-radius:8px; margin-bottom:16px;">
       📄 FICHE D'ENQUÊTE MÉTIER — ${nom.toUpperCase()}
     </div>
+
+    <div style="background:#EDE7F6; border:1.5px solid #ccc; border-radius:8px; padding:10px 12px; margin-bottom:12px;">
+      <strong style="font-size:0.78rem; font-family:'Poppins',sans-serif;">🧭 Base de connaissance de soi</strong>
+      <p style="margin-top:4px; font-size:0.77rem;">${syntheseProfil}</p>
+    </div>
+
     <table style="width:100%; border-collapse:collapse; font-size:0.8rem; margin-bottom:16px;">
       <tr><td style="padding:5px 8px; font-weight:700; width:200px; background:#f5f5f5; border:1px solid #ddd;">Structure</td><td style="padding:5px 8px; border:1px solid #ddd;">${nom} <em style="color:#888; font-size:0.75rem;">(${structType})</em></td></tr>
       <tr><td style="padding:5px 8px; font-weight:700; background:#f5f5f5; border:1px solid #ddd;">Secteur / Domaine</td><td style="padding:5px 8px; border:1px solid #ddd;">${secteur}</td></tr>
@@ -2314,7 +1709,9 @@ function generateRecap() {
       <tr><td style="padding:5px 8px; font-weight:700; background:#f5f5f5; border:1px solid #ddd;">Date de visite</td><td style="padding:5px 8px; border:1px solid #ddd;">${date}</td></tr>
       <tr><td style="padding:5px 8px; font-weight:700; background:#f5f5f5; border:1px solid #ddd;">Métier(s) explorés</td><td style="padding:5px 8px; border:1px solid #ddd;">${metierStr}</td></tr>
     </table>
+
     ${qSelected.length ? `<div style="margin-bottom:12px;"><strong style="font-family:'Poppins',sans-serif; font-size:0.8rem;">Questions sélectionnées (${qSelected.length}) :</strong><ul style="margin-top:6px; padding-left:16px;">${qSelected.map(q=>`<li style="margin-bottom:3px;">${q}</li>`).join('')}</ul></div>` : ''}
+
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px;">
       <div style="background:#E0F7FA; border:1.5px solid #ccc; border-radius:8px; padding:10px 12px;">
         <strong style="font-size:0.78rem; font-family:'Poppins',sans-serif;">🔑 Points clés retenus</strong>
@@ -2333,10 +1730,12 @@ function generateRecap() {
         <p style="margin-top:4px; font-size:0.77rem;">${dev}</p>
       </div>
     </div>
+
     <div style="background:#F3E5F5; border:1.5px solid #ccc; border-radius:8px; padding:10px 12px; margin-bottom:10px;">
       <strong style="font-size:0.78rem; font-family:'Poppins',sans-serif;">✍️ Synthèse personnelle</strong>
       <p style="margin-top:4px; font-size:0.77rem;">${synthese}</p>
     </div>
+
     <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:10px;">
       <div style="background:#E8F5E9; border:1.5px solid #ccc; border-radius:8px; padding:8px 12px; flex:1; min-width:180px;">
         <strong style="font-size:0.77rem;">🌡️ Attractivité :</strong> ${attract}
@@ -2345,6 +1744,7 @@ function generateRecap() {
         <strong style="font-size:0.77rem;">🔄 Impact sur mon projet :</strong> ${impact}
       </div>
     </div>
+
     <div style="background:var(--yellow); border:2px solid var(--black); border-radius:8px; padding:10px 14px; font-family:'Poppins',sans-serif; font-weight:700; font-size:0.82rem;">
       🚀 Prochaine action : ${action} <span style="font-weight:400; margin-left:10px;">📅 RDV conseiller : ${rdv}</span>
     </div>
@@ -2352,13 +1752,12 @@ function generateRecap() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  addSupportRow();
-  addSupportRow();
   shuffleChoices();
   shuffleScenarios();
-  renderSortCard();
   if (document.getElementById('metiers-list')) addMetier();
 });
 </script>
+</body>
+</html>
 </body>
 </html>
