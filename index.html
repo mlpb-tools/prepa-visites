@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LS4YOU – Image de soi / Image publique</title>
+<title>LS4YOU – Réseau, image de soi et posture professionnelle</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -13,6 +13,7 @@
     --mint:   #66BB6A;
     --orange: #FB8C00;
     --pink:   #E91E8C;
+    --violet: #7E57C2;
     --black:  #1A1A1A;
     --white:  #FFFDF7;
     --shadow: 4px 4px 0px var(--black);
@@ -28,7 +29,6 @@
     min-height: 100vh;
   }
 
-  /* ───── HEADER ───── */
   .header {
     background: var(--red);
     padding: 0;
@@ -94,14 +94,12 @@
     transform: rotate(15deg);
   }
 
-  /* ───── MAIN ───── */
   .main {
     max-width: 960px;
     margin: 0 auto;
     padding: 28px 20px 60px;
   }
 
-  /* ───── INTRO CARD ───── */
   .intro-card {
     background: #FFF9E6;
     border: 3px solid var(--black);
@@ -113,7 +111,10 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
-  @media (max-width: 640px) { .intro-card { grid-template-columns: 1fr; } }
+  @media (max-width: 760px) {
+    .intro-card { grid-template-columns: 1fr; }
+  }
+
   .intro-card h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
@@ -149,42 +150,6 @@
   .meta-pill.turq  { background: #E0F7FA; }
   .meta-pill.mint  { background: #F1F8E9; }
 
-  /* ───── SECTION TITLE ───── */
-  .section-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 16px;
-  }
-  .section-label .num {
-    background: var(--black);
-    color: var(--yellow);
-    font-family: 'Poppins', sans-serif;
-    font-weight: 900;
-    font-size: 1.1rem;
-    width: 36px; height: 36px;
-    display: flex; align-items: center; justify-content: center;
-    border-radius: 8px;
-    flex-shrink: 0;
-  }
-  .section-label h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.05rem;
-    font-weight: 800;
-    color: var(--black);
-  }
-  .section-label .time {
-    background: var(--yellow);
-    border: 2px solid var(--black);
-    border-radius: 20px;
-    padding: 2px 10px;
-    font-size: 0.72rem;
-    font-weight: 700;
-    box-shadow: 2px 2px 0 var(--black);
-    white-space: nowrap;
-  }
-
-  /* ───── PHASE WRAPPER ───── */
   .phase {
     background: #fff;
     border: 3px solid var(--black);
@@ -205,6 +170,9 @@
   .phase-header.turq   { background: var(--turq);   color: #fff; }
   .phase-header.mint   { background: var(--mint);   color: #fff; }
   .phase-header.orange { background: var(--orange); color: #fff; }
+  .phase-header.pink   { background: var(--pink);   color: #fff; }
+  .phase-header.violet { background: var(--violet); color: #fff; }
+
   .phase-icon {
     font-size: 1.8rem;
     flex-shrink: 0;
@@ -220,7 +188,7 @@
   }
   .phase-title small {
     font-size: 0.75rem;
-    opacity: 0.85;
+    opacity: 0.88;
     font-weight: 600;
   }
   .phase-duration {
@@ -235,10 +203,41 @@
     padding: 22px 24px;
   }
 
-  /* ───── CARDS GRID ───── */
+  .phase-intro {
+    font-size:0.84rem;
+    line-height:1.6;
+    margin-bottom:16px;
+  }
+  .phase-goal {
+    display:inline-block;
+    margin-bottom:14px;
+    padding:6px 12px;
+    background:#fff;
+    border:2px solid var(--black);
+    border-radius:999px;
+    box-shadow:2px 2px 0 var(--black);
+    font-size:0.75rem;
+    font-weight:700;
+  }
+  .phase-consigne {
+    font-size:0.84rem;
+    line-height:1.6;
+    margin-bottom:16px;
+    padding:12px 16px;
+    border:2px solid var(--black);
+    border-radius:10px;
+    box-shadow:var(--shadow);
+  }
+  .phase-consigne.yellow { background:#FFFDE7; }
+  .phase-consigne.pink { background:#FCE4EC; }
+  .phase-consigne.turq { background:#E0F7FA; }
+  .phase-consigne.orange { background:#FFF3E0; }
+  .phase-consigne.mint { background:#F1F8E9; }
+  .phase-consigne.violet { background:#EDE7F6; }
+
   .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
     gap: 14px;
     margin-top: 14px;
   }
@@ -247,9 +246,9 @@
     border-radius: 12px;
     padding: 14px 16px;
     box-shadow: 3px 3px 0 var(--black);
-    cursor: pointer;
     transition: transform 0.15s, box-shadow 0.15s;
     position: relative;
+    background: #fff;
   }
   .card:hover {
     transform: translateY(-2px);
@@ -260,6 +259,7 @@
   .card.turq   { background: #E0F7FA; }
   .card.mint   { background: #F1F8E9; }
   .card.orange { background: #FFF3E0; }
+  .card.pink   { background: #FCE4EC; }
   .card-icon { font-size: 1.5rem; margin-bottom: 6px; }
   .card h4 {
     font-family: 'Poppins', sans-serif;
@@ -269,11 +269,355 @@
   }
   .card p {
     font-size: 0.75rem;
-    line-height: 1.4;
+    line-height: 1.45;
     color: #444;
   }
 
-  /* ───── SCENARIO ───── */
+  .tip-box {
+    border: 2px solid var(--black);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-top: 18px;
+  }
+  .tip-box-header {
+    background: var(--black);
+    color: var(--yellow);
+    padding: 9px 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .tip-box-body {
+    padding: 14px 16px;
+    background: #FFFDE7;
+    font-size: 0.79rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  .tip-box-body ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .network-hero {
+    background:#FFF3E0;
+    border:2px solid var(--black);
+    border-radius:12px;
+    padding:14px 16px;
+    box-shadow:var(--shadow);
+    font-size:0.83rem;
+    line-height:1.6;
+    margin-bottom:16px;
+  }
+
+  .network-grid {
+    display:grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap:16px;
+  }
+  @media (max-width: 760px) {
+    .network-grid { grid-template-columns: 1fr; }
+  }
+
+  .network-map {
+    background:#fff;
+    border:3px solid var(--black);
+    border-radius:14px;
+    padding:18px;
+    box-shadow:var(--shadow);
+  }
+
+  .network-center {
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    margin:0 auto 18px;
+    background:var(--turq);
+    color:#fff;
+    border:3px solid var(--black);
+    box-shadow:var(--shadow);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-family:'Poppins',sans-serif;
+    font-weight:900;
+    font-size:0.95rem;
+    line-height:1.2;
+  }
+
+  .network-rings {
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .network-ring {
+    border:2px dashed var(--black);
+    border-radius:12px;
+    padding:12px;
+    background:#fafafa;
+  }
+
+  .network-ring h4 {
+    font-family:'Poppins',sans-serif;
+    font-size:0.8rem;
+    font-weight:800;
+    margin-bottom:8px;
+  }
+
+  .network-tags {
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+
+  .network-tag {
+    padding:6px 10px;
+    border:2px solid var(--black);
+    border-radius:999px;
+    background:#fff;
+    font-size:0.74rem;
+    font-weight:700;
+    box-shadow:2px 2px 0 var(--black);
+  }
+
+  .network-side {
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+
+  .support-card {
+    background:#fff;
+    border:2px solid var(--black);
+    border-radius:12px;
+    padding:14px;
+    box-shadow:var(--shadow);
+  }
+
+  .support-card h4 {
+    font-family:'Poppins',sans-serif;
+    font-size:0.82rem;
+    font-weight:800;
+    margin-bottom:8px;
+  }
+
+  .support-list {
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    margin-top:8px;
+  }
+
+  .support-row {
+    display:grid;
+    grid-template-columns: 1.1fr 1fr 1fr auto;
+    gap:8px;
+    align-items:center;
+  }
+  @media (max-width: 760px) {
+    .support-row { grid-template-columns: 1fr; }
+  }
+
+  .support-mini {
+    font-size:0.73rem;
+    color:#555;
+    line-height:1.5;
+  }
+
+  .support-btn-add {
+    width:100%;
+    background:#fff;
+    border:2px dashed var(--black);
+    border-radius:8px;
+    padding:9px 12px;
+    font-family:'Poppins',sans-serif;
+    font-weight:700;
+    font-size:0.78rem;
+    cursor:pointer;
+    margin-top:10px;
+  }
+
+  .support-del {
+    width:34px;
+    height:34px;
+    border-radius:8px;
+    border:2px solid var(--black);
+    background:#FFEBEE;
+    box-shadow:2px 2px 0 var(--black);
+    cursor:pointer;
+    font-weight:900;
+  }
+
+  .network-summary {
+    background:#E8F5E9;
+    border:2px solid var(--black);
+    border-radius:12px;
+    padding:12px 14px;
+    box-shadow:var(--shadow);
+    font-size:0.79rem;
+    line-height:1.6;
+  }
+
+  .network-action-box {
+    display:none;
+    background:var(--yellow);
+    border:2px solid var(--black);
+    border-radius:12px;
+    padding:14px;
+    box-shadow:var(--shadow);
+    font-size:0.82rem;
+    line-height:1.6;
+    margin-top:12px;
+  }
+
+  .miroir-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+    border: 3px solid var(--black);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-top: 12px;
+  }
+  .miroir-header {
+    padding: 10px 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-align: center;
+    border-bottom: 2px solid var(--black);
+  }
+  .miroir-header.left  { background: var(--turq); color: #fff; border-right: 1.5px solid var(--black); }
+  .miroir-header.right { background: var(--orange); color: #fff; border-left: 1.5px solid var(--black); }
+  .miroir-row { display: contents; }
+  .miroir-cell {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .miroir-cell.left  { background: #E0F7FA; border-right: 1.5px solid #ccc; }
+  .miroir-cell.right { background: #FFF3E0; }
+
+  .enq-label {
+    display:block;
+    font-family:'Poppins',sans-serif;
+    font-size:0.78rem;
+    font-weight:700;
+    margin-bottom:5px;
+    color:var(--black);
+  }
+  .enq-input {
+    width:100%;
+    border:2px solid var(--black);
+    border-radius:8px;
+    padding:9px 12px;
+    font-family:'Montserrat',sans-serif;
+    font-size:0.82rem;
+    background:#fff;
+    outline:none;
+    transition:box-shadow 0.15s;
+    box-shadow:2px 2px 0 var(--black);
+  }
+  .enq-input:focus {
+    box-shadow:4px 4px 0 var(--turq);
+    border-color:var(--turq);
+  }
+  .enq-textarea {
+    width:100%;
+    border:2px solid var(--black);
+    border-radius:8px;
+    padding:9px 12px;
+    font-family:'Montserrat',sans-serif;
+    font-size:0.82rem;
+    background:#fff;
+    outline:none;
+    resize:vertical;
+    transition:box-shadow 0.15s;
+    box-shadow:2px 2px 0 var(--black);
+  }
+  .enq-textarea:focus {
+    box-shadow:4px 4px 0 var(--turq);
+    border-color:var(--turq);
+  }
+
+  .btn-engage {
+    background: var(--yellow);
+    color: var(--black);
+    border: 2.5px solid var(--black);
+    border-radius: 8px;
+    padding: 11px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 0.88rem;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 var(--black);
+    transition: transform 0.1s, box-shadow 0.1s;
+  }
+  .btn-engage:hover {
+    transform: translateY(-2px);
+    box-shadow: 5px 5px 0 var(--black);
+  }
+
+  .pitch-box {
+    display:none;
+    margin-top:12px;
+    padding:14px;
+    border:2px solid var(--black);
+    border-radius:10px;
+    background:#fff;
+    box-shadow: var(--shadow);
+  }
+  .pitch-level {
+    display:inline-block;
+    margin-bottom:8px;
+    padding:5px 10px;
+    border-radius:20px;
+    border:2px solid var(--black);
+    background:var(--yellow);
+    font-family:'Poppins',sans-serif;
+    font-weight:800;
+    font-size:0.72rem;
+  }
+
+  .eval-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .eval-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .eval-item label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .star-row { display: flex; gap: 4px; margin-top: 2px; }
+  .star {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.1s;
+    filter: grayscale(1);
+    opacity: 0.4;
+  }
+  .star:hover, .star.active {
+    filter: none;
+    opacity: 1;
+    transform: scale(1.15);
+  }
+
   .scenario-block {
     border: 2px solid var(--black);
     border-radius: 12px;
@@ -320,10 +664,6 @@
     box-shadow: 2px 2px 0 var(--black);
   }
   .choice:hover { transform: translateX(3px); }
-  .choice.correct { background: #E8F5E9; border-color: var(--mint); }
-  .choice.wrong   { background: #FFEBEE; border-color: var(--red); }
-  .choice.selected-good { background: #C8E6C9; }
-  .choice.selected-bad  { background: #FFCDD2; }
   .choice-letter {
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
@@ -338,8 +678,8 @@
   }
   .choice-feedback {
     display: none;
-    margin-top: 4px;
-    padding: 6px 10px;
+    margin-top: 8px;
+    padding: 8px 10px;
     border-radius: 6px;
     font-size: 0.73rem;
     font-weight: 600;
@@ -348,136 +688,95 @@
   .choice-feedback.good { background: #E8F5E9; display: block; }
   .choice-feedback.bad  { background: #FFEBEE; display: block; }
 
-  /* ───── MIROIR ACTIVITY ───── */
-  .miroir-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3px;
+  .sort-game {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 24px 16px;
+    border-radius: 12px;
+    border: 2px dashed #bbb;
+    margin-top: 10px;
+  }
+  .sort-card {
+    background: #fff;
     border: 3px solid var(--black);
     border-radius: 12px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    margin-top: 12px;
-  }
-  .miroir-header {
-    padding: 10px 16px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    font-size: 0.85rem;
+    padding: 24px 16px;
     text-align: center;
-    border-bottom: 2px solid var(--black);
-  }
-  .miroir-header.left  { background: var(--turq); color: #fff; border-right: 1.5px solid var(--black); }
-  .miroir-header.right { background: var(--orange); color: #fff; border-left: 1.5px solid var(--black); }
-  .miroir-row {
-    display: contents;
-  }
-  .miroir-cell {
-    padding: 8px 14px;
-    font-size: 0.8rem;
-    border-bottom: 1px solid #e0e0e0;
-    display: flex; align-items: center; gap: 6px;
-  }
-  .miroir-cell.left  { background: #E0F7FA; border-right: 1.5px solid #ccc; }
-  .miroir-cell.right { background: #FFF3E0; }
-  .miroir-cell:last-child { border-bottom: none; }
-
-  /* ───── SLIDER EVAL ───── */
-  .eval-items {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 12px;
-  }
-  .eval-item {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-  .eval-item label {
-    font-size: 0.82rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
     font-weight: 700;
-    display: flex; align-items: center; gap: 8px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, border-color 0.2s;
+    line-height: 1.4;
   }
-  .eval-item label span.ico { font-size: 1rem; }
-  .star-row { display: flex; gap: 4px; margin-top: 2px; }
-  .star {
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: transform 0.1s;
-    filter: grayscale(1);
-    opacity: 0.4;
-  }
-  .star:hover, .star.active {
-    filter: none;
-    opacity: 1;
-    transform: scale(1.15);
-  }
-
-  /* ───── JEU DU TRI (PHASE 4) ───── */
-  .sort-game { display: flex; flex-direction: column; gap: 16px; align-items: center; background: #f9f9f9; padding: 24px 16px; border-radius: 12px; border: 2px dashed #bbb; margin-top: 10px; }
-  .sort-card { background: #fff; border: 3px solid var(--black); border-radius: 12px; padding: 24px 16px; text-align: center; font-family: 'Poppins', sans-serif; font-size: 1.05rem; font-weight: 700; width: 100%; max-width: 450px; box-shadow: var(--shadow); transition: transform 0.2s, border-color 0.2s; line-height: 1.4; }
   .sort-card.shake { animation: shake 0.4s; }
   .sort-actions { display: flex; gap: 14px; width: 100%; max-width: 450px; }
-  .sort-btn { flex: 1; padding: 12px; border: 3px solid var(--black); border-radius: 10px; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 0.95rem; cursor: pointer; box-shadow: 3px 3px 0 var(--black); transition: transform 0.1s; }
-  .sort-btn:active { transform: translateY(3px); box-shadow: 0px 0px 0 var(--black); }
+  .sort-btn {
+    flex: 1;
+    padding: 12px;
+    border: 3px solid var(--black);
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 0.95rem;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 var(--black);
+    transition: transform 0.1s;
+  }
   .sort-btn.do { background: var(--mint); color: #fff; }
   .sort-btn.dont { background: var(--red); color: #fff; }
-  
-  .sorted-lists { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; width: 100%; margin-top: 20px; }
-  @media(max-width: 560px) { .sorted-lists { grid-template-columns: 1fr; } }
-  .sorted-col { background: #fff; border: 2px solid var(--black); border-radius: 10px; padding: 14px; }
-  .sorted-col h4 { font-family: 'Poppins', sans-serif; font-size: 0.9rem; margin-bottom: 12px; text-align: center; padding-bottom: 8px; border-bottom: 2px dashed #ccc; }
-  .sorted-col.col-do h4 { color: #2E7D32; }
-  .sorted-col.col-dont h4 { color: #C62828; }
-  .sorted-col ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; }
-  .sorted-col ul li { font-size: 0.78rem; padding: 8px 10px; border-radius: 6px; background: #f5f5f5; border: 1px solid #ddd; animation: bounce-in 0.3s ease; line-height: 1.3; }
 
-  @keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-6px) rotate(-2deg); }
-    75% { transform: translateX(6px) rotate(2deg); }
+  .sorted-lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    width: 100%;
+    margin-top: 20px;
   }
-
-  /* ───── TIP BOX ───── */
-  .tip-box {
+  @media (max-width: 760px) {
+    .sorted-lists { grid-template-columns: 1fr; }
+  }
+  .sorted-col {
+    background: #fff;
     border: 2px solid var(--black);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    margin-top: 18px;
+    border-radius: 10px;
+    padding: 14px;
   }
-  .tip-box-header {
-    background: var(--black);
-    color: var(--yellow);
-    padding: 9px 16px;
+  .sorted-col h4 {
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 0.8rem;
-    display: flex; align-items: center; gap: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    text-align: center;
+    padding-bottom: 8px;
+    border-bottom: 2px dashed #ccc;
   }
-  .tip-box-body {
-    padding: 14px 16px;
-    background: #FFFDE7;
-    font-size: 0.79rem;
-    line-height: 1.6;
-    color: #333;
-  }
-  .tip-box-body ul {
+  .sorted-col ul {
     list-style: none;
     padding: 0;
-    display: flex; flex-direction: column; gap: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
-  .tip-box-body ul li { display: flex; align-items: flex-start; gap: 6px; }
+  .sorted-col ul li {
+    font-size: 0.78rem;
+    padding: 8px 10px;
+    border-radius: 6px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+  }
 
-  /* ───── ENGAGEMENT ───── */
   .engagement-card {
     background: var(--red);
     border: 3px solid var(--black);
     border-radius: 16px;
     box-shadow: var(--shadow-lg);
     padding: 24px;
-    margin-top: 28px;
+    margin-top: 10px;
     text-align: center;
     color: #fff;
   }
@@ -505,22 +804,7 @@
     font-weight: 600;
     outline: none;
   }
-  .engagement-form input::placeholder { color: rgba(255,255,255,0.6); }
-  .engagement-form input:focus { background: rgba(255,255,255,0.25); }
-  .btn-engage {
-    background: var(--yellow);
-    color: var(--black);
-    border: 2.5px solid var(--black);
-    border-radius: 8px;
-    padding: 11px 20px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    font-size: 0.88rem;
-    cursor: pointer;
-    box-shadow: 3px 3px 0 var(--black);
-    transition: transform 0.1s, box-shadow 0.1s;
-  }
-  .btn-engage:hover { transform: translateY(-2px); box-shadow: 5px 5px 0 var(--black); }
+  .engagement-form input::placeholder { color: rgba(255,255,255,0.72); }
   .engagement-result {
     display: none;
     background: var(--yellow);
@@ -533,49 +817,42 @@
     font-weight: 700;
   }
 
-  /* ───── PROGRESS BAR (top) ───── */
-  .progress-bar-wrapper {
-    background: #fff;
-    border-bottom: 3px solid var(--black);
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-  .progress-steps {
-    display: flex;
-    gap: 6px;
-    flex: 1;
-  }
-  .step-dot {
-    flex: 1;
-    height: 8px;
-    border-radius: 4px;
-    border: 1.5px solid var(--black);
-    background: #e0e0e0;
-    transition: background 0.3s;
-  }
-  .step-dot.active { background: var(--red); }
-  .progress-label {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: var(--black);
-    white-space: nowrap;
-  }
+  .struct-btn { background:#fff; border:2px solid var(--black); border-radius:8px; padding:8px 14px; font-family:'Poppins',sans-serif; font-weight:700; font-size:0.78rem; cursor:pointer; box-shadow:2px 2px 0 var(--black); transition:all 0.15s; }
+  .struct-btn:hover { transform:translateY(-1px); box-shadow:3px 3px 0 var(--black); }
+  .struct-btn.selected { background:var(--turq); color:#fff; }
 
-  /* ───── DIVIDER ───── */
-  .divider {
-    height: 3px;
-    background: repeating-linear-gradient(90deg, var(--black) 0 8px, transparent 8px 14px);
-    margin: 28px 0;
-    opacity: 0.2;
-  }
+  .metier-row { display:flex; gap:8px; align-items:center; }
+  .metier-row input { flex:1; }
+  .metier-del { background:#FFEBEE; border:2px solid var(--black); border-radius:6px; width:30px; height:30px; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:0.9rem; flex-shrink:0; box-shadow:2px 2px 0 var(--black); }
+  .metier-del:hover { background:var(--red); color:#fff; }
 
-  /* ───── FOOTER ───── */
+  .enq-tab { flex:1; padding:12px 8px; background:#f5f5f5; border:none; font-family:'Poppins',sans-serif; font-weight:700; font-size:0.72rem; cursor:pointer; transition:background 0.15s; display:flex; align-items:center; justify-content:center; gap:6px; text-align:center; }
+  .enq-tab span { background:var(--black); color:var(--yellow); width:20px; height:20px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:0.68rem; flex-shrink:0; }
+  .enq-tab.active { background:var(--turq); color:#fff; }
+  .enq-tab.active span { background:#fff; color:var(--turq); }
+
+  .enq-panel { display:block; }
+  .enq-panel.hidden { display:none; }
+
+  .qblock { border:2px solid var(--black); border-radius:12px; overflow:hidden; box-shadow:var(--shadow); margin-bottom:14px; }
+  .qblock-header { padding:11px 16px; font-family:'Poppins',sans-serif; font-weight:800; font-size:0.82rem; color:#fff; display:flex; align-items:center; gap:8px; border-bottom:2px solid var(--black); }
+  .q-counter { margin-left:auto; background:rgba(255,255,255,0.2); border-radius:20px; padding:2px 10px; font-size:0.7rem; }
+  .qblock-body { background:#fff; }
+  .qitem { display:flex; align-items:flex-start; gap:10px; padding:10px 16px; font-size:0.8rem; line-height:1.4; border-bottom:1px solid #f0f0f0; cursor:pointer; transition:background 0.1s; }
+  .qitem:last-child { border-bottom:none; }
+  .qitem:hover { background:#f9f9f9; }
+  .qitem.selected { background:#E0F7FA; }
+  .qcheck { font-size:1rem; flex-shrink:0; margin-top:-1px; }
+
+  .chk-section-title { font-family:'Poppins',sans-serif; font-weight:800; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:8px; color:var(--black); padding-bottom:4px; border-bottom:2px dashed #ccc; }
+  .chk-item { display:flex; align-items:flex-start; gap:10px; padding:9px 12px; margin-bottom:6px; background:#fff; border:2px solid var(--black); border-radius:8px; font-size:0.78rem; line-height:1.4; cursor:pointer; box-shadow:2px 2px 0 var(--black); transition:all 0.15s; }
+  .chk-item.checked { background:#E8F5E9; border-color:var(--mint); box-shadow:2px 2px 0 var(--mint); }
+  .chk-box { font-size:1rem; flex-shrink:0; }
+
+  .attract-btn { background:#fff; border:2px solid var(--black); border-radius:8px; padding:7px 12px; font-family:'Poppins',sans-serif; font-weight:600; font-size:0.75rem; cursor:pointer; box-shadow:2px 2px 0 var(--black); transition:all 0.15s; }
+  .attract-btn:hover { transform:translateY(-1px); box-shadow:3px 3px 0 var(--black); }
+  .attract-btn.selected { background:var(--turq); color:#fff; border-color:var(--black); }
+
   .footer {
     background: var(--black);
     color: var(--yellow);
@@ -588,551 +865,606 @@
     text-transform: uppercase;
   }
 
-  .struct-btn { background:#fff; border:2px solid var(--black); border-radius:8px; padding:8px 14px; font-family:'Poppins',sans-serif; font-weight:700; font-size:0.78rem; cursor:pointer; box-shadow:2px 2px 0 var(--black); transition:all 0.15s; }
-  .struct-btn:hover { transform:translateY(-1px); box-shadow:3px 3px 0 var(--black); }
-  .struct-btn.selected { background:var(--turq); color:#fff; }
-  .metier-row { display:flex; gap:8px; align-items:center; }
-  .metier-row input { flex:1; }
-  .metier-del { background:#FFEBEE; border:2px solid var(--black); border-radius:6px; width:30px; height:30px; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:0.9rem; flex-shrink:0; box-shadow:2px 2px 0 var(--black); }
-  .metier-del:hover { background:var(--red); color:#fff; }
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-6px) rotate(-2deg); }
+    75% { transform: translateX(6px) rotate(2deg); }
+  }
 
-  /* ───── ENQUÊTE TABS ───── */
-  .enq-tab { flex:1; padding:12px 8px; background:#f5f5f5; border:none; font-family:'Poppins',sans-serif; font-weight:700; font-size:0.72rem; cursor:pointer; transition:background 0.15s; display:flex; align-items:center; justify-content:center; gap:6px; text-align:center; }
-  .enq-tab span { background:var(--black); color:var(--yellow); width:20px; height:20px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:0.68rem; flex-shrink:0; }
-  .enq-tab.active { background:var(--turq); color:#fff; }
-  .enq-tab.active span { background:#fff; color:var(--turq); }
-  .enq-tab:hover:not(.active) { background:#e0e0e0; }
-  .enq-panel { display:block; }
-  .enq-panel.hidden { display:none; }
-
-  /* ───── ENQUÊTE FORM ───── */
-  .enq-label { display:block; font-family:'Poppins',sans-serif; font-size:0.78rem; font-weight:700; margin-bottom:5px; color:var(--black); }
-  .enq-input { width:100%; border:2px solid var(--black); border-radius:8px; padding:9px 12px; font-family:'Montserrat',sans-serif; font-size:0.82rem; background:#fff; outline:none; transition:box-shadow 0.15s; box-shadow:2px 2px 0 var(--black); }
-  .enq-input:focus { box-shadow:4px 4px 0 var(--turq); border-color:var(--turq); }
-  .enq-textarea { width:100%; border:2px solid var(--black); border-radius:8px; padding:9px 12px; font-family:'Montserrat',sans-serif; font-size:0.82rem; background:#fff; outline:none; resize:vertical; transition:box-shadow 0.15s; box-shadow:2px 2px 0 var(--black); }
-  .enq-textarea:focus { box-shadow:4px 4px 0 var(--turq); border-color:var(--turq); }
-  .enq-btn-next { background:var(--turq); color:#fff; border:2.5px solid var(--black); border-radius:8px; padding:10px 20px; font-family:'Poppins',sans-serif; font-weight:800; font-size:0.83rem; cursor:pointer; box-shadow:3px 3px 0 var(--black); transition:transform 0.1s,box-shadow 0.1s; }
-  .enq-btn-next:hover { transform:translateY(-2px); box-shadow:5px 5px 0 var(--black); }
-
-  /* ───── QUESTION BLOCKS ───── */
-  .qblock { border:2px solid var(--black); border-radius:12px; overflow:hidden; box-shadow:var(--shadow); margin-bottom:14px; }
-  .qblock-header { padding:11px 16px; font-family:'Poppins',sans-serif; font-weight:800; font-size:0.82rem; color:#fff; display:flex; align-items:center; gap:8px; border-bottom:2px solid var(--black); }
-  .q-counter { margin-left:auto; background:rgba(255,255,255,0.2); border-radius:20px; padding:2px 10px; font-size:0.7rem; }
-  .qblock-body { background:#fff; }
-  .qitem { display:flex; align-items:flex-start; gap:10px; padding:10px 16px; font-size:0.8rem; line-height:1.4; border-bottom:1px solid #f0f0f0; cursor:pointer; transition:background 0.1s; }
-  .qitem:last-child { border-bottom:none; }
-  .qitem:hover { background:#f9f9f9; }
-  .qitem.selected { background:#E0F7FA; }
-  .qcheck { font-size:1rem; flex-shrink:0; margin-top:-1px; }
-
-  /* ───── CHECKLIST ───── */
-  .chk-section-title { font-family:'Poppins',sans-serif; font-weight:800; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:8px; color:var(--black); padding-bottom:4px; border-bottom:2px dashed #ccc; }
-  .chk-item { display:flex; align-items:flex-start; gap:10px; padding:9px 12px; margin-bottom:6px; background:#fff; border:2px solid var(--black); border-radius:8px; font-size:0.78rem; line-height:1.4; cursor:pointer; box-shadow:2px 2px 0 var(--black); transition:all 0.15s; }
-  .chk-item.checked { background:#E8F5E9; border-color:var(--mint); box-shadow:2px 2px 0 var(--mint); }
-  .chk-box { font-size:1rem; flex-shrink:0; }
-
-  /* ───── ATTRACT BUTTONS ───── */
-  .attract-btn { background:#fff; border:2px solid var(--black); border-radius:8px; padding:7px 12px; font-family:'Poppins',sans-serif; font-weight:600; font-size:0.75rem; cursor:pointer; box-shadow:2px 2px 0 var(--black); transition:all 0.15s; }
-  .attract-btn:hover { transform:translateY(-1px); box-shadow:3px 3px 0 var(--black); }
-  .attract-btn.selected { background:var(--turq); color:#fff; border-color:var(--black); }
-
-  /* ───── ANIMATIONS ───── */
   @keyframes bounce-in {
     0%   { transform: scale(0.8); opacity: 0; }
     70%  { transform: scale(1.05); }
     100% { transform: scale(1); opacity: 1; }
   }
   .bounce { animation: bounce-in 0.4s ease forwards; }
-
-  .hidden { display: none !important; }
-
-  /* ───── TOOLTIP ───── */
-  .tooltip {
-    position: relative;
-    display: inline-block;
-    cursor: help;
-    border-bottom: 2px dashed var(--red);
-  }
-  .tooltip .tt {
-    visibility: hidden;
-    background: var(--black);
-    color: var(--yellow);
-    font-size: 0.72rem;
-    font-weight: 600;
-    border-radius: 6px;
-    padding: 6px 10px;
-    position: absolute;
-    z-index: 10;
-    bottom: 125%; left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    box-shadow: var(--shadow);
-  }
-  .tooltip:hover .tt { visibility: visible; }
+  .hidden { display:none !important; }
 </style>
 </head>
 <body>
 
-<!-- STICKY PROGRESS -->
-<div class="progress-bar-wrapper">
-  <span class="progress-label">Atelier LS4YOU</span>
-  <div class="progress-steps" id="progressDots">
-    <div class="step-dot active"></div>
-    <div class="step-dot"></div>
-    <div class="step-dot"></div>
-    <div class="step-dot"></div>
-    <div class="step-dot"></div>
-  </div>
-  <span class="progress-label" id="timeLeft">⏱ 1h30</span>
-</div>
-
-<!-- HEADER -->
 <div class="header">
   <div class="header-inner">
-    <div class="header-badge">🪞</div>
+    <div class="header-badge">🕸️</div>
     <div class="header-text">
-      <h1>Image de soi<br><span>vs image publique</span></h1>
+      <h1>Réseau, image de soi<br><span>et posture professionnelle</span></h1>
       <div class="header-meta">
         <span class="tag solid">LS4YOU</span>
-        <span class="tag">Personnalité</span>
-        <span class="tag">Posture professionnelle</span>
-        <span class="tag">Enquête professionnelle</span>
+        <span class="tag">Réseau de soutien</span>
+        <span class="tag">Auto-marketing</span>
+        <span class="tag">Entreprise</span>
       </div>
     </div>
   </div>
-  <div class="header-deco">🧩</div>
+  <div class="header-deco">🤝</div>
 </div>
 
-<!-- MAIN -->
 <div class="main">
 
-  <!-- INTRO -->
   <div class="intro-card">
     <div>
       <h2>🎯 Description de l'atelier</h2>
       <p>
-        Les participants explorent la perception qu'ils ont d'eux-mêmes et la comparent à celle que les autres ont d'eux.
-        Avant de partir en <strong>enquête professionnelle dans une structure</strong> (entreprise, association ou institution), ils identifient leur posture, leurs forces,
-        et les points à ajuster pour se comporter de manière adaptée.
+        Les participants comprennent d’abord l’importance du <strong>réseau social et professionnel</strong>
+        pour accéder à l’entreprise, puis identifient les personnes ressources qui peuvent les soutenir.
+        Ils travaillent ensuite leur <strong>image de soi</strong>, leur <strong>marque personnelle</strong>
+        et leur <strong>posture professionnelle</strong> afin de préparer au mieux une visite,
+        une immersion, un stage ou une rencontre avec un employeur.
       </p>
     </div>
     <div>
       <h2>📋 Déroulé</h2>
       <div class="meta-row">
-        <div class="meta-pill red">🕐 1h30</div>
+        <div class="meta-pill red">🕐 2h00 + enquête métier</div>
         <div class="meta-pill yellow">👥 Groupe</div>
-        <div class="meta-pill turq">🏢 Présentiel</div>
-        <div class="meta-pill mint">🎓 Compétence : Posture professionnelle</div>
+        <div class="meta-pill turq">🏢 Présentiel / distanciel</div>
+        <div class="meta-pill mint">🎓 Réseau + posture + auto-marketing</div>
       </div>
       <div style="margin-top:12px; font-size:0.82rem; line-height:1.6; color:#444;">
-        5 phases progressives · Jeu de miroir · Scénarios · Code de conduite · Engagement individuel
+        Réseau social et professionnel · réseau de soutien · image de soi · marque personnelle · savoir-être · scénarios · engagement · enquête métier
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 0 -->
+  <div class="phase" id="phase0">
+    <div class="phase-header red">
+      <div class="phase-icon">🕸️</div>
+      <div class="phase-title">
+        <h3>Phase 0 · Pourquoi le réseau compte</h3>
+        <small>Comprendre que l’accès à l’entreprise passe aussi par les relations</small>
+      </div>
+      <div class="phase-duration">10 min</div>
+    </div>
+    <div class="phase-body">
+      <div class="phase-intro">
+        Cette phase permet de comprendre qu’on n’accède pas à l’entreprise uniquement avec un CV ou une motivation personnelle.
+        Le réseau social et professionnel joue un rôle important pour obtenir des informations, être conseillé, rencontrer des personnes ressources
+        et accéder plus facilement à des opportunités.
+      </div>
+      <div class="phase-goal">🎯 Objectif : comprendre l’importance du réseau</div>
+      <div class="phase-consigne yellow">
+        👉 <strong>Consigne :</strong> Réfléchis aux moments où quelqu’un t’a déjà aidé à avancer :
+        pour comprendre un métier, reprendre confiance, obtenir une information, trouver un stage, te déplacer ou rencontrer une bonne personne.
+        L’objectif est de voir que le réseau est déjà présent dans la vie quotidienne, même quand on ne le nomme pas comme ça.
+      </div>
+
+      <div class="network-hero">
+        👉 <strong>Idée clé :</strong> on n’avance pas seul.
+        Pour découvrir un métier, trouver une immersion, être rassuré, obtenir un conseil,
+        poser une question ou rebondir après un refus, on s’appuie souvent sur des personnes autour de soi.
+      </div>
+
+      <div class="cards-grid">
+        <div class="card yellow">
+          <div class="card-icon">💬</div>
+          <h4>Soutien émotionnel</h4>
+          <p>Des personnes qui encouragent, rassurent et redonnent confiance quand on doute.</p>
+        </div>
+        <div class="card turq">
+          <div class="card-icon">🛠️</div>
+          <h4>Soutien pratique</h4>
+          <p>Des personnes qui aident concrètement : transport, relecture, accompagnement, organisation.</p>
+        </div>
+        <div class="card mint">
+          <div class="card-icon">🧭</div>
+          <h4>Soutien conseil</h4>
+          <p>Des personnes qui donnent des idées, des infos, des retours ou orientent vers une opportunité.</p>
+        </div>
+        <div class="card orange">
+          <div class="card-icon">🚪</div>
+          <h4>Ouverture vers l’entreprise</h4>
+          <p>Un contact, une recommandation, une rencontre ou une mise en relation peuvent tout changer.</p>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <div class="tip-box-header">💬 Questions d’ouverture</div>
+        <div class="tip-box-body">
+          <ul>
+            <li>✦ Quand tu as besoin d’un conseil, vers qui vas-tu ?</li>
+            <li>✦ Qui pourrait t’aider à mieux comprendre le monde du travail ?</li>
+            <li>✦ As-tu déjà obtenu une info ou une opportunité grâce à quelqu’un ?</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- PHASE 1 -->
-  <div class="phase" id="phase1">
-    <div class="phase-header red">
-      <div class="phase-icon">⚡</div>
+  <div class="phase" id="phase-support">
+    <div class="phase-header pink">
+      <div class="phase-icon">🤝</div>
       <div class="phase-title">
-        <h3>Phase 1 · Mise en route : Le Jeu du Miroir</h3>
-        <small>Brise-glace + prise de conscience de l'image perçue</small>
+        <h3>Phase 1 · Mon réseau de soutien</h3>
+        <small>Identifier les personnes ressources et définir comment renforcer son réseau</small>
+      </div>
+      <div class="phase-duration">25 min</div>
+    </div>
+    <div class="phase-body">
+      <div class="phase-intro">
+        Cette activité t’aide à repérer les personnes qui peuvent te soutenir dans ton parcours,
+        sur le plan émotionnel, pratique ou en matière de conseil.
+        Elle permet aussi d’identifier les manques dans ton réseau et de réfléchir à des actions concrètes pour le renforcer.
+      </div>
+      <div class="phase-goal">🎯 Objectif : repérer mes personnes ressources</div>
+      <div class="phase-consigne pink">
+        👉 <strong>Consigne :</strong> Note les personnes qui peuvent t’aider aujourd’hui ou demain dans ton parcours.
+        Pour chacune, demande-toi :
+        <strong>qui est cette personne ?</strong>,
+        <strong>quel type de soutien peut-elle m’apporter ?</strong>
+        et <strong>dans quel cercle se situe-t-elle ?</strong>
+        Puis choisis une action concrète pour renforcer ou élargir ton réseau dans le mois qui vient.
+      </div>
+
+      <div class="network-grid">
+        <div class="network-map">
+          <div class="network-center">MOI<br>& MON<br>PROJET</div>
+
+          <div class="network-rings">
+            <div class="network-ring">
+              <h4>🟢 Cercle proche</h4>
+              <div class="network-tags">
+                <span class="network-tag">Famille</span>
+                <span class="network-tag">Amis proches</span>
+                <span class="network-tag">Personne de confiance</span>
+              </div>
+            </div>
+
+            <div class="network-ring">
+              <h4>🔵 Cercle d’appui</h4>
+              <div class="network-tags">
+                <span class="network-tag">Conseiller</span>
+                <span class="network-tag">Prof / formateur</span>
+                <span class="network-tag">Coach / éducateur</span>
+              </div>
+            </div>
+
+            <div class="network-ring">
+              <h4>🟠 Cercle d’ouverture</h4>
+              <div class="network-tags">
+                <span class="network-tag">Pro rencontré</span>
+                <span class="network-tag">Association</span>
+                <span class="network-tag">Club / sport</span>
+                <span class="network-tag">Événement / stage</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="network-side">
+          <div class="support-card">
+            <h4>➕ Mes personnes ressources</h4>
+            <div class="support-mini">
+              Ajoute ici les personnes qui peuvent t’aider.
+              Tu peux indiquer si elles t’apportent surtout :
+              de l’encouragement, de l’aide concrète ou des conseils.
+            </div>
+
+            <div id="support-list" class="support-list"></div>
+
+            <button class="support-btn-add" onclick="addSupportRow()">＋ Ajouter une personne ressource</button>
+          </div>
+
+          <div class="network-summary" id="network-summary">
+            <strong>Lecture rapide :</strong><br>
+            Ajoute quelques personnes pour voir où ton réseau est déjà solide
+            et où tu pourrais le développer.
+          </div>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <div class="tip-box-header">🧠 Moment stratégie</div>
+        <div class="tip-box-body">
+          <ul>
+            <li>✦ Où ton réseau est-il déjà fort ?</li>
+            <li>✦ Où te manque-t-il un appui : encouragement, aide pratique ou conseil ?</li>
+            <li>✦ Quelle relation pourrais-tu entretenir davantage ?</li>
+            <li>✦ Quelle nouvelle personne pourrais-tu rencontrer ?</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top:16px;">
+        <label class="enq-label">🎯 Mon action du mois pour renforcer mon réseau</label>
+        <input class="enq-input" id="networkAction" placeholder="Ex : recontacter mon ancien tuteur, demander conseil à mon conseiller, participer à un événement, remercier une personne ressource…">
+        <button class="btn-engage" onclick="saveNetworkAction()" style="margin-top:10px;">Valider mon action réseau</button>
+        <div id="network-action-result" class="network-action-box"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 2 -->
+  <div class="phase" id="phase2">
+    <div class="phase-header turq">
+      <div class="phase-icon">🪞</div>
+      <div class="phase-title">
+        <h3>Phase 2 · Le jeu du miroir</h3>
+        <small>Prendre conscience de l’image que j’envoie</small>
       </div>
       <div class="phase-duration">15 min</div>
     </div>
     <div class="phase-body">
-
-      <div style="font-size:0.84rem; line-height:1.6; margin-bottom:16px;">
-        👉 <strong>Consigne :</strong> En binôme, chaque participant note <em>3 mots</em> qui le décrivent selon lui, et <em>3 mots</em> que son binôme noterait pour le décrire à un employeur.
-        On compare ensuite les deux listes.
+      <div class="phase-intro">
+        Cette phase permet de comparer l’image que tu as de toi-même avec l’image que les autres peuvent percevoir.
+        Elle aide à prendre conscience de tes qualités visibles, de ta posture spontanée et des premiers signaux que tu renvoies à un professionnel.
+      </div>
+      <div class="phase-goal">🎯 Objectif : prendre conscience de mon image perçue</div>
+      <div class="phase-consigne turq">
+        👉 <strong>Consigne :</strong> En binôme, écris 3 mots qui te décrivent selon toi,
+        puis imagine 3 mots qu’un autre pourrait utiliser pour te décrire dans un contexte professionnel.
+        Compare ensuite les deux regards :
+        qu’est-ce qui se rejoint ? qu’est-ce qui te surprend ? qu’est-ce qui te semble utile pour une visite ou une rencontre avec une entreprise ?
       </div>
 
       <div class="miroir-grid">
         <div class="miroir-header left">🤔 Comment je me vois</div>
         <div class="miroir-header right">👀 Comment on me voit</div>
         <div class="miroir-row">
-          <div class="miroir-cell left">Exemples&nbsp;: "discret", "motivé", "timide"…</div>
-          <div class="miroir-cell right">Exemples&nbsp;: "souriant", "sérieux", "à l'heure"…</div>
+          <div class="miroir-cell left">Exemples : « discret », « motivé », « timide »…</div>
+          <div class="miroir-cell right">Exemples : « souriant », « sérieux », « à l’heure »…</div>
         </div>
         <div class="miroir-row">
-          <div class="miroir-cell left" style="font-size:0.75rem; color:#666; font-style:italic; border-right:1.5px solid #ccc;">Les qualités qu'on s'accorde</div>
-          <div class="miroir-cell right" style="font-size:0.75rem; color:#666; font-style:italic;">Les signaux qu'on envoie sans le savoir</div>
+          <div class="miroir-cell left" style="font-size:0.75rem; color:#666; font-style:italic;">Les qualités qu’on s’accorde</div>
+          <div class="miroir-cell right" style="font-size:0.75rem; color:#666; font-style:italic;">Les signaux qu’on envoie</div>
         </div>
       </div>
 
-      <div class="tip-box" style="margin-top:14px;">
-        <div class="tip-box-header">💬 Questions pour débriefer en groupe (5 min)</div>
+      <div class="tip-box">
+        <div class="tip-box-header">💬 Débrief</div>
         <div class="tip-box-body">
           <ul>
-            <li>✦ Y a-t-il des différences entre vos deux listes ? Lesquelles vous surprennent ?</li>
-            <li>✦ Qu'est-ce qu'un professionnel va remarquer chez vous en quelques minutes lors de la visite ?</li>
-            <li>✦ Est-ce que votre image, c'est quelque chose de fixe… ou est-ce que ça dépend de comment vous vous comportez ?</li>
+            <li>✦ Qu’est-ce qui te surprend ?</li>
+            <li>✦ Qu’est-ce qu’un professionnel repère chez toi très vite ?</li>
+            <li>✦ Selon toi, qu’est-ce qui dépend de ta posture ?</li>
           </ul>
         </div>
       </div>
-
-    </div>
-  </div>
-
-  <!-- PHASE 2 -->
-  <div class="phase" id="phase2">
-    <div class="phase-header yellow">
-      <div class="phase-icon">🔍</div>
-      <div class="phase-title">
-        <h3>Phase 2 · Le Savoir-Être en entreprise</h3>
-        <small>Identifier les attentes concrètes des professionnels</small>
-      </div>
-      <div class="phase-duration">20 min</div>
-    </div>
-    <div class="phase-body">
-
-      <div style="font-size:0.84rem; line-height:1.5; margin-bottom:16px; padding:12px 16px; background:#FFFDE7; border:2px solid var(--black); border-radius:10px; box-shadow:3px 3px 0 var(--black);">
-        📌 <strong>Contexte :</strong> Vous allez visiter une structure dans le cadre d'une enquête professionnelle.
-        Ce n'est pas un entretien d'embauche. Mais la façon dont vous vous comportez compte quand même —
-        les gens qui vous reçoivent se font une idée de vous <strong>très vite, dès les premières minutes</strong>.
-      </div>
-
-      <div class="cards-grid">
-        <div class="card yellow">
-          <div class="card-icon">🧠</div>
-          <h4>L'attitude prime</h4>
-          <p>L'employeur préfère quelqu'un de motivé et volontaire, même sans toutes les compétences techniques.</p>
-        </div>
-        <div class="card turq">
-          <div class="card-icon">🕐</div>
-          <h4>La ponctualité</h4>
-          <p>Arriver à l'heure, c'est montrer du respect. 5 minutes en avance, c'est parfait.</p>
-        </div>
-        <div class="card mint">
-          <div class="card-icon">📱</div>
-          <h4>Le téléphone</h4>
-          <p>Hors de vue, hors de portée. Le phone reste dans la poche pendant la visite.</p>
-        </div>
-        <div class="card orange">
-          <div class="card-icon">👗</div>
-          <h4>La tenue vestimentaire</h4>
-          <p>Pas besoin d'un costume, mais une tenue propre et appropriée au secteur s'impose.</p>
-        </div>
-        <div class="card red">
-          <div class="card-icon">🤝</div>
-          <h4>La poignée de main</h4>
-          <p>Ferme, avec le regard, et un sourire. Ça commence dès le "bonjour".</p>
-        </div>
-        <div class="card yellow">
-          <div class="card-icon">💬</div>
-          <h4>Le langage</h4>
-          <p>Pas d'argot, pas de "ouais", pas de familiarités. Vouvoiement systématique.</p>
-        </div>
-        <div class="card turq">
-          <div class="card-icon">👂</div>
-          <h4>L'écoute active</h4>
-          <p>Ne pas interrompre. Hocher la tête. Montrer qu'on suit. Prendre des notes si possible.</p>
-        </div>
-        <div class="card mint">
-          <div class="card-icon">❓</div>
-          <h4>Poser des questions</h4>
-          <p>Un participant qui pose des questions intelligentes est perçu comme motivé et curieux.</p>
-        </div>
-      </div>
-
-      <div style="margin-top:16px; background:#fff; border:2px solid var(--black); border-radius:10px; padding:14px 18px; box-shadow:var(--shadow);">
-        <strong style="font-family:'Poppins',sans-serif; font-size:0.82rem;">⭐ Auto-évaluation : Comment tu te sens sur ces points ?</strong>
-        <div class="eval-items" id="evalItems">
-          <div class="eval-item">
-            <label><span class="ico">🕐</span> Ponctualité</label>
-            <div class="star-row" data-key="ponc">
-              <span class="star" data-v="1">⭐</span><span class="star" data-v="2">⭐</span>
-              <span class="star" data-v="3">⭐</span><span class="star" data-v="4">⭐</span><span class="star" data-v="5">⭐</span>
-            </div>
-          </div>
-          <div class="eval-item">
-            <label><span class="ico">💬</span> Langage professionnel</label>
-            <div class="star-row" data-key="lang">
-              <span class="star" data-v="1">⭐</span><span class="star" data-v="2">⭐</span>
-              <span class="star" data-v="3">⭐</span><span class="star" data-v="4">⭐</span><span class="star" data-v="5">⭐</span>
-            </div>
-          </div>
-          <div class="eval-item">
-            <label><span class="ico">👗</span> Tenue vestimentaire</label>
-            <div class="star-row" data-key="tenu">
-              <span class="star" data-v="1">⭐</span><span class="star" data-v="2">⭐</span>
-              <span class="star" data-v="3">⭐</span><span class="star" data-v="4">⭐</span><span class="star" data-v="5">⭐</span>
-            </div>
-          </div>
-          <div class="eval-item">
-            <label><span class="ico">👂</span> Écoute & posture</label>
-            <div class="star-row" data-key="ecut">
-              <span class="star" data-v="1">⭐</span><span class="star" data-v="2">⭐</span>
-              <span class="star" data-v="3">⭐</span><span class="star" data-v="4">⭐</span><span class="star" data-v="5">⭐</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 
   <!-- PHASE 3 -->
-  <div class="phase" id="phase3">
-    <div class="phase-header turq">
-      <div class="phase-icon">🎭</div>
+  <div class="phase" id="phase-brand">
+    <div class="phase-header pink">
+      <div class="phase-icon">🌟</div>
       <div class="phase-title">
-        <h3>Phase 3 · Scénarios : Bonne ou mauvaise posture ?</h3>
-        <small>Mise en situation — débat collectif</small>
+        <h3>Phase 3 · Mon image de marque personnelle</h3>
+        <small>Transformer mes points forts en valeur utile</small>
       </div>
-      <div class="phase-duration">25 min</div>
+      <div class="phase-duration">20 min</div>
     </div>
     <div class="phase-body">
-
-      <div style="font-size:0.84rem; margin-bottom:16px; line-height:1.5;">
-        👉 <strong>Consigne :</strong> Pour chaque situation, discutez en groupe avant de choisir.
-        Il n'y a pas toujours de réponse parfaite — l'important c'est de réfléchir ensemble à ce qu'on ferait vraiment.
+      <div class="phase-intro">
+        Cette phase t’aide à transformer tes qualités en valeur utile pour les autres.
+        Il ne s’agit pas seulement de dire “je suis motivé” ou “je suis sérieux”,
+        mais de comprendre à quoi ces qualités servent concrètement dans une équipe, une entreprise ou auprès d’un public.
+      </div>
+      <div class="phase-goal">🎯 Objectif : formuler ce que j’apporte</div>
+      <div class="phase-consigne orange">
+        👉 <strong>Consigne :</strong> Commence par identifier tes points forts et les valeurs qui comptent pour toi.
+        Ensuite, demande-toi :
+        <strong>à qui cela peut être utile ?</strong>
+        et <strong>quels besoins cela peut aider à couvrir ?</strong>
+        Enfin, construis une phrase simple de présentation qui montre ce que tu peux apporter concrètement.
       </div>
 
-      <!-- SCÉNARIO 1 -->
-      <div class="scenario-block">
-        <div class="scenario-header">🎬 Scénario 1 · Tu arrives en retard</div>
-        <div class="scenario-body">
-          <div class="scenario-situation">
-            Tu t'es trompé(e) d'arrêt de bus. Tu arrives avec 10 minutes de retard. La personne qui vous reçoit attendait le groupe depuis un moment. Elle a l'air un peu agacée. Qu'est-ce que tu fais en entrant ?
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+        <div class="tip-box" style="margin-top:0;">
+          <div class="tip-box-header">1️⃣ Ce que j’ai en moi</div>
+          <div class="tip-box-body">
+            <label class="enq-label">Mes 3 points forts</label>
+            <input class="enq-input" id="force1" placeholder="Ex : organisé">
+            <input class="enq-input" id="force2" placeholder="Ex : à l’écoute" style="margin-top:8px;">
+            <input class="enq-input" id="force3" placeholder="Ex : calme / motivé / fiable" style="margin-top:8px;">
+
+            <label class="enq-label" style="margin-top:12px;">Mes valeurs importantes</label>
+            <input class="enq-input" id="valeurs" placeholder="Ex : respect, entraide, sérieux">
           </div>
-          <div class="scenario-choices" id="sc1">
-            <div class="choice" onclick="chooseScenario(this,'sc1',false)">
-              <span class="choice-letter">A</span>
-              <span>Tu entres discrètement et tu t'assois sans rien dire pour pas attirer l'attention.</span>
-            </div>
-            <div class="choice" onclick="chooseScenario(this,'sc1',true)">
-              <span class="choice-letter">B</span>
-              <span>Tu t'excuses brièvement et clairement — "Désolé(e) pour le retard" — sans rentrer dans des explications à rallonge. Et tu passes à autre chose.</span>
-            </div>
-            <div class="choice" onclick="chooseScenario(this,'sc1',false)">
-              <span class="choice-letter">C</span>
-              <span>Tu expliques tout dans le détail : le bus, le chauffeur, la connexion ratée, le plan Google Maps qui t'a mal guidé…</span>
-            </div>
+        </div>
+
+        <div class="tip-box" style="margin-top:0;">
+          <div class="tip-box-header">2️⃣ À qui et à quoi ça sert</div>
+          <div class="tip-box-body">
+            <label class="enq-label">À qui mes qualités peuvent être utiles ?</label>
+            <input class="enq-input" id="cible" placeholder="Ex : collègues, clients, équipe, usagers">
+
+            <label class="enq-label" style="margin-top:12px;">Quels besoins je peux aider à couvrir ?</label>
+            <textarea class="enq-textarea" id="besoins" rows="4" placeholder="Ex : bien accueillir, rassurer, s’organiser, travailler proprement, aider une équipe à mieux fonctionner"></textarea>
           </div>
-          <div id="fb-sc1" class="choice-feedback hidden"></div>
         </div>
       </div>
 
-      <!-- SCÉNARIO 2 -->
-      <div class="scenario-block">
-        <div class="scenario-header">🎬 Scénario 2 · Tu t'ennuies pendant la visite</div>
-        <div class="scenario-body">
-          <div class="scenario-situation">
-            Le professionnel explique son métier depuis 15 minutes. Il parle beaucoup, c'est assez technique et tu décroches. Le gars à côté de toi ricane doucement. Qu'est-ce que tu fais ?
+      <div class="tip-box">
+        <div class="tip-box-header">3️⃣ Ma phrase de marque personnelle</div>
+        <div class="tip-box-body">
+          <p style="margin-bottom:10px;">
+            Clique pour générer une phrase simple que tu pourrais dire avant une visite, un stage ou un entretien.
+          </p>
+          <button class="btn-engage" onclick="generatePitch()">Créer ma phrase 💬</button>
+          <button class="btn-engage" onclick="copyPitch()" style="margin-left:8px;">Copier 📋</button>
+
+          <div id="pitchResult" class="pitch-box">
+            <div class="pitch-level" id="pitchLevel">Niveau</div>
+            <div id="pitchText" style="font-size:0.84rem; line-height:1.6; font-weight:700;"></div>
+            <div id="pitchCoach" style="margin-top:10px; font-size:0.78rem; line-height:1.5;"></div>
           </div>
-          <div class="scenario-choices" id="sc2">
-            <div class="choice" onclick="chooseScenario(this,'sc2',false)">
-              <span class="choice-letter">A</span>
-              <span>Tu rigoles aussi discrètement — bah c'est vrai que c'est un peu long.</span>
-            </div>
-            <div class="choice" onclick="chooseScenario(this,'sc2',false)">
-              <span class="choice-letter">B</span>
-              <span>Tu regardes ton téléphone le temps que ça passe.</span>
-            </div>
-            <div class="choice" onclick="chooseScenario(this,'sc2',true)">
-              <span class="choice-letter">C</span>
-              <span>Tu gardes le contact visuel avec la personne qui parle, tu continues à prendre des notes même si c'est dur, et tu ignores le gars à côté.</span>
-            </div>
-          </div>
-          <div id="fb-sc2" class="choice-feedback hidden"></div>
         </div>
       </div>
 
-      <!-- SCÉNARIO 3 -->
-      <div class="scenario-block">
-        <div class="scenario-header">🎬 Scénario 3 · Tu n'as rien compris</div>
-        <div class="scenario-body">
-          <div class="scenario-situation">
-            Tu poses ta question. La personne te répond avec des termes techniques que tu ne connais pas du tout. Tu n'as rien compris à sa réponse. Qu'est-ce que tu fais ?
-          </div>
-          <div class="scenario-choices" id="sc3">
-            <div class="choice" onclick="chooseScenario(this,'sc3',false)">
-              <span class="choice-letter">A</span>
-              <span>Tu hoches la tête comme si t'avais compris pour pas avoir l'air bête.</span>
-            </div>
-            <div class="choice" onclick="chooseScenario(this,'sc3',true)">
-              <span class="choice-letter">B</span>
-              <span>Tu lui dis poliment : "Excusez-moi, je n'ai pas bien saisi ce que vous voulez dire par [mot]. Est-ce que vous pouvez m'expliquer ça autrement ?"</span>
-            </div>
-            <div class="choice" onclick="chooseScenario(this,'sc3',false)">
-              <span class="choice-letter">C</span>
-              <span>Tu passes directement à ta prochaine question — au moins celle-là tu la comprends.</span>
-            </div>
-          </div>
-          <div id="fb-sc3" class="choice-feedback hidden"></div>
+      <div class="tip-box">
+        <div class="tip-box-header">🌐 Prolongement plateforme LS4YOU</div>
+        <div class="tip-box-body">
+          <ul>
+            <li>✦ Reprendre cette phrase après l’atelier</li>
+            <li>✦ Vérifier si elle correspond bien à sa personnalité et à ses forces</li>
+            <li>✦ Revenir avec une version plus précise pour le conseiller</li>
+          </ul>
         </div>
       </div>
-
-      <!-- SCÉNARIO 4 -->
-      <div class="scenario-block">
-        <div class="scenario-header">🎬 Scénario 4 · Le temps s'est envolé</div>
-        <div class="scenario-body">
-          <div class="scenario-situation">
-            La visite se termine. Tu réalises que t'as posé seulement 3 de tes 10 questions parce que la personne a beaucoup parlé. Tu repars avec la moitié des infos qu'il te fallait. Qu'est-ce que tu fais ?
-          </div>
-          <div class="scenario-choices" id="sc4">
-            <div class="choice" onclick="chooseScenario(this,'sc4',true)">
-              <span class="choice-letter">A</span>
-              <span>Tu remercies chaleureusement et tu lui demandes si tu peux lui envoyer tes questions restantes par mail, ou si tu peux revenir vers lui plus tard.</span>
-            </div>
-            <div class="choice" onclick="chooseScenario(this,'sc4',false)">
-              <span class="choice-letter">B</span>
-              <span>Tu es déçu(e) et tu le montres — tu soupires ou tu dis que finalement c'était pas très utile.</span>
-            </div>
-            <div class="choice" onclick="chooseScenario(this,'sc4',false)">
-              <span class="choice-letter">C</span>
-              <span>Tu inventes des réponses plausibles pour compléter ta fiche plus tard — personne le saura.</span>
-            </div>
-          </div>
-          <div id="fb-sc4" class="choice-feedback hidden"></div>
-        </div>
-      </div>
-
     </div>
   </div>
 
   <!-- PHASE 4 -->
   <div class="phase" id="phase4">
-    <div class="phase-header mint">
-      <div class="phase-icon">🕹️</div>
+    <div class="phase-header yellow">
+      <div class="phase-icon">🔍</div>
       <div class="phase-title">
-        <h3>Phase 4 · Le Défi du Savoir-Être</h3>
-        <small>Jeu interactif — Construisons notre code de conduite</small>
+        <h3>Phase 4 · Le savoir-être en entreprise</h3>
+        <small>Identifier les attentes concrètes des professionnels</small>
       </div>
       <div class="phase-duration">20 min</div>
     </div>
     <div class="phase-body">
-
-      <div style="font-size:0.84rem; line-height:1.5; margin-bottom:16px;">
-        👉 <strong>Consigne :</strong> Pour chaque comportement qui s'affiche, le groupe doit débattre : est-ce une bonne pratique (✅) ou un comportement à proscrire (❌) en milieu professionnel ?
+      <div class="phase-intro">
+        Cette phase permet d’identifier les attitudes attendues dans un cadre professionnel.
+        L’objectif n’est pas de “jouer un rôle”, mais de comprendre les codes de base qui facilitent la relation,
+        montrent du respect et donnent une image sérieuse lors d’une visite ou d’un premier contact.
+      </div>
+      <div class="phase-goal">🎯 Objectif : identifier les codes du savoir-être professionnel</div>
+      <div class="phase-consigne yellow">
+        👉 <strong>Consigne :</strong> Observe les différents éléments du savoir-être en entreprise
+        puis évalue-toi honnêtement sur chacun d’eux.
+        L’objectif n’est pas d’être parfait,
+        mais d’identifier les points sur lesquels tu es déjà à l’aise et ceux que tu dois encore travailler avant une visite ou une immersion.
       </div>
 
-      <!-- JEU INTERACTIF -->
+      <div class="cards-grid">
+        <div class="card yellow"><div class="card-icon">🧠</div><h4>L’attitude prime</h4><p>Être motivé, volontaire, présent.</p></div>
+        <div class="card turq"><div class="card-icon">🕐</div><h4>La ponctualité</h4><p>5 minutes en avance, c’est idéal.</p></div>
+        <div class="card mint"><div class="card-icon">📱</div><h4>Le téléphone</h4><p>Rangé pendant toute la visite.</p></div>
+        <div class="card orange"><div class="card-icon">👗</div><h4>La tenue</h4><p>Propre, simple, adaptée au lieu.</p></div>
+        <div class="card red"><div class="card-icon">🤝</div><h4>Le bonjour</h4><p>Regard, politesse, présence.</p></div>
+        <div class="card yellow"><div class="card-icon">💬</div><h4>Le langage</h4><p>Poli, clair, sans familiarité.</p></div>
+        <div class="card turq"><div class="card-icon">👂</div><h4>L’écoute active</h4><p>Rester présent, suivre, prendre des notes.</p></div>
+        <div class="card mint"><div class="card-icon">❓</div><h4>Poser des questions</h4><p>Montrer sa curiosité et son intérêt.</p></div>
+      </div>
+
+      <div style="margin-top:16px; background:#fff; border:2px solid var(--black); border-radius:10px; padding:14px 18px; box-shadow:var(--shadow);">
+        <strong style="font-family:'Poppins',sans-serif; font-size:0.82rem;">⭐ Auto-évaluation</strong>
+        <div class="eval-items">
+          <div class="eval-item">
+            <label>🕐 Ponctualité</label>
+            <div class="star-row">
+              <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+            </div>
+          </div>
+          <div class="eval-item">
+            <label>💬 Langage professionnel</label>
+            <div class="star-row">
+              <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+            </div>
+          </div>
+          <div class="eval-item">
+            <label>👗 Tenue vestimentaire</label>
+            <div class="star-row">
+              <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+            </div>
+          </div>
+          <div class="eval-item">
+            <label>👂 Écoute & posture</label>
+            <div class="star-row">
+              <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 5 -->
+  <div class="phase" id="phase5">
+    <div class="phase-header turq">
+      <div class="phase-icon">🎭</div>
+      <div class="phase-title">
+        <h3>Phase 5 · Scénarios : bonne ou mauvaise posture ?</h3>
+        <small>Mise en situation — débat collectif</small>
+      </div>
+      <div class="phase-duration">25 min</div>
+    </div>
+    <div class="phase-body">
+      <div class="phase-intro">
+        Cette phase propose des situations réalistes pour réfléchir à la bonne posture à adopter.
+        Elle permet de s’entraîner à réagir face à des imprévus ou à des situations de malaise,
+        en gardant une attitude professionnelle, claire et respectueuse.
+      </div>
+      <div class="phase-goal">🎯 Objectif : s’entraîner à réagir dans des situations concrètes</div>
+      <div class="phase-consigne turq">
+        👉 <strong>Consigne :</strong> Pour chaque situation, prends quelques secondes pour réfléchir avant de répondre.
+        Ne cherche pas seulement “la bonne case” :
+        demande-toi surtout <strong>quelle image cette réaction renvoie</strong>,
+        <strong>ce qu’elle produit dans la relation</strong>
+        et <strong>si elle t’aide vraiment à avancer</strong>.
+      </div>
+
+      <div id="scenarioContainer">
+        <div class="scenario-block">
+          <div class="scenario-header">🎬 Scénario 1 · Tu arrives en retard</div>
+          <div class="scenario-body">
+            <div class="scenario-situation">
+              Tu arrives avec 10 minutes de retard. Que fais-tu en entrant ?
+            </div>
+            <div class="scenario-choices" id="sc1">
+              <div class="choice" data-correct="false"><span class="choice-letter">A</span><span>Tu entres discrètement sans rien dire.</span></div>
+              <div class="choice" data-correct="true"><span class="choice-letter">B</span><span>Tu t’excuses brièvement et clairement.</span></div>
+              <div class="choice" data-correct="false"><span class="choice-letter">C</span><span>Tu racontes toute l’histoire en détail.</span></div>
+            </div>
+            <div id="fb-sc1" class="choice-feedback hidden"></div>
+          </div>
+        </div>
+
+        <div class="scenario-block">
+          <div class="scenario-header">🎬 Scénario 2 · Tu décroches pendant la visite</div>
+          <div class="scenario-body">
+            <div class="scenario-situation">
+              La visite dure, tu t’ennuies un peu. Que fais-tu ?
+            </div>
+            <div class="scenario-choices" id="sc2">
+              <div class="choice" data-correct="false"><span class="choice-letter">A</span><span>Tu regardes ton téléphone.</span></div>
+              <div class="choice" data-correct="true"><span class="choice-letter">B</span><span>Tu restes présent, tu écoutes, tu notes.</span></div>
+              <div class="choice" data-correct="false"><span class="choice-letter">C</span><span>Tu rigoles avec la personne à côté.</span></div>
+            </div>
+            <div id="fb-sc2" class="choice-feedback hidden"></div>
+          </div>
+        </div>
+
+        <div class="scenario-block">
+          <div class="scenario-header">🎬 Scénario 3 · Tu n’as pas compris</div>
+          <div class="scenario-body">
+            <div class="scenario-situation">
+              La réponse du professionnel est trop technique. Que fais-tu ?
+            </div>
+            <div class="scenario-choices" id="sc3">
+              <div class="choice" data-correct="false"><span class="choice-letter">A</span><span>Tu fais semblant d’avoir compris.</span></div>
+              <div class="choice" data-correct="false"><span class="choice-letter">B</span><span>Tu passes à la suite.</span></div>
+              <div class="choice" data-correct="true"><span class="choice-letter">C</span><span>Tu demandes poliment qu’on reformule.</span></div>
+            </div>
+            <div id="fb-sc3" class="choice-feedback hidden"></div>
+          </div>
+        </div>
+
+        <div class="scenario-block">
+          <div class="scenario-header">🎬 Scénario 4 · Tu n’as pas eu toutes tes réponses</div>
+          <div class="scenario-body">
+            <div class="scenario-situation">
+              La visite se termine, il reste des questions. Que fais-tu ?
+            </div>
+            <div class="scenario-choices" id="sc4">
+              <div class="choice" data-correct="false"><span class="choice-letter">A</span><span>Tu inventes des réponses plus tard.</span></div>
+              <div class="choice" data-correct="true"><span class="choice-letter">B</span><span>Tu remercies et demandes si tu peux revenir par mail.</span></div>
+              <div class="choice" data-correct="false"><span class="choice-letter">C</span><span>Tu montres ta déception.</span></div>
+            </div>
+            <div id="fb-sc4" class="choice-feedback hidden"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 6 -->
+  <div class="phase" id="phase6">
+    <div class="phase-header mint">
+      <div class="phase-icon">🕹️</div>
+      <div class="phase-title">
+        <h3>Phase 6 · Le défi du savoir-être</h3>
+        <small>Construisons notre code de conduite</small>
+      </div>
+      <div class="phase-duration">15 min</div>
+    </div>
+    <div class="phase-body">
+      <div class="phase-intro">
+        Cette phase permet de transformer les apprentissages précédents en règles d’action concrètes.
+        Le groupe distingue les comportements à adopter de ceux à éviter,
+        afin de construire un repère simple et collectif pour les futures visites en entreprise.
+      </div>
+      <div class="phase-goal">🎯 Objectif : construire un repère collectif simple</div>
+      <div class="phase-consigne mint">
+        👉 <strong>Consigne :</strong> Pour chaque comportement proposé, discutez en groupe avant de choisir.
+        L’objectif est de construire ensemble un code de conduite simple :
+        <strong>ce que je fais</strong> et <strong>ce que j’évite</strong>
+        quand je rencontre un professionnel ou que je vais dans une entreprise.
+      </div>
+
       <div class="sort-game" id="sort-game-container">
-        <div class="sort-card" id="sort-current-card">Chargement...</div>
+        <div class="sort-card" id="sort-current-card">Chargement…</div>
         <div class="sort-actions">
           <button class="sort-btn do" onclick="handleSort('do')">✅ À FAIRE</button>
           <button class="sort-btn dont" onclick="handleSort('dont')">❌ À ÉVITER</button>
         </div>
       </div>
 
-      <div id="sort-done-msg" style="display:none; text-align:center; padding:20px; background:var(--yellow); border:3px solid var(--black); border-radius:12px; font-family:'Poppins',sans-serif; font-weight:800; box-shadow:var(--shadow); margin-top:10px;">
-        🎉 Bravo ! Votre code de conduite est prêt !
-      </div>
-
-      <!-- COLONNES RÉSULTATS -->
       <div class="sorted-lists">
-        <div class="sorted-col col-do">
+        <div class="sorted-col">
           <h4>✅ Ce que je fais</h4>
           <ul id="list-do"></ul>
         </div>
-        <div class="sorted-col col-dont">
-          <h4>❌ Ce que j'évite</h4>
+        <div class="sorted-col">
+          <h4>❌ Ce que j’évite</h4>
           <ul id="list-dont"></ul>
         </div>
       </div>
-
-      <div class="tip-box">
-        <div class="tip-box-header">🎓 Pour l'animateur · Animation de la phase</div>
-        <div class="tip-box-body">
-          <ul>
-            <li>📌 Ne cliquez pas tout de suite ! Laissez les participants argumenter s'ils ne sont pas d'accord.</li>
-            <li>📌 S'ils se trompent, la carte tremblera et rougira : c'est l'occasion de demander <em>"Pourquoi l'outil refuse votre choix à votre avis ?"</em></li>
-            <li>📌 Ce tableau final sera votre charte de groupe pour les visites à venir.</li>
-          </ul>
-        </div>
-      </div>
-
     </div>
   </div>
 
-  <!-- PHASE 5 -->
-  <div class="phase" id="phase5">
+  <!-- PHASE 7 -->
+  <div class="phase" id="phase7">
     <div class="phase-header orange">
       <div class="phase-icon">🌟</div>
       <div class="phase-title">
-        <h3>Phase 5 · Mon engagement personnel</h3>
-        <small>Clôture individuelle — formalisation d'un objectif concret</small>
+        <h3>Phase 7 · Mon engagement personnel</h3>
+        <small>Formaliser un objectif concret</small>
       </div>
       <div class="phase-duration">10 min</div>
     </div>
     <div class="phase-body">
-
-      <div style="font-size:0.84rem; line-height:1.5; margin-bottom:16px;">
-        👉 <strong>Consigne :</strong> Chaque participant identifie <strong>1 point fort</strong> qu'il amènera lors de la visite et
-        <strong>1 point à améliorer</strong> sur lequel il se fixe un objectif concret avant le jour J.
+      <div class="phase-intro">
+        Cette dernière phase permet de transformer la réflexion en action.
+        Chaque participant identifie ce qu’il apporte déjà et ce qu’il veut améliorer,
+        afin de repartir avec un engagement concret, réaliste et utile pour la prochaine étape.
+      </div>
+      <div class="phase-goal">🎯 Objectif : repartir avec une action concrète</div>
+      <div class="phase-consigne orange">
+        👉 <strong>Consigne :</strong> Écris ton prénom, un point fort que tu veux mobiliser,
+        un point que tu veux améliorer et un objectif concret pour la prochaine visite ou rencontre professionnelle.
+        Ton engagement doit être simple, précis et réalisable.
       </div>
 
       <div class="engagement-card">
         <h3>🎯 Mon engagement pour la visite</h3>
         <div class="engagement-form">
           <input type="text" id="prenom" placeholder="Mon prénom…">
-          <input type="text" id="force" placeholder="✅ Mon point fort que j'apporte…">
-          <input type="text" id="amelio" placeholder="📈 Ce que je vais travailler avant la visite…">
-          <input type="text" id="objectif" placeholder="🎯 Mon objectif concret (ex : ne pas sortir mon téléphone)…">
-          <button class="btn-engage" onclick="submitEngagement()">Je m'engage 🤝</button>
+          <input type="text" id="force" placeholder="✅ Mon point fort que j’apporte…">
+          <input type="text" id="amelio" placeholder="📈 Ce que je vais travailler…">
+          <input type="text" id="objectif" placeholder="🎯 Mon objectif concret…">
+          <button class="btn-engage" onclick="submitEngagement()">Je m’engage 🤝</button>
         </div>
         <div class="engagement-result" id="engResult"></div>
       </div>
-
-    </div>
-  </div>
-
-  <!-- FEEDBACK FORMATEUR -->
-  <div class="phase">
-    <div class="phase-header" style="background:#1A1A1A; color:var(--yellow);">
-      <div class="phase-icon">🛠</div>
-      <div class="phase-title">
-        <h3>Notes pour le formateur</h3>
-        <small>Conseils pédagogiques & matériel nécessaire</small>
-      </div>
-    </div>
-    <div class="phase-body">
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
-        <div>
-          <div class="tip-box">
-            <div class="tip-box-header">🌱 Environnement bienveillant</div>
-            <div class="tip-box-body">
-              Créez un cadre sécurisant où chacun peut parler de ses difficultés sans jugement.
-              L'image de soi est un sujet sensible : validez toutes les contributions avant de nuancer.
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="tip-box">
-            <div class="tip-box-header">🔄 Méthode de feedback</div>
-            <div class="tip-box-body">
-              Pour la clôture, invitez chaque participant à partager en 1 phrase :
-              <em>"Ce que je retiens de cet atelier, c'est…"</em>
-              — sans obligation, la parole est libre.
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-top:14px; display:grid; grid-template-columns:1fr 1fr; gap:14px; font-size:0.79rem;">
-        <div style="background:#E3F2FD; border:2px solid var(--black); border-radius:10px; padding:12px 16px; box-shadow:var(--shadow);">
-          <strong style="display:block; margin-bottom:6px; font-family:'Poppins',sans-serif;">📦 Matériel · Présentiel</strong>
-          Tableau blanc ou paperboard · Post-its (3 couleurs) · Stylos ·
-          Fiches d'auto-évaluation imprimées · Exemple de tenue "avant/après" en photos
-        </div>
-        <div style="background:#F3E5F5; border:2px solid var(--black); border-radius:10px; padding:12px 16px; box-shadow:var(--shadow);">
-          <strong style="display:block; margin-bottom:6px; font-family:'Poppins',sans-serif;">🎯 Résultats attendus</strong>
-          Meilleure conscience de la posture professionnelle · Code de conduite co-construit ·
-          Engagement individuel formalisé · Groupe soudé avant les visites
-        </div>
-      </div>
-
     </div>
   </div>
 
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════
-     OUTIL DE PRÉPARATION À L'ENQUÊTE MÉTIER
-     ═══════════════════════════════════════════════════════════ -->
-
+<!-- PHASE 8 : ENQUÊTE MÉTIER -->
 <div style="background:var(--black); padding:0; margin-top:0;">
   <div style="max-width:960px; margin:0 auto; padding:28px 20px 12px; display:flex; align-items:center; gap:16px;">
     <div style="background:var(--turq); border:3px solid rgba(255,255,255,0.3); border-radius:50%; width:56px; height:56px; display:flex; align-items:center; justify-content:center; font-size:1.6rem; flex-shrink:0;">🔍</div>
@@ -1149,47 +1481,64 @@
   </div>
   <div style="max-width:960px; margin:0 auto; padding:0 20px 18px;">
     <p style="font-size:0.82rem; color:rgba(255,255,255,0.7); line-height:1.6;">
-      Une enquête métier, ce n'est ni un entretien d'embauche, ni un questionnaire scolaire.
-      C'est un échange authentique avec un professionnel pour découvrir la réalité d'un métier de l'intérieur.
-      Cet outil t'aide à te préparer étape par étape.
+      Une enquête métier, ce n’est ni un entretien d’embauche, ni un questionnaire scolaire.
+      C’est un échange authentique avec un professionnel pour découvrir la réalité d’un métier de l’intérieur.
+      Cet outil t’aide à te préparer étape par étape.
     </p>
   </div>
 </div>
 
 <div style="max-width:960px; margin:0 auto; padding:28px 20px 60px;">
 
-  <!-- TABS NAVIGATION -->
-  <div style="display:flex; gap:0; border:3px solid var(--black); border-radius:12px; overflow:hidden; box-shadow:var(--shadow-lg); margin-bottom:28px;">
-    <button class="enq-tab active" onclick="switchTab('tab-info')" id="btn-tab-info">
-      <span>1</span> Infos structure
-    </button>
-    <button class="enq-tab" onclick="switchTab('tab-questions')" id="btn-tab-questions" style="border-left:3px solid var(--black);">
-      <span>2</span> Mes questions
-    </button>
-    <button class="enq-tab" onclick="switchTab('tab-checklist')" id="btn-tab-checklist" style="border-left:3px solid var(--black);">
-      <span>3</span> Check départ
-    </button>
-    <button class="enq-tab" onclick="switchTab('tab-notes')" id="btn-tab-notes" style="border-left:3px solid var(--black);">
-      <span>4</span> Mes notes
-    </button>
-    <button class="enq-tab" onclick="switchTab('tab-bilan')" id="btn-tab-bilan" style="border-left:3px solid var(--black);">
-      <span>5</span> Bilan
-    </button>
-  </div>
-
-  <!-- ── TAB 1 · INFOS STRUCTURE ── -->
-  <div id="tab-info" class="enq-panel">
-    <div class="phase" style="margin-bottom:20px;">
-      <div class="phase-header turq">
-        <div class="phase-icon">🏛️</div>
-        <div class="phase-title">
-          <h3>La structure que je vais visiter</h3>
-          <small>Note les informations essentielles avant de partir</small>
-        </div>
+  <div class="phase" style="margin-bottom:20px;">
+    <div class="phase-header violet">
+      <div class="phase-icon">🧭</div>
+      <div class="phase-title">
+        <h3>Phase 8 · Préparer mon enquête métier</h3>
+        <small>Transformer l’atelier en action concrète vers l’entreprise</small>
       </div>
-      <div class="phase-body">
+      <div class="phase-duration">30 à 45 min</div>
+    </div>
+    <div class="phase-body">
 
-        <!-- Type de structure -->
+      <div class="phase-intro">
+        Cette phase te permet de préparer une rencontre avec un professionnel de façon sérieuse et utile.
+        Elle t’aide à clarifier ce que tu veux découvrir, à formuler de bonnes questions et à garder une trace exploitable de la visite.
+      </div>
+      <div class="phase-goal">🎯 Objectif : préparer une rencontre professionnelle utile</div>
+      <div class="phase-consigne violet">
+        👉 <strong>Consigne :</strong> Complète les différentes étapes pour préparer ton enquête métier :
+        la structure que tu visites, les questions que tu veux poser, ce que tu dois vérifier avant de partir,
+        puis ce que tu retiendras après la visite.
+      </div>
+
+      <!-- TABS NAVIGATION -->
+      <div style="display:flex; gap:0; border:3px solid var(--black); border-radius:12px; overflow:hidden; box-shadow:var(--shadow-lg); margin-bottom:28px;">
+        <button class="enq-tab active" onclick="switchTab('tab-info')" id="btn-tab-info">
+          <span>1</span> Infos structure
+        </button>
+        <button class="enq-tab" onclick="switchTab('tab-questions')" id="btn-tab-questions" style="border-left:3px solid var(--black);">
+          <span>2</span> Mes questions
+        </button>
+        <button class="enq-tab" onclick="switchTab('tab-checklist')" id="btn-tab-checklist" style="border-left:3px solid var(--black);">
+          <span>3</span> Check départ
+        </button>
+        <button class="enq-tab" onclick="switchTab('tab-notes')" id="btn-tab-notes" style="border-left:3px solid var(--black);">
+          <span>4</span> Mes notes
+        </button>
+        <button class="enq-tab" onclick="switchTab('tab-bilan')" id="btn-tab-bilan" style="border-left:3px solid var(--black);">
+          <span>5</span> Bilan
+        </button>
+      </div>
+
+      <!-- TAB 1 -->
+      <div id="tab-info" class="enq-panel">
+        <div class="phase-goal">🎯 Objectif : identifier clairement où je vais et qui je rencontre</div>
+        <div class="phase-consigne turq">
+          👉 <strong>Consigne :</strong> Renseigne la structure, la personne rencontrée, le ou les métiers visés
+          et ce que tu sais déjà. L’idée est d’arriver préparé et de montrer que ta démarche est sérieuse.
+        </div>
+
         <div style="margin-bottom:18px;">
           <label class="enq-label">Type de structure visitée</label>
           <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:6px;" id="struct-type-btns">
@@ -1205,266 +1554,191 @@
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
           <div>
             <label class="enq-label">Nom de la structure</label>
-            <input class="enq-input" id="ent-nom" placeholder="Ex : Mairie de Bayonne, Croix-Rouge locale…">
+            <input class="enq-input" id="ent-nom" placeholder="Ex : entreprise, mairie, association…">
           </div>
           <div>
             <label class="enq-label">Secteur / Domaine d'activité</label>
-            <input class="enq-input" id="ent-secteur" placeholder="Ex : Social, bâtiment, restauration…">
+            <input class="enq-input" id="ent-secteur" placeholder="Ex : bâtiment, social, restauration…">
           </div>
           <div>
             <label class="enq-label">Adresse / Localisation</label>
-            <input class="enq-input" id="ent-adresse" placeholder="Ex : 12 rue du Moulin, Bayonne…">
+            <input class="enq-input" id="ent-adresse" placeholder="Adresse ou lieu de rendez-vous">
           </div>
           <div>
             <label class="enq-label">Date & heure de la visite</label>
-            <input class="enq-input" id="ent-date" placeholder="Ex : Mardi 10 juin à 10h00">
+            <input class="enq-input" id="ent-date" placeholder="Ex : mardi 10 juin à 10h00">
           </div>
           <div>
             <label class="enq-label">Nom de la personne rencontrée</label>
-            <input class="enq-input" id="ent-contact" placeholder="Prénom + Nom…">
+            <input class="enq-input" id="ent-contact" placeholder="Prénom + nom">
           </div>
           <div>
-            <label class="enq-label">Son poste / rôle dans la structure</label>
-            <input class="enq-input" id="ent-poste" placeholder="Ex : Responsable RH, chef cuisinier, éducateur…">
+            <label class="enq-label">Son poste / rôle</label>
+            <input class="enq-input" id="ent-poste" placeholder="Ex : chef d’équipe, RH, artisan…">
           </div>
         </div>
 
         <div style="margin-top:14px;">
-          <label class="enq-label">Ce que je sais déjà sur cette structure (quelques mots)</label>
-          <textarea class="enq-textarea" id="ent-connais" placeholder="Ex : C'est une association qui aide les personnes sans abri. J'ai vu leur site. Environ 20 bénévoles…" rows="3"></textarea>
+          <label class="enq-label">Ce que je sais déjà sur cette structure</label>
+          <textarea class="enq-textarea" id="ent-connais" placeholder="Ce que j’ai déjà compris, entendu ou recherché…" rows="3"></textarea>
         </div>
 
-        <!-- Métiers multiples -->
         <div style="margin-top:16px;">
-          <label class="enq-label">Le(s) métier(s) que j'explore lors de cette visite</label>
+          <label class="enq-label">Le(s) métier(s) que j’explore lors de cette visite</label>
           <div id="metiers-list" style="display:flex; flex-direction:column; gap:8px; margin-top:6px;"></div>
-          <button onclick="addMetier()" style="margin-top:8px; background:#fff; border:2px dashed var(--black); border-radius:8px; padding:8px 16px; font-family:'Poppins',sans-serif; font-weight:700; font-size:0.78rem; cursor:pointer; width:100%; color:var(--black); transition:background 0.15s;" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='#fff'">
+          <button onclick="addMetier()" style="margin-top:8px; background:#fff; border:2px dashed var(--black); border-radius:8px; padding:8px 16px; font-family:'Poppins',sans-serif; font-weight:700; font-size:0.78rem; cursor:pointer; width:100%;">
             ＋ Ajouter un métier à explorer
           </button>
         </div>
 
         <div style="margin-top:16px; text-align:right;">
-          <button class="enq-btn-next" onclick="switchTab('tab-questions')">Suivant : mes questions →</button>
+          <button class="btn-engage" onclick="switchTab('tab-questions')">Suivant : mes questions →</button>
         </div>
       </div>
-    </div>
 
-    <!-- Pourquoi préparer ? -->
-    <div class="tip-box">
-      <div class="tip-box-header">💡 Pourquoi préparer l'enquête métier ?</div>
-      <div class="tip-box-body">
-        <ul>
-          <li>✦ <strong>Clarifier ton projet</strong> : passer d'une idée vague à une vision concrète du métier.</li>
-          <li>✦ <strong>Identifier les compétences</strong> attendues sur le terrain — pas dans une fiche théorique.</li>
-          <li>✦ <strong>Découvrir la réalité</strong> : rythme, outils, collègues, contraintes… ce qu'on ne dit pas dans les livres.</li>
-          <li>✦ <strong>Tisser des liens</strong> : chaque professionnel rencontré peut devenir un contact précieux pour la suite.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+      <!-- TAB 2 -->
+      <div id="tab-questions" class="enq-panel hidden">
+        <div class="phase-goal">🎯 Objectif : sélectionner les questions les plus utiles</div>
+        <div class="phase-consigne yellow">
+          👉 <strong>Consigne :</strong> Coche les questions qui t’intéressent le plus.
+          Prépare idéalement <strong>8 à 12 questions maximum</strong> pour garder un échange fluide, réaliste et respectueux du temps du professionnel.
+        </div>
 
-  <!-- ── TAB 2 · MES QUESTIONS ── -->
-  <div id="tab-questions" class="enq-panel hidden">
+        <div class="qblock">
+          <div class="qblock-header" style="background:var(--turq);">
+            <span>📋</span> Le contenu du poste et les missions
+            <span class="q-counter" id="counter-1">0 sélectionnée(s)</span>
+          </div>
+          <div class="qblock-body" id="qgroup-1">
+            <div class="qitem" onclick="toggleQ(this,'1')"><span class="qcheck">☐</span> Quelles sont vos principales tâches au quotidien ?</div>
+            <div class="qitem" onclick="toggleQ(this,'1')"><span class="qcheck">☐</span> À quoi ressemble une journée type dans votre métier ?</div>
+            <div class="qitem" onclick="toggleQ(this,'1')"><span class="qcheck">☐</span> Y a-t-il des tâches qu’on n’imagine pas forcément ?</div>
+            <div class="qitem" onclick="toggleQ(this,'1')"><span class="qcheck">☐</span> Qu’est-ce qui prend le plus de temps dans votre travail ?</div>
+            <div class="qitem qitem-custom" onclick="addCustomQ('qgroup-1','1')" style="border:2px dashed #aaa; background:#f9f9f9; color:#888; justify-content:center;">＋ Ajouter ma propre question…</div>
+          </div>
+        </div>
 
-    <div style="background:#E0F7FA; border:3px solid var(--black); border-radius:12px; padding:14px 18px; margin-bottom:20px; box-shadow:var(--shadow); font-size:0.83rem; line-height:1.5;">
-      📌 <strong>Consigne :</strong> Coche les questions qui t'intéressent le plus. Tu peux en ajouter de personnalisées.
-      Pour la visite, prépare <strong>8 à 12 questions maximum</strong> pour ne pas dépasser le temps disponible.
-      <span style="display:block; margin-top:6px; color:#00838F; font-weight:700;">👇 Clique sur une question pour la sélectionner / désélectionner</span>
-    </div>
+        <div class="qblock">
+          <div class="qblock-header" style="background:var(--mint);">
+            <span>🎓</span> L'accès au métier
+            <span class="q-counter" id="counter-2">0 sélectionnée(s)</span>
+          </div>
+          <div class="qblock-body" id="qgroup-2">
+            <div class="qitem" onclick="toggleQ(this,'2')"><span class="qcheck">☐</span> Quel a été votre parcours pour accéder à ce métier ?</div>
+            <div class="qitem" onclick="toggleQ(this,'2')"><span class="qcheck">☐</span> Existe-t-il plusieurs voies pour y accéder ?</div>
+            <div class="qitem" onclick="toggleQ(this,'2')"><span class="qcheck">☐</span> Quels diplômes ou expériences sont les plus utiles ?</div>
+            <div class="qitem" onclick="toggleQ(this,'2')"><span class="qcheck">☐</span> Qu’est-ce qui aide à entrer dans ce secteur quand on débute ?</div>
+            <div class="qitem qitem-custom" onclick="addCustomQ('qgroup-2','2')" style="border:2px dashed #aaa; background:#f9f9f9; color:#888; justify-content:center;">＋ Ajouter ma propre question…</div>
+          </div>
+        </div>
 
-    <!-- Thématique 1 -->
-    <div class="qblock">
-      <div class="qblock-header" style="background:var(--turq);">
-        <span>📋</span> Le contenu du poste et les missions
-        <span class="q-counter" id="counter-1">0 sélectionnée(s)</span>
-      </div>
-      <div class="qblock-body" id="qgroup-1">
-        <div class="qitem" onclick="toggleQ(this,'1')"><span class="qcheck">☐</span> Quelles sont vos principales tâches au quotidien ?</div>
-        <div class="qitem" onclick="toggleQ(this,'1')"><span class="qcheck">☐</span> Y a-t-il des tâches insoupçonnées que vous réalisez régulièrement ?</div>
-        <div class="qitem" onclick="toggleQ(this,'1')"><span class="qcheck">☐</span> Quelle part de votre travail est consacrée à l'opérationnel, à la coordination, à la réflexion ?</div>
-        <div class="qitem" onclick="toggleQ(this,'1')"><span class="qcheck">☐</span> À quoi ressemble une journée type dans votre métier ?</div>
-        <div class="qitem qitem-custom" onclick="addCustomQ('qgroup-1','1')" style="border:2px dashed #aaa; background:#f9f9f9; color:#888; cursor:pointer; justify-content:center; gap:6px;">
-          <span>＋</span> Ajouter ma propre question…
+        <div class="qblock">
+          <div class="qblock-header" style="background:var(--orange);">
+            <span>🧠</span> Les compétences clés
+            <span class="q-counter" id="counter-3">0 sélectionnée(s)</span>
+          </div>
+          <div class="qblock-body" id="qgroup-3">
+            <div class="qitem" onclick="toggleQ(this,'3')"><span class="qcheck">☐</span> Quelles sont les compétences techniques indispensables ?</div>
+            <div class="qitem" onclick="toggleQ(this,'3')"><span class="qcheck">☐</span> Quelles qualités humaines font la différence ?</div>
+            <div class="qitem" onclick="toggleQ(this,'3')"><span class="qcheck">☐</span> Qu’est-ce qui distingue les bons professionnels ?</div>
+            <div class="qitem" onclick="toggleQ(this,'3')"><span class="qcheck">☐</span> Quelles compétences peut-on développer sur le terrain ?</div>
+            <div class="qitem qitem-custom" onclick="addCustomQ('qgroup-3','3')" style="border:2px dashed #aaa; background:#f9f9f9; color:#888; justify-content:center;">＋ Ajouter ma propre question…</div>
+          </div>
+        </div>
+
+        <div class="qblock">
+          <div class="qblock-header" style="background:var(--violet); color:#fff;">
+            <span>🌍</span> L'environnement et les conditions de travail
+            <span class="q-counter" id="counter-4">0 sélectionnée(s)</span>
+          </div>
+          <div class="qblock-body" id="qgroup-4">
+            <div class="qitem" onclick="toggleQ(this,'4')"><span class="qcheck">☐</span> Comment se déroule le travail en équipe ?</div>
+            <div class="qitem" onclick="toggleQ(this,'4')"><span class="qcheck">☐</span> Quels sont les horaires ou le rythme de travail ?</div>
+            <div class="qitem" onclick="toggleQ(this,'4')"><span class="qcheck">☐</span> Quels outils ou équipements utilisez-vous ?</div>
+            <div class="qitem" onclick="toggleQ(this,'4')"><span class="qcheck">☐</span> Qu’est-ce qui est le plus exigeant dans l’environnement de travail ?</div>
+            <div class="qitem qitem-custom" onclick="addCustomQ('qgroup-4','4')" style="border:2px dashed #aaa; background:#f9f9f9; color:#888; justify-content:center;">＋ Ajouter ma propre question…</div>
+          </div>
+        </div>
+
+        <div class="qblock">
+          <div class="qblock-header" style="background:#EF5350; color:#fff;">
+            <span>⚠️</span> Les contraintes du métier
+            <span class="q-counter" id="counter-5">0 sélectionnée(s)</span>
+          </div>
+          <div class="qblock-body" id="qgroup-5">
+            <div class="qitem" onclick="toggleQ(this,'5')"><span class="qcheck">☐</span> Qu’aimez-vous le moins dans votre métier ?</div>
+            <div class="qitem" onclick="toggleQ(this,'5')"><span class="qcheck">☐</span> Qu’auriez-vous aimé savoir avant de commencer ?</div>
+            <div class="qitem" onclick="toggleQ(this,'5')"><span class="qcheck">☐</span> Y a-t-il des contraintes physiques, mentales ou horaires ?</div>
+            <div class="qitem" onclick="toggleQ(this,'5')"><span class="qcheck">☐</span> Quels profils ont du mal à tenir dans ce métier ?</div>
+            <div class="qitem qitem-custom" onclick="addCustomQ('qgroup-5','5')" style="border:2px dashed #aaa; background:#f9f9f9; color:#888; justify-content:center;">＋ Ajouter ma propre question…</div>
+          </div>
+        </div>
+
+        <div class="qblock">
+          <div class="qblock-header" style="background:#26A69A; color:#fff;">
+            <span>💶</span> La rémunération
+            <span class="q-counter" id="counter-6">0 sélectionnée(s)</span>
+          </div>
+          <div class="qblock-body" id="qgroup-6">
+            <div class="qitem" onclick="toggleQ(this,'6')"><span class="qcheck">☐</span> Quel est le salaire à l’entrée dans ce métier ?</div>
+            <div class="qitem" onclick="toggleQ(this,'6')"><span class="qcheck">☐</span> Y a-t-il des primes ou avantages ?</div>
+            <div class="qitem" onclick="toggleQ(this,'6')"><span class="qcheck">☐</span> Comment évolue la rémunération avec l’expérience ?</div>
+            <div class="qitem qitem-custom" onclick="addCustomQ('qgroup-6','6')" style="border:2px dashed #aaa; background:#f9f9f9; color:#888; justify-content:center;">＋ Ajouter ma propre question…</div>
+          </div>
+        </div>
+
+        <div class="qblock">
+          <div class="qblock-header" style="background:var(--black); color:var(--yellow);">
+            <span>🌟</span> Les conseils du professionnel
+            <span class="q-counter" id="counter-7">0 sélectionnée(s)</span>
+          </div>
+          <div class="qblock-body" id="qgroup-7">
+            <div class="qitem" onclick="toggleQ(this,'7')"><span class="qcheck">☐</span> Quels conseils donneriez-vous à quelqu’un qui veut se lancer ?</div>
+            <div class="qitem" onclick="toggleQ(this,'7')"><span class="qcheck">☐</span> Par quoi commencer quand on s’intéresse à ce métier ?</div>
+            <div class="qitem" onclick="toggleQ(this,'7')"><span class="qcheck">☐</span> Quels contacts, sites ou ressources recommandez-vous ?</div>
+            <div class="qitem" onclick="toggleQ(this,'7')"><span class="qcheck">☐</span> Que regarder en priorité quand on visite une structure comme la vôtre ?</div>
+            <div class="qitem qitem-custom" onclick="addCustomQ('qgroup-7','7')" style="border:2px dashed #aaa; background:#f9f9f9; color:#888; justify-content:center;">＋ Ajouter ma propre question…</div>
+          </div>
+        </div>
+
+        <div id="q-total-bar" style="background:var(--yellow); border:3px solid var(--black); border-radius:12px; padding:14px 20px; box-shadow:var(--shadow); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-top:8px;">
+          <div>
+            <span style="font-family:'Poppins',sans-serif; font-weight:800; font-size:1.1rem;" id="total-q-count">0</span>
+            <span style="font-size:0.82rem; font-weight:600;"> question(s) sélectionnée(s) </span>
+            <span style="font-size:0.78rem; color:#666;" id="q-advice">— Vise 8 à 12 questions idéalement.</span>
+          </div>
+          <button class="btn-engage" onclick="switchTab('tab-checklist')">Suivant : check départ →</button>
         </div>
       </div>
-    </div>
 
-    <!-- Thématique 2 -->
-    <div class="qblock">
-      <div class="qblock-header" style="background:var(--mint);">
-        <span>🎓</span> L'accès au métier
-        <span class="q-counter" id="counter-2">0 sélectionnée(s)</span>
-      </div>
-      <div class="qblock-body" id="qgroup-2">
-        <div class="qitem" onclick="toggleQ(this,'2')"><span class="qcheck">☐</span> Quel a été votre parcours pour accéder à ce poste ?</div>
-        <div class="qitem" onclick="toggleQ(this,'2')"><span class="qcheck">☐</span> Existe-t-il plusieurs voies pour exercer ce métier (formation, apprentissage, reconversion…) ?</div>
-        <div class="qitem" onclick="toggleQ(this,'2')"><span class="qcheck">☐</span> Avez-vous rencontré des obstacles pour décrocher votre premier emploi dans ce domaine ?</div>
-        <div class="qitem" onclick="toggleQ(this,'2')"><span class="qcheck">☐</span> Est-ce qu'un diplôme spécifique est obligatoire, ou d'autres profils sont-ils acceptés ?</div>
-        <div class="qitem qitem-custom" onclick="addCustomQ('qgroup-2','2')" style="border:2px dashed #aaa; background:#f9f9f9; color:#888; cursor:pointer; justify-content:center; gap:6px;">
-          <span>＋</span> Ajouter ma propre question…
+      <!-- TAB 3 -->
+      <div id="tab-checklist" class="enq-panel hidden">
+        <div class="phase-goal">🎯 Objectif : vérifier que tout est prêt avant le départ</div>
+        <div class="phase-consigne mint">
+          👉 <strong>Consigne :</strong> Coche chaque point honnêtement.
+          Cette checklist t’aide à éviter les oublis et à te présenter dans de bonnes conditions le jour de la visite.
         </div>
-      </div>
-    </div>
-
-    <!-- Thématique 3 -->
-    <div class="qblock">
-      <div class="qblock-header" style="background:var(--orange);">
-        <span>🧠</span> Les compétences clés
-        <span class="q-counter" id="counter-3">0 sélectionnée(s)</span>
-      </div>
-      <div class="qblock-body" id="qgroup-3">
-        <div class="qitem" onclick="toggleQ(this,'3')"><span class="qcheck">☐</span> Quelles sont les compétences techniques indispensables pour ce métier ?</div>
-        <div class="qitem" onclick="toggleQ(this,'3')"><span class="qcheck">☐</span> Quelles qualités humaines font vraiment la différence au quotidien ?</div>
-        <div class="qitem" onclick="toggleQ(this,'3')"><span class="qcheck">☐</span> Avez-vous développé des compétences sur le terrain que vous n'aviez pas au départ ?</div>
-        <div class="qitem" onclick="toggleQ(this,'3')"><span class="qcheck">☐</span> Qu'est-ce qui distingue les bons professionnels dans ce métier selon vous ?</div>
-        <div class="qitem qitem-custom" onclick="addCustomQ('qgroup-3','3')" style="border:2px dashed #aaa; background:#f9f9f9; color:#888; cursor:pointer; justify-content:center; gap:6px;">
-          <span>＋</span> Ajouter ma propre question…
-        </div>
-      </div>
-    </div>
-
-    <!-- Thématique 4 -->
-    <div class="qblock">
-      <div class="qblock-header" style="background:#7E57C2; color:#fff;">
-        <span>🌍</span> L'environnement et les conditions de travail
-        <span class="q-counter" id="counter-4">0 sélectionnée(s)</span>
-      </div>
-      <div class="qblock-body" id="qgroup-4">
-        <div class="qitem" onclick="toggleQ(this,'4')"><span class="qcheck">☐</span> À quoi ressemble votre cadre de travail (lieu, rythme, outils…) ?</div>
-        <div class="qitem" onclick="toggleQ(this,'4')"><span class="qcheck">☐</span> Travaillez-vous de manière autonome ou en équipe ? Les deux ?</div>
-        <div class="qitem" onclick="toggleQ(this,'4')"><span class="qcheck">☐</span> Comment se passent les relations avec vos collègues, clients, supérieurs ?</div>
-        <div class="qitem" onclick="toggleQ(this,'4')"><span class="qcheck">☐</span> Votre emploi du temps est-il flexible ou contraignant ?</div>
-        <div class="qitem qitem-custom" onclick="addCustomQ('qgroup-4','4')" style="border:2px dashed #aaa; background:#f9f9f9; color:#888; cursor:pointer; justify-content:center; gap:6px;">
-          <span>＋</span> Ajouter ma propre question…
-        </div>
-      </div>
-    </div>
-
-    <!-- Thématique 5 -->
-    <div class="qblock">
-      <div class="qblock-header" style="background:#EF5350; color:#fff;">
-        <span>⚠️</span> Les contraintes du métier
-        <span class="q-counter" id="counter-5">0 sélectionnée(s)</span>
-      </div>
-      <div class="qblock-body" id="qgroup-5">
-        <div class="qitem" onclick="toggleQ(this,'5')"><span class="qcheck">☐</span> Qu'aimez-vous le moins dans votre travail ?</div>
-        <div class="qitem" onclick="toggleQ(this,'5')"><span class="qcheck">☐</span> Qu'auriez-vous aimé savoir avant d'exercer ce métier ?</div>
-        <div class="qitem" onclick="toggleQ(this,'5')"><span class="qcheck">☐</span> Ce métier permet-il un bon équilibre vie professionnelle / vie personnelle ?</div>
-        <div class="qitem" onclick="toggleQ(this,'5')"><span class="qcheck">☐</span> Diriez-vous que votre métier est stressant ? Pour quelles raisons ?</div>
-        <div class="qitem qitem-custom" onclick="addCustomQ('qgroup-5','5')" style="border:2px dashed #aaa; background:#f9f9f9; color:#888; cursor:pointer; justify-content:center; gap:6px;">
-          <span>＋</span> Ajouter ma propre question…
-        </div>
-      </div>
-    </div>
-
-    <!-- Thématique 6 -->
-    <div class="qblock">
-      <div class="qblock-header" style="background:#26A69A; color:#fff;">
-        <span>💶</span> La rémunération
-        <span class="q-counter" id="counter-6">0 sélectionnée(s)</span>
-      </div>
-      <div class="qblock-body" id="qgroup-6">
-        <div class="qitem" onclick="toggleQ(this,'6')"><span class="qcheck">☐</span> Quelle est la rémunération à l'entrée dans ce métier ? Après quelques années ?</div>
-        <div class="qitem" onclick="toggleQ(this,'6')"><span class="qcheck">☐</span> La rémunération comprend-elle une part variable, des primes, des avantages ?</div>
-        <div class="qitem" onclick="toggleQ(this,'6')"><span class="qcheck">☐</span> Le salaire vous semble-t-il en adéquation avec le niveau d'exigence du poste ?</div>
-        <div class="qitem qitem-custom" onclick="addCustomQ('qgroup-6','6')" style="border:2px dashed #aaa; background:#f9f9f9; color:#888; cursor:pointer; justify-content:center; gap:6px;">
-          <span>＋</span> Ajouter ma propre question…
-        </div>
-      </div>
-    </div>
-
-    <!-- Thématique 7 -->
-    <div class="qblock">
-      <div class="qblock-header" style="background:var(--black); color:var(--yellow);">
-        <span>🌟</span> Les conseils du professionnel
-        <span class="q-counter" id="counter-7">0 sélectionnée(s)</span>
-      </div>
-      <div class="qblock-body" id="qgroup-7">
-        <div class="qitem" onclick="toggleQ(this,'7')"><span class="qcheck">☐</span> Quels conseils donneriez-vous à quelqu'un qui souhaite se lancer dans ce métier ?</div>
-        <div class="qitem" onclick="toggleQ(this,'7')"><span class="qcheck">☐</span> Si c'était à refaire, que feriez-vous différemment dans votre parcours ?</div>
-        <div class="qitem" onclick="toggleQ(this,'7')"><span class="qcheck">☐</span> Avez-vous des ressources à recommander (formations, sites, personnes à contacter…) ?</div>
-        <div class="qitem" onclick="toggleQ(this,'7')"><span class="qcheck">☐</span> Comment voyez-vous l'avenir de ce métier dans 5 ou 10 ans ?</div>
-        <div class="qitem qitem-custom" onclick="addCustomQ('qgroup-7','7')" style="border:2px dashed #aaa; background:#f9f9f9; color:#888; cursor:pointer; justify-content:center; gap:6px;">
-          <span>＋</span> Ajouter ma propre question…
-        </div>
-      </div>
-    </div>
-
-    <!-- Compteur global -->
-    <div id="q-total-bar" style="background:var(--yellow); border:3px solid var(--black); border-radius:12px; padding:14px 20px; box-shadow:var(--shadow); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-top:8px;">
-      <div>
-        <span style="font-family:'Poppins',sans-serif; font-weight:800; font-size:1.1rem;" id="total-q-count">0</span>
-        <span style="font-size:0.82rem; font-weight:600;"> question(s) sélectionnée(s) </span>
-        <span style="font-size:0.78rem; color:#666;" id="q-advice">— Vise 8 à 12 questions idéalement.</span>
-      </div>
-      <button class="enq-btn-next" onclick="switchTab('tab-checklist')">Suivant : check départ →</button>
-    </div>
-  </div>
-
-  <!-- ── TAB 3 · CHECKLIST DÉPART ── -->
-  <div id="tab-checklist" class="enq-panel hidden">
-    <div class="phase">
-      <div class="phase-header" style="background:var(--orange); color:#fff;">
-        <div class="phase-icon">✅</div>
-        <div class="phase-title">
-          <h3>Ma checklist avant de partir</h3>
-          <small>Coche chaque point — zéro improvisation le jour J</small>
-        </div>
-      </div>
-      <div class="phase-body">
 
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
-          <!-- Colonne gauche -->
           <div>
             <div class="chk-section-title">📋 Préparation</div>
-            <div class="chk-item" onclick="toggleChk(this)">
-              <span class="chk-box">☐</span>
-              <div><strong>J'ai noté le nom, le poste et le lieu exact</strong> de la personne que je rencontre</div>
-            </div>
-            <div class="chk-item" onclick="toggleChk(this)">
-              <span class="chk-box">☐</span>
-              <div><strong>J'ai préparé mes questions</strong> et je les ai sur moi (papier ou téléphone)</div>
-            </div>
-            <div class="chk-item" onclick="toggleChk(this)">
-              <span class="chk-box">☐</span>
-              <div><strong>Je me suis renseigné(e) sur la structure</strong> (activité, taille, ce qu'ils font)</div>
-            </div>
-            <div class="chk-item" onclick="toggleChk(this)">
-              <span class="chk-box">☐</span>
-              <div><strong>J'ai prévu de quoi prendre des notes</strong> (carnet + stylo)</div>
-            </div>
-            <div class="chk-item" onclick="toggleChk(this)">
-              <span class="chk-box">☐</span>
-              <div><strong>Je connais l'itinéraire</strong> et j'ai vérifié les horaires de transport</div>
-            </div>
+            <div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>J’ai noté le nom, le poste et le lieu exact</strong></div></div>
+            <div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>J’ai préparé mes questions</strong></div></div>
+            <div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>Je me suis renseigné(e) sur la structure</strong></div></div>
+            <div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>J’ai prévu de quoi prendre des notes</strong></div></div>
+            <div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>Je connais l’itinéraire</strong></div></div>
           </div>
-          <!-- Colonne droite -->
+
           <div>
-            <div class="chk-section-title">👗 Tenue & Attitude</div>
-            <div class="chk-item" onclick="toggleChk(this)">
-              <span class="chk-box">☐</span>
-              <div><strong>Ma tenue est propre et adaptée</strong> au secteur de l'entreprise</div>
-            </div>
-            <div class="chk-item" onclick="toggleChk(this)">
-              <span class="chk-box">☐</span>
-              <div><strong>Je pars avec assez d'avance</strong> pour arriver 5 min avant</div>
-            </div>
-            <div class="chk-item" onclick="toggleChk(this)">
-              <span class="chk-box">☐</span>
-              <div><strong>Mon téléphone sera silencieux</strong> et rangé pendant la visite</div>
-            </div>
-            <div class="chk-item" onclick="toggleChk(this)">
-              <span class="chk-box">☐</span>
-              <div><strong>Je me rappelle pourquoi je fais cette enquête</strong> : découvrir, pas décrocher un emploi</div>
-            </div>
-            <div class="chk-item" onclick="toggleChk(this)">
-              <span class="chk-box">☐</span>
-              <div><strong>Je suis prêt(e) à remercier</strong> chaleureusement à la fin et à serrer la main</div>
-            </div>
+            <div class="chk-section-title">👗 Tenue & attitude</div>
+            <div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>Ma tenue est propre et adaptée</strong></div></div>
+            <div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>Je pars avec assez d’avance</strong></div></div>
+            <div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>Mon téléphone sera silencieux</strong></div></div>
+            <div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>Je sais pourquoi je fais cette enquête</strong></div></div>
+            <div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>Je suis prêt(e) à remercier mon interlocuteur</strong></div></div>
           </div>
         </div>
 
-        <!-- Barre de progression checklist -->
         <div style="margin-top:20px; background:#f5f5f5; border:2px solid var(--black); border-radius:10px; padding:14px 18px; box-shadow:var(--shadow);">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
             <span style="font-family:'Poppins',sans-serif; font-weight:700; font-size:0.82rem;">Progression</span>
@@ -1477,87 +1751,65 @@
         </div>
 
         <div style="margin-top:16px; text-align:right;">
-          <button class="enq-btn-next" onclick="switchTab('tab-notes')">Suivant : mes notes de visite →</button>
+          <button class="btn-engage" onclick="switchTab('tab-notes')">Suivant : mes notes →</button>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- ── TAB 4 · NOTES DE VISITE ── -->
-  <div id="tab-notes" class="enq-panel hidden">
-    <div class="phase">
-      <div class="phase-header" style="background:#7E57C2; color:#fff;">
-        <div class="phase-icon">✏️</div>
-        <div class="phase-title">
-          <h3>Mes notes pendant et après la visite</h3>
-          <small>Complète pendant ou juste après l'enquête — à chaud !</small>
-        </div>
-      </div>
-      <div class="phase-body">
-
-        <div style="background:#EDE7F6; border:2px solid var(--black); border-radius:10px; padding:12px 16px; font-size:0.82rem; margin-bottom:18px; box-shadow:var(--shadow);">
-          💡 <strong>Astuce :</strong> Remplis ces notes <em>immédiatement après</em> la visite, pendant que les souvenirs sont frais.
-          Ce que tu ne notes pas maintenant sera oublié dans 48h.
+      <!-- TAB 4 -->
+      <div id="tab-notes" class="enq-panel hidden">
+        <div class="phase-goal">🎯 Objectif : garder une trace utile de la visite</div>
+        <div class="phase-consigne orange">
+          👉 <strong>Consigne :</strong> Remplis cette partie pendant ou juste après la visite.
+          Note ce qui t’a marqué, ce que tu as appris, ce qui te semble accessible et ce qu’il faudra encore développer.
         </div>
 
         <div style="display:flex; flex-direction:column; gap:14px;">
           <div>
-            <label class="enq-label">🔑 Les 3 informations les plus importantes que j'ai apprises</label>
-            <textarea class="enq-textarea" id="notes-top3" placeholder="1. …&#10;2. …&#10;3. …" rows="4"></textarea>
+            <label class="enq-label">🔑 Les 3 informations les plus importantes que j’ai apprises</label>
+            <textarea class="enq-textarea" id="notes-top3" rows="4"></textarea>
           </div>
           <div>
-            <label class="enq-label">😮 Ce qui m'a surpris (en bien ou en mal)</label>
-            <textarea class="enq-textarea" id="notes-surprise" placeholder="Ex : Je ne savais pas que ce métier impliquait autant de travail administratif…" rows="3"></textarea>
+            <label class="enq-label">😮 Ce qui m’a surpris</label>
+            <textarea class="enq-textarea" id="notes-surprise" rows="3"></textarea>
           </div>
           <div>
-            <label class="enq-label">💪 Les compétences mentionnées qui me semblent accessibles</label>
-            <textarea class="enq-textarea" id="notes-forces" placeholder="Ex : L'organisation, le sens du contact client — je pense que j'ai déjà ça…" rows="3"></textarea>
+            <label class="enq-label">💪 Les compétences qui me semblent accessibles</label>
+            <textarea class="enq-textarea" id="notes-forces" rows="3"></textarea>
           </div>
           <div>
             <label class="enq-label">📈 Les compétences que je devrais développer</label>
-            <textarea class="enq-textarea" id="notes-dev" placeholder="Ex : La maîtrise d'un logiciel métier spécifique, la gestion du stress…" rows="3"></textarea>
+            <textarea class="enq-textarea" id="notes-dev" rows="3"></textarea>
           </div>
           <div>
-            <label class="enq-label">🌡️ Ce métier m'attire-t-il toujours autant après la visite ?</label>
-            <div style="display:flex; gap:10px; margin-top:6px;" id="attractivite">
+            <label class="enq-label">🌡️ Ce métier m’attire-t-il toujours autant ?</label>
+            <div style="display:flex; gap:10px; margin-top:6px; flex-wrap:wrap;" id="attractivite">
               <button class="attract-btn" onclick="setAttract(this,'🔥 Encore plus motivé(e) !')">🔥 Encore plus</button>
               <button class="attract-btn" onclick="setAttract(this,'✅ Toujours autant')">✅ Toujours autant</button>
               <button class="attract-btn" onclick="setAttract(this,'🤔 Je dois y réfléchir')">🤔 À réfléchir</button>
-              <button class="attract-btn" onclick="setAttract(this,'❌ Moins qu'avant')">❌ Moins qu'avant</button>
+              <button class="attract-btn" onclick="setAttract(this,'❌ Moins qu’avant')">❌ Moins qu’avant</button>
             </div>
             <div id="attract-result" style="display:none; margin-top:8px; font-size:0.8rem; font-weight:700; padding:8px 12px; border:2px solid var(--black); border-radius:8px; background:#FFFDE7;"></div>
-          </div>
-          <div>
-            <label class="enq-label">📬 J'ai pensé à remercier mon interlocuteur ?</label>
-            <div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
-              <div class="chk-item" onclick="toggleChk(this)" style="flex:0;">
-                <span class="chk-box">☐</span> <span style="font-size:0.82rem;">Message de remerciement envoyé</span>
-              </div>
-            </div>
-            <textarea class="enq-textarea" id="notes-merci" placeholder="Brouillon du message de remerciement (optionnel) :&#10;Bonjour [Prénom], je vous remercie chaleureusement pour le temps accordé…" rows="3" style="margin-top:8px;"></textarea>
           </div>
         </div>
 
         <div style="margin-top:16px; text-align:right;">
-          <button class="enq-btn-next" onclick="switchTab('tab-bilan')">Suivant : mon bilan →</button>
+          <button class="btn-engage" onclick="switchTab('tab-bilan')">Suivant : mon bilan →</button>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- ── TAB 5 · BILAN ── -->
-  <div id="tab-bilan" class="enq-panel hidden">
-    <div style="background:var(--turq); border:3px solid var(--black); border-radius:16px; padding:22px 24px; box-shadow:var(--shadow-lg); margin-bottom:20px; color:#fff;">
-      <h3 style="font-family:'Poppins',sans-serif; font-weight:900; font-size:1.1rem; margin-bottom:6px;">🎯 Mon bilan d'enquête</h3>
-      <p style="font-size:0.82rem; opacity:0.9;">Synthèse personnelle — ce que je retiens et ma prochaine action concrète</p>
-    </div>
+      <!-- TAB 5 -->
+      <div id="tab-bilan" class="enq-panel hidden">
+        <div class="phase-goal">🎯 Objectif : relier la visite à la suite de mon parcours</div>
+        <div class="phase-consigne pink">
+          👉 <strong>Consigne :</strong> Fais une synthèse de ce que tu retiens,
+          indique si cette visite confirme ou fait évoluer ton projet,
+          puis note une prochaine action concrète à partager avec ton conseiller.
+        </div>
 
-    <div class="phase">
-      <div class="phase-body" style="padding-top:20px;">
         <div style="display:flex; flex-direction:column; gap:14px;">
           <div>
-            <label class="enq-label">✍️ En 2-3 phrases, ce que je retiens de cette enquête</label>
-            <textarea class="enq-textarea" id="bilan-synthese" placeholder="Ex : Ce métier est plus varié que ce que je pensais. J'ai découvert que la relation client est centrale. Ça confirme mon intérêt, mais je dois me former sur…" rows="4"></textarea>
+            <label class="enq-label">✍️ En 2 ou 3 phrases, ce que je retiens de cette enquête</label>
+            <textarea class="enq-textarea" id="bilan-synthese" rows="4"></textarea>
           </div>
 
           <div>
@@ -1566,54 +1818,38 @@
               <button class="attract-btn" onclick="setImpact(this,'✅ Ça confirme mon projet !')">✅ Confirme mon projet</button>
               <button class="attract-btn" onclick="setImpact(this,'🔀 Je nuance un peu mon projet')">🔀 Je nuance un peu</button>
               <button class="attract-btn" onclick="setImpact(this,'🔄 Je reconsidère une piste')">🔄 Je reconsidère une piste</button>
-              <button class="attract-btn" onclick="setImpact(this,'💡 Je découvre une nouvelle piste')">💡 Nouvelle piste découverte</button>
+              <button class="attract-btn" onclick="setImpact(this,'💡 Je découvre une nouvelle piste')">💡 Nouvelle piste</button>
             </div>
             <div id="impact-result" style="display:none; margin-top:8px; font-size:0.8rem; font-weight:700; padding:8px 12px; border:2px solid var(--black); border-radius:8px; background:#E0F7FA;"></div>
           </div>
 
           <div>
-            <label class="enq-label">🚀 Ma prochaine action concrète (dans les 7 jours)</label>
-            <input class="enq-input" id="bilan-action" placeholder="Ex : Chercher une formation en menuiserie, contacter un deuxième professionnel, revoir mon CV…">
+            <label class="enq-label">🚀 Ma prochaine action concrète</label>
+            <input class="enq-input" id="bilan-action" placeholder="Ex : contacter un autre pro, chercher une immersion, revoir mon projet…">
           </div>
 
           <div>
             <label class="enq-label">📅 Je partage ce bilan avec mon conseiller le…</label>
-            <input class="enq-input" id="bilan-rdv" placeholder="Date du prochain rendez-vous Mission Locale…">
+            <input class="enq-input" id="bilan-rdv" placeholder="Date du prochain rendez-vous">
           </div>
         </div>
 
-        <!-- Fiche récap générée -->
         <div style="margin-top:22px;">
-          <button style="width:100%; background:var(--black); color:var(--yellow); border:3px solid var(--black); border-radius:10px; padding:14px; font-family:'Poppins',sans-serif; font-weight:800; font-size:0.9rem; cursor:pointer; box-shadow:var(--shadow); transition:transform 0.1s;" onclick="generateRecap()" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
-            📄 Générer ma fiche récapitulative d'enquête
+          <button style="width:100%; background:var(--black); color:var(--yellow); border:3px solid var(--black); border-radius:10px; padding:14px; font-family:'Poppins',sans-serif; font-weight:800; font-size:0.9rem; cursor:pointer; box-shadow:var(--shadow);" onclick="generateRecap()">
+            📄 Générer ma fiche récapitulative d’enquête
           </button>
         </div>
 
         <div id="recap-output" style="display:none; margin-top:18px; background:#FFFDF7; border:3px solid var(--black); border-radius:12px; padding:22px; box-shadow:var(--shadow-lg); font-size:0.82rem; line-height:1.7;"></div>
-
       </div>
-    </div>
 
-    <div class="tip-box" style="margin-top:0;">
-      <div class="tip-box-header">📌 Ce que tu dois faire après chaque enquête</div>
-      <div class="tip-box-body">
-        <ul>
-          <li>✦ <strong>Relis tes notes à chaud</strong> : identifie les points saillants, les surprises, les confirmations.</li>
-          <li>✦ <strong>Envoie un message de remerciement</strong> simple et personnalisé à ton interlocuteur.</li>
-          <li>✦ <strong>Garde une trace claire</strong> de chaque échange (nom, date, métier, points clés) pour bâtir ton réseau.</li>
-          <li>✦ <strong>Partage ton bilan</strong> avec ton conseiller Mission Locale pour ajuster ton plan d'action.</li>
-        </ul>
-      </div>
     </div>
   </div>
-
 </div>
 
-<!-- FOOTER -->
-<div class="footer">LS4YOU · Mission Locale Pays Basque · Atelier Image de soi & Posture professionnelle</div>
+<div class="footer">LS4YOU · Mission Locale Pays Basque · Réseau de soutien, image de soi, posture professionnelle et enquête métier</div>
 
 <script>
-// ─── Stars ───
 document.querySelectorAll('.star-row').forEach(row => {
   const stars = row.querySelectorAll('.star');
   stars.forEach((star, i) => {
@@ -1627,23 +1863,201 @@ document.querySelectorAll('.star-row').forEach(row => {
   });
 });
 
-// ─── Scenarios ───
+let supportCount = 0;
+
+function addSupportRow(name = "", support = "", circle = "") {
+  supportCount++;
+  const list = document.getElementById('support-list');
+
+  const row = document.createElement('div');
+  row.className = 'support-row';
+  row.id = 'support-row-' + supportCount;
+
+  row.innerHTML = `
+    <input class="enq-input support-name" placeholder="Nom / rôle" value="${name}">
+    <select class="enq-input support-type">
+      <option value="">Type de soutien</option>
+      <option value="émotionnel" ${support === 'émotionnel' ? 'selected' : ''}>Émotionnel</option>
+      <option value="pratique" ${support === 'pratique' ? 'selected' : ''}>Pratique</option>
+      <option value="conseil" ${support === 'conseil' ? 'selected' : ''}>Conseil</option>
+    </select>
+    <select class="enq-input support-circle">
+      <option value="">Cercle</option>
+      <option value="personnel" ${circle === 'personnel' ? 'selected' : ''}>Personnel</option>
+      <option value="professionnel" ${circle === 'professionnel' ? 'selected' : ''}>Professionnel</option>
+      <option value="social" ${circle === 'social' ? 'selected' : ''}>Social</option>
+    </select>
+    <button class="support-del" onclick="removeSupportRow(${supportCount})">✕</button>
+  `;
+
+  list.appendChild(row);
+
+  row.querySelectorAll('input, select').forEach(el => {
+    el.addEventListener('input', updateSupportSummary);
+    el.addEventListener('change', updateSupportSummary);
+  });
+
+  updateSupportSummary();
+}
+
+function removeSupportRow(id) {
+  const row = document.getElementById('support-row-' + id);
+  if (row) row.remove();
+  updateSupportSummary();
+}
+
+function updateSupportSummary() {
+  const rows = document.querySelectorAll('#support-list .support-row');
+
+  let emotional = 0;
+  let practical = 0;
+  let advice = 0;
+  let personnel = 0;
+  let professionnel = 0;
+  let social = 0;
+  let filled = 0;
+
+  rows.forEach(row => {
+    const name = row.querySelector('.support-name')?.value.trim();
+    const type = row.querySelector('.support-type')?.value;
+    const circle = row.querySelector('.support-circle')?.value;
+
+    if (name || type || circle) filled++;
+
+    if (type === 'émotionnel') emotional++;
+    if (type === 'pratique') practical++;
+    if (type === 'conseil') advice++;
+
+    if (circle === 'personnel') personnel++;
+    if (circle === 'professionnel') professionnel++;
+    if (circle === 'social') social++;
+  });
+
+  const summary = document.getElementById('network-summary');
+
+  if (filled === 0) {
+    summary.innerHTML = `
+      <strong>Lecture rapide :</strong><br>
+      Ajoute quelques personnes pour voir où ton réseau est déjà solide
+      et où tu pourrais le développer.
+    `;
+    return;
+  }
+
+  let weakPoints = [];
+  if (emotional === 0) weakPoints.push("soutien émotionnel");
+  if (practical === 0) weakPoints.push("aide pratique");
+  if (advice === 0) weakPoints.push("conseil");
+  if (professionnel === 0) weakPoints.push("cercle professionnel");
+
+  summary.innerHTML = `
+    <strong>Ton réseau actuel :</strong><br>
+    • ${filled} personne(s) repérée(s)<br>
+    • Soutien émotionnel : <strong>${emotional}</strong><br>
+    • Soutien pratique : <strong>${practical}</strong><br>
+    • Soutien conseil : <strong>${advice}</strong><br>
+    • Cercle personnel : <strong>${personnel}</strong> · professionnel : <strong>${professionnel}</strong> · social : <strong>${social}</strong><br><br>
+    ${
+      weakPoints.length
+        ? `👉 À renforcer en priorité : <strong>${weakPoints.join(", ")}</strong>.`
+        : `✅ Ton réseau est déjà diversifié. L’enjeu maintenant est de l’entretenir et de l’activer.`
+    }
+  `;
+}
+
+function saveNetworkAction() {
+  const action = document.getElementById('networkAction').value.trim();
+  if (!action) {
+    alert("Écris une action concrète pour renforcer ton réseau.");
+    return;
+  }
+
+  const box = document.getElementById('network-action-result');
+  box.style.display = 'block';
+  box.innerHTML = `
+    <strong>✅ Action validée</strong><br>
+    Dans le mois qui vient, je m’engage à : <em>${action}</em>
+  `;
+}
+
+function generatePitch() {
+  const f1 = document.getElementById('force1').value.trim();
+  const f2 = document.getElementById('force2').value.trim();
+  const f3 = document.getElementById('force3').value.trim();
+  const valeurs = document.getElementById('valeurs').value.trim();
+  const cible = document.getElementById('cible').value.trim();
+  const besoins = document.getElementById('besoins').value.trim();
+
+  if (!f1 || !cible) {
+    alert("Complète au moins un point fort et à qui il peut être utile.");
+    return;
+  }
+
+  let niveau = 1;
+  if (f1 && cible) niveau = 2;
+  if (f1 && f2 && cible) niveau = 3;
+  if (f1 && f2 && f3 && valeurs && cible && besoins) niveau = 4;
+
+  let pitch = `Je suis quelqu’un de ${f1}`;
+  if (f2) pitch += `, ${f2}`;
+  if (f3) pitch += ` et ${f3}`;
+  pitch += `. `;
+
+  pitch += `Je peux être utile pour ${cible}`;
+  if (besoins) pitch += ` en aidant à ${besoins}`;
+  pitch += `.`;
+
+  if (valeurs) {
+    pitch += ` Ce qui est important pour moi : ${valeurs}.`;
+  }
+
+  const levelText = {
+    1: "Niveau 1 · J’identifie une force",
+    2: "Niveau 2 · Je relie ma force à un public",
+    3: "Niveau 3 · Je commence à me présenter clairement",
+    4: "Niveau 4 · Ma marque personnelle est solide"
+  };
+
+  const coachText = {
+    1: "Ajoute à qui cette qualité peut être utile.",
+    2: "Ajoute 1 ou 2 autres points forts pour être plus convaincant.",
+    3: "Ajoute les besoins que tu peux aider à couvrir.",
+    4: "Très bien : tu peux réutiliser cette phrase en visite ou en entretien."
+  };
+
+  document.getElementById('pitchResult').style.display = 'block';
+  document.getElementById('pitchLevel').textContent = levelText[niveau];
+  document.getElementById('pitchText').textContent = pitch;
+  document.getElementById('pitchCoach').textContent = "💡 " + coachText[niveau];
+}
+
+function copyPitch() {
+  const text = document.getElementById('pitchText').textContent.trim();
+  if (!text) {
+    alert("Génère d’abord ta phrase.");
+    return;
+  }
+  navigator.clipboard.writeText(text)
+    .then(() => alert("Pitch copié."))
+    .catch(() => alert("Impossible de copier automatiquement."));
+}
+
 const feedbacks = {
   sc1: {
-    good: "✅ C'est la bonne attitude. S'excuser simplement et passer à autre chose, c'est la preuve qu'on est adulte. Pas besoin de se justifier pendant 5 minutes — ça rend les choses encore plus gênantes.",
-    bad: "❌ Pas top. Entrer sans rien dire, ça peut passer pour de l'insolence. À l'inverse, expliquer tout dans le détail, ça donne l'impression qu'on cherche des excuses. Un \"désolé pour le retard\" direct, c'est suffisant et efficace."
+    good: "✅ Bonne réaction : tu assumes simplement et tu passes à la suite.",
+    bad: "❌ Pas idéal : soit tu ne dis rien, soit tu te justifies trop. Le mieux, c’est une excuse simple."
   },
   sc2: {
-    good: "✅ Bonne posture. Maintenir l'attention même quand c'est difficile, c'est ce qu'on attend de quelqu'un qui est là pour apprendre. Et ignorer celui qui ricane, c'est aussi une forme de respect envers la personne qui prend du temps pour vous.",
-    bad: "❌ Ça se voit toujours plus qu'on croit. Rire ou regarder son téléphone, même \"discrètement\", ça marque les gens. La personne en face a accepté de vous recevoir — ça mérite qu'on reste présent, même quand c'est long."
+    good: "✅ Bonne posture : tu restes présent, même si c’est difficile.",
+    bad: "❌ Cela donne une mauvaise image. La personne t’accorde du temps."
   },
   sc3: {
-    good: "✅ Exactement ça. Oser dire \"je n'ai pas compris\" c'est une force, pas une faiblesse. Les professionnels apprécient les participants qui posent des vraies questions plutôt que ceux qui font semblant de tout suivre.",
-    bad: "❌ Les deux autres options ont un problème en commun : tu repars sans l'info dont tu avais besoin. Faire semblant de comprendre ou esquiver, ça ne t'aide pas. Reformuler une question, c'est toujours mieux qu'un vide dans tes notes."
+    good: "✅ Très bon réflexe : demander une reformulation montre ton sérieux.",
+    bad: "❌ Tu risques de repartir sans comprendre l’essentiel."
   },
   sc4: {
-    good: "✅ Réflexe nickel. Demander à poursuivre l'échange par mail ou plus tard, c'est montrer que la démarche compte vraiment pour toi. Et c'est souvent comme ça qu'on garde un contact utile pour la suite.",
-    bad: "❌ Attention. Montrer sa déception ou inventer des réponses, ce sont deux façons de terminer sur une mauvaise note. La visite n'est pas un examen — si t'as pas tout eu, t'as quand même appris des choses. Et tu peux toujours demander à revenir vers la personne."
+    good: "✅ Très bon réflexe : tu prolonges l’échange avec respect.",
+    bad: "❌ Cela ferme la relation ou fausse ton retour."
   }
 };
 
@@ -1656,6 +2070,7 @@ function chooseScenario(el, scenId, isGood) {
     c.style.pointerEvents = 'none';
     c.style.opacity = '0.6';
   });
+
   el.style.opacity = '1';
   el.style.borderColor = isGood ? 'var(--mint)' : 'var(--red)';
   el.style.background = isGood ? '#E8F5E9' : '#FFEBEE';
@@ -1664,35 +2079,59 @@ function chooseScenario(el, scenId, isGood) {
   fb.textContent = isGood ? feedbacks[scenId].good : feedbacks[scenId].bad;
   fb.className = 'choice-feedback ' + (isGood ? 'good' : 'bad');
   fb.classList.remove('hidden');
-
-  // update progress
-  updateProgress();
 }
 
-// ─── Jeu du Tri Interactif (Phase 4) ───
+function shuffleChoices() {
+  document.querySelectorAll('.scenario-choices').forEach(container => {
+    const choices = Array.from(container.querySelectorAll('.choice'));
+
+    for (let i = choices.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [choices[i], choices[j]] = [choices[j], choices[i]];
+    }
+
+    container.innerHTML = '';
+    choices.forEach((choice, index) => {
+      choice.querySelector('.choice-letter').textContent = String.fromCharCode(65 + index);
+      choice.onclick = () => {
+        const isCorrect = choice.dataset.correct === "true";
+        chooseScenario(choice, container.id, isCorrect);
+      };
+      container.appendChild(choice);
+    });
+  });
+}
+
+function shuffleScenarios() {
+  const container = document.getElementById('scenarioContainer');
+  if (!container) return;
+  const blocks = Array.from(container.querySelectorAll('.scenario-block'));
+  for (let i = blocks.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [blocks[i], blocks[j]] = [blocks[j], blocks[i]];
+  }
+  blocks.forEach(block => container.appendChild(block));
+}
+
 const sortItems = [
-  { text: "Arriver 5 minutes avant l'heure prévue", type: "do" },
+  { text: "Arriver 5 minutes avant l’heure prévue", type: "do" },
   { text: "Garder son téléphone posé sur la table", type: "dont" },
   { text: "Dire bonjour à chaque personne croisée", type: "do" },
-  { text: "Regarder ses chaussures quand on s'adresse à nous", type: "dont" },
-  { text: "Préparer 3 ou 4 questions à l'avance", type: "do" },
-  { text: "Mâcher un chewing-gum (même discrètement)", type: "dont" },
-  { text: "Vouvoyer son interlocuteur d'office", type: "do" },
-  { text: "Faire semblant d'avoir compris", type: "dont" },
-  { text: "Prendre des notes pendant la visite", type: "do" },
-  { text: "S'affaler sur sa chaise pour montrer qu'on est à l'aise", type: "dont" }
+  { text: "Faire semblant d’avoir compris", type: "dont" },
+  { text: "Préparer quelques questions à l’avance", type: "do" },
+  { text: "Mâcher un chewing-gum", type: "dont" },
+  { text: "Vouvoyer son interlocuteur", type: "do" },
+  { text: "S’affaler sur sa chaise", type: "dont" }
 ];
 let currentSortIndex = 0;
 
 function renderSortCard() {
   const card = document.getElementById('sort-current-card');
-  const container = document.getElementById('sort-game-container');
-  const doneMsg = document.getElementById('sort-done-msg');
-  
+  if (!card) return;
   if (currentSortIndex >= sortItems.length) {
-    container.style.display = 'none';
-    doneMsg.style.display = 'block';
-    doneMsg.classList.add('bounce');
+    card.textContent = "🎉 Bravo ! Votre code de conduite est prêt.";
+    const actions = document.querySelector('.sort-actions');
+    if (actions) actions.style.display = 'none';
     return;
   }
   card.textContent = sortItems[currentSortIndex].text;
@@ -1701,61 +2140,47 @@ function renderSortCard() {
 function handleSort(choice) {
   const item = sortItems[currentSortIndex];
   const card = document.getElementById('sort-current-card');
-  
+
   if (choice === item.type) {
-    // Bonne réponse
     const ul = document.getElementById(choice === 'do' ? 'list-do' : 'list-dont');
     const li = document.createElement('li');
     li.textContent = (choice === 'do' ? '✅ ' : '❌ ') + item.text;
     ul.appendChild(li);
-    
     currentSortIndex++;
     renderSortCard();
   } else {
-    // Mauvaise réponse (Erreur)
     card.classList.remove('shake');
-    void card.offsetWidth; // Force le reflow pour relancer l'animation CSS
+    void card.offsetWidth;
     card.classList.add('shake');
-    card.style.borderColor = 'var(--red)';
-    card.style.color = 'var(--red)';
-    setTimeout(() => {
-      card.style.borderColor = 'var(--black)';
-      card.style.color = 'inherit';
-    }, 400);
   }
 }
 
-// Initialisation au chargement
-document.addEventListener('DOMContentLoaded', () => {
-  renderSortCard();
-});
-
-// ─── Engagement ───
 function submitEngagement() {
   const p = document.getElementById('prenom').value.trim();
   const f = document.getElementById('force').value.trim();
   const a = document.getElementById('amelio').value.trim();
   const o = document.getElementById('objectif').value.trim();
-  if (!p) { alert("Écris ton prénom pour t'engager !"); return; }
+
+  if (!p) {
+    alert("Écris ton prénom.");
+    return;
+  }
 
   const res = document.getElementById('engResult');
-  res.innerHTML = `🤝 <strong>${p}</strong>, tu t'engages !<br>
+  res.innerHTML = `🤝 <strong>${p}</strong>, tu t’engages !<br>
     ✅ Tu apportes : <em>${f || '…'}</em><br>
-    📈 Tu vas travailler : <em>${a || '…'}</em><br>
-    🎯 Ton objectif : <em>${o || '…'}</em><br><br>
-    <span style="font-size:1.2rem">💪 Bonne visite !</span>`;
+    📈 Tu travailles : <em>${a || '…'}</em><br>
+    🎯 Ton objectif : <em>${o || '…'}</em>`;
   res.style.display = 'block';
-  res.classList.add('bounce');
 }
 
-// ─── Progress ───
-function updateProgress() {
-  const answered = document.querySelectorAll('[data-answered]').length;
-  const dots = document.querySelectorAll('.step-dot');
-  dots.forEach((d, i) => d.classList.toggle('active', i <= answered));
+function switchTab(id) {
+  document.querySelectorAll('.enq-panel').forEach(p => p.classList.add('hidden'));
+  document.getElementById(id).classList.remove('hidden');
+  document.querySelectorAll('.enq-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('btn-' + id).classList.add('active');
 }
 
-// ─── Structure type ───
 function selectStruct(btn, label) {
   document.querySelectorAll('.struct-btn').forEach(b => b.classList.remove('selected'));
   btn.classList.add('selected');
@@ -1764,7 +2189,6 @@ function selectStruct(btn, label) {
   r.textContent = '→ ' + label;
 }
 
-// ─── Métiers multiples ───
 let metierCount = 0;
 function addMetier() {
   metierCount++;
@@ -1773,8 +2197,8 @@ function addMetier() {
   row.className = 'metier-row';
   row.id = 'metier-row-' + metierCount;
   row.innerHTML = `
-    <input class="enq-input" id="metier-${metierCount}" placeholder="Ex : Agent d'accueil, cuisinier, éducateur…">
-    <div class="metier-del" onclick="removeMetier(${metierCount})" title="Supprimer">✕</div>
+    <input class="enq-input" id="metier-${metierCount}" placeholder="Ex : agent d’accueil, cuisinier, éducateur…">
+    <div class="metier-del" onclick="removeMetier(${metierCount})">✕</div>
   `;
   list.appendChild(row);
 }
@@ -1786,17 +2210,8 @@ function getMetiers() {
   return [...document.querySelectorAll('#metiers-list input')].map(i => i.value.trim()).filter(Boolean);
 }
 
-// ─── Enquête : Tabs ───
-function switchTab(id) {
-  document.querySelectorAll('.enq-panel').forEach(p => p.classList.add('hidden'));
-  document.getElementById(id).classList.remove('hidden');
-  document.querySelectorAll('.enq-tab').forEach(t => t.classList.remove('active'));
-  document.getElementById('btn-' + id).classList.add('active');
-  document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-// ─── Enquête : Questions ───
 const qCounts = { '1':0,'2':0,'3':0,'4':0,'5':0,'6':0,'7':0 };
+
 function toggleQ(el, gid) {
   if (el.classList.contains('qitem-custom')) return;
   el.classList.toggle('selected');
@@ -1807,6 +2222,7 @@ function toggleQ(el, gid) {
   document.getElementById('counter-' + gid).textContent = qCounts[gid] + ' sélectionnée(s)';
   updateQTotal();
 }
+
 function updateQTotal() {
   const total = Object.values(qCounts).reduce((a,b)=>a+b,0);
   document.getElementById('total-q-count').textContent = total;
@@ -1815,6 +2231,7 @@ function updateQTotal() {
   else if (total <= 12) adv.textContent = '— Parfait ! Tu as un bon nombre de questions. ✅';
   else adv.textContent = '— Attention, tu en as un peu trop. Affine ta sélection.';
 }
+
 function addCustomQ(groupId, gid) {
   const text = prompt('Ta question personnalisée :');
   if (!text || !text.trim()) return;
@@ -1827,23 +2244,23 @@ function addCustomQ(groupId, gid) {
   group.insertBefore(newQ, addBtn);
 }
 
-// ─── Enquête : Checklist ───
-let chkTotal = 0;
 function toggleChk(el) {
   el.classList.toggle('checked');
   const box = el.querySelector('.chk-box');
   const on = el.classList.contains('checked');
   box.textContent = on ? '☑' : '☐';
+
   const allChk = document.querySelectorAll('#tab-checklist .chk-item');
   const done = document.querySelectorAll('#tab-checklist .chk-item.checked').length;
   const pct = Math.round(done / allChk.length * 100);
+
   document.getElementById('chk-count').textContent = done + ' / ' + allChk.length;
   document.getElementById('chk-bar').style.width = pct + '%';
+
   const msgs = ['','Bon début !','Continue !','Tu avances bien !','Presque prêt(e) !','Presque prêt(e) !','Presque prêt(e) !','Presque prêt(e) !','Presque prêt(e) !','Encore un peu !','✅ Tu es 100% prêt(e) pour la visite !'];
   document.getElementById('chk-msg').textContent = msgs[done] || '';
 }
 
-// ─── Enquête : Attractivité ───
 function setAttract(btn, label) {
   document.querySelectorAll('#attractivite .attract-btn').forEach(b => b.classList.remove('selected'));
   btn.classList.add('selected');
@@ -1851,6 +2268,7 @@ function setAttract(btn, label) {
   r.style.display = 'block';
   r.textContent = '→ ' + label;
 }
+
 function setImpact(btn, label) {
   document.querySelectorAll('#impact-btns .attract-btn').forEach(b => b.classList.remove('selected'));
   btn.classList.add('selected');
@@ -1859,7 +2277,6 @@ function setImpact(btn, label) {
   r.textContent = '→ ' + label;
 }
 
-// ─── Enquête : Récap ───
 function generateRecap() {
   const nom = document.getElementById('ent-nom').value || '—';
   const secteur = document.getElementById('ent-secteur').value || '—';
@@ -1887,7 +2304,7 @@ function generateRecap() {
   const out = document.getElementById('recap-output');
   out.style.display = 'block';
   out.innerHTML = `
-    <div style="background:var(--black); color:var(--yellow); font-family:'Poppins',sans-serif; font-weight:900; font-size:0.95rem; padding:12px 16px; border-radius:8px; margin-bottom:16px; letter-spacing:0.5px;">
+    <div style="background:var(--black); color:var(--yellow); font-family:'Poppins',sans-serif; font-weight:900; font-size:0.95rem; padding:12px 16px; border-radius:8px; margin-bottom:16px;">
       📄 FICHE D'ENQUÊTE MÉTIER — ${nom.toUpperCase()}
     </div>
     <table style="width:100%; border-collapse:collapse; font-size:0.8rem; margin-bottom:16px;">
@@ -1897,7 +2314,7 @@ function generateRecap() {
       <tr><td style="padding:5px 8px; font-weight:700; background:#f5f5f5; border:1px solid #ddd;">Date de visite</td><td style="padding:5px 8px; border:1px solid #ddd;">${date}</td></tr>
       <tr><td style="padding:5px 8px; font-weight:700; background:#f5f5f5; border:1px solid #ddd;">Métier(s) explorés</td><td style="padding:5px 8px; border:1px solid #ddd;">${metierStr}</td></tr>
     </table>
-    ${qSelected.length ? `<div style="margin-bottom:12px;"><strong style="font-family:'Poppins',sans-serif; font-size:0.8rem;">Questions posées (${qSelected.length}) :</strong><ul style="margin-top:6px; padding-left:16px;">${qSelected.map(q=>`<li style="margin-bottom:3px;">${q}</li>`).join('')}</ul></div>` : ''}
+    ${qSelected.length ? `<div style="margin-bottom:12px;"><strong style="font-family:'Poppins',sans-serif; font-size:0.8rem;">Questions sélectionnées (${qSelected.length}) :</strong><ul style="margin-top:6px; padding-left:16px;">${qSelected.map(q=>`<li style="margin-bottom:3px;">${q}</li>`).join('')}</ul></div>` : ''}
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px;">
       <div style="background:#E0F7FA; border:1.5px solid #ccc; border-radius:8px; padding:10px 12px;">
         <strong style="font-size:0.78rem; font-family:'Poppins',sans-serif;">🔑 Points clés retenus</strong>
@@ -1931,23 +2348,16 @@ function generateRecap() {
     <div style="background:var(--yellow); border:2px solid var(--black); border-radius:8px; padding:10px 14px; font-family:'Poppins',sans-serif; font-weight:700; font-size:0.82rem;">
       🚀 Prochaine action : ${action} <span style="font-weight:400; margin-left:10px;">📅 RDV conseiller : ${rdv}</span>
     </div>
-    <div style="margin-top:12px; text-align:center; font-size:0.72rem; color:#888; font-style:italic;">
-      Généré avec l'outil LS4YOU · Mission Locale Pays Basque
-    </div>
   `;
-  out.classList.add('bounce');
 }
 
-// ─── Scroll progress ───
-window.addEventListener('scroll', () => {
-  const phases = ['phase1','phase2','phase3','phase4','phase5'];
-  const dots = document.querySelectorAll('.step-dot');
-  let active = 0;
-  phases.forEach((id, i) => {
-    const el = document.getElementById(id);
-    if (el && el.getBoundingClientRect().top < window.innerHeight * 0.6) active = i;
-  });
-  dots.forEach((d, i) => d.classList.toggle('active', i <= active));
+document.addEventListener('DOMContentLoaded', () => {
+  addSupportRow();
+  addSupportRow();
+  shuffleChoices();
+  shuffleScenarios();
+  renderSortCard();
+  if (document.getElementById('metiers-list')) addMetier();
 });
 </script>
 </body>
