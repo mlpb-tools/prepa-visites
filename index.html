@@ -1,116 +1,193 @@
- <!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LS4YOU – Se connaître, image de soi et posture professionnelle</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --red:#C62828;--yellow:#FFD54F;--turq:#00ACC1;--mint:#66BB6A;--orange:#FB8C00;--pink:#E91E8C;--violet:#7E57C2;--black:#1A1A1A;--white:#FFFDF7;
   --shadow:4px 4px 0 var(--black);--shadow-lg:6px 6px 0 var(--black);
+  --max-w:1320px;
+  --fs-xs:.85rem;--fs-sm:.95rem;--fs-md:1.05rem;--fs-lg:1.15rem;--fs-xl:1.25rem;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--black);min-height:100vh}
+body{font-family:'Nunito',sans-serif;font-size:var(--fs-md);background:var(--white);color:var(--black);min-height:100vh;line-height:1.65}
 .header{background:var(--red);position:relative;overflow:hidden}
-.header-inner{max-width:960px;margin:0 auto;padding:32px 24px 28px;display:flex;align-items:center;gap:20px}
-.header-badge{background:var(--yellow);border:3px solid var(--black);box-shadow:var(--shadow);border-radius:50%;width:64px;height:64px;display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0}
-.header-text h1{font-family:'Poppins',sans-serif;font-size:2rem;font-weight:900;color:#fff;line-height:1.1;letter-spacing:-.5px}
+.header-inner{max-width:var(--max-w);margin:0 auto;padding:38px 48px 34px;display:flex;align-items:center;gap:24px}
+.header-badge{background:var(--yellow);border:3px solid var(--black);box-shadow:var(--shadow);border-radius:50%;width:80px;height:80px;display:flex;align-items:center;justify-content:center;font-size:36px;flex-shrink:0}
+.header-text h1{font-family:'Poppins',sans-serif;font-size:2.6rem;font-weight:900;color:#fff;line-height:1.1;letter-spacing:-.5px}
 .header-text h1 span{color:var(--yellow)}
-.header-meta{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap}
-.tag{background:rgba(255,255,255,.18);border:2px solid rgba(255,255,255,.5);border-radius:20px;padding:4px 12px;font-size:.75rem;font-weight:600;color:#fff}
+.header-meta{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+.tag{background:rgba(255,255,255,.18);border:2px solid rgba(255,255,255,.5);border-radius:20px;padding:5px 14px;font-size:var(--fs-xs);font-weight:700;color:#fff}
 .tag.solid{background:var(--yellow);color:var(--black);border-color:var(--black);box-shadow:2px 2px 0 var(--black)}
-.header-deco{position:absolute;right:-10px;top:-20px;font-size:140px;opacity:.07;pointer-events:none;transform:rotate(15deg)}
-.main{max-width:960px;margin:0 auto;padding:28px 20px 60px}
-.intro-card{background:#FFF9E6;border:3px solid var(--black);box-shadow:var(--shadow-lg);border-radius:16px;padding:22px 28px;margin-bottom:32px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
-@media(max-width:760px){.intro-card{grid-template-columns:1fr}}
-.intro-card h2{font-family:'Poppins',sans-serif;font-size:1rem;font-weight:800;color:var(--red);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
-.intro-card p{font-size:.85rem;line-height:1.6;color:#333}
-.meta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-.meta-pill{background:var(--white);border:2px solid var(--black);border-radius:8px;padding:5px 12px;font-size:.78rem;font-weight:700;display:flex;align-items:center;gap:6px;box-shadow:2px 2px 0 var(--black)}
+.header-deco{position:absolute;right:-10px;top:-20px;font-size:160px;opacity:.07;pointer-events:none;transform:rotate(15deg)}
+.main{max-width:var(--max-w);margin:0 auto;padding:36px 48px 80px}
+.intro-card{background:#FFF9E6;border:3px solid var(--black);box-shadow:var(--shadow-lg);border-radius:18px;padding:30px 36px;margin-bottom:36px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.intro-card h2{font-family:'Poppins',sans-serif;font-size:var(--fs-sm);font-weight:800;color:var(--red);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+.intro-card p{font-size:var(--fs-md);line-height:1.7;color:#333}
+.meta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+.meta-pill{background:var(--white);border:2px solid var(--black);border-radius:8px;padding:7px 14px;font-size:var(--fs-xs);font-weight:700;display:flex;align-items:center;gap:6px;box-shadow:2px 2px 0 var(--black)}
 .meta-pill.red{background:#FFEBEE}.meta-pill.yellow{background:#FFFDE7}.meta-pill.turq{background:#E0F7FA}.meta-pill.mint{background:#F1F8E9}
-.phase{background:#fff;border:3px solid var(--black);box-shadow:var(--shadow-lg);border-radius:16px;overflow:hidden;margin-bottom:28px}
-.phase-header{padding:16px 24px;display:flex;align-items:center;gap:14px;border-bottom:3px solid var(--black)}
+.phase{background:#fff;border:3px solid var(--black);box-shadow:var(--shadow-lg);border-radius:18px;overflow:hidden;margin-bottom:32px}
+.phase-header{padding:20px 28px;display:flex;align-items:center;gap:16px;border-bottom:3px solid var(--black)}
 .phase-header.red{background:var(--red);color:#fff}.phase-header.yellow{background:var(--yellow);color:var(--black)}.phase-header.turq{background:var(--turq);color:#fff}.phase-header.mint{background:var(--mint);color:#fff}.phase-header.orange{background:var(--orange);color:#fff}.phase-header.pink{background:var(--pink);color:#fff}.phase-header.violet{background:var(--violet);color:#fff}
-.phase-icon{font-size:1.8rem;flex-shrink:0}.phase-title{flex:1}.phase-title h3{font-family:'Poppins',sans-serif;font-weight:800;font-size:1rem;line-height:1.2}.phase-title small{font-size:.75rem;opacity:.88;font-weight:600}
-.phase-duration{background:rgba(0,0,0,.15);border-radius:20px;padding:4px 12px;font-size:.75rem;font-weight:700;white-space:nowrap}
-.phase-body{padding:22px 24px}
-.phase-intro{font-size:.84rem;line-height:1.6;margin-bottom:16px}.phase-goal{display:inline-block;margin-bottom:14px;padding:6px 12px;background:#fff;border:2px solid var(--black);border-radius:999px;box-shadow:2px 2px 0 var(--black);font-size:.75rem;font-weight:700}
-.phase-consigne{font-size:.84rem;line-height:1.6;margin-bottom:16px;padding:12px 16px;border:2px solid var(--black);border-radius:10px;box-shadow:var(--shadow)}
+.phase-icon{font-size:2rem;flex-shrink:0}
+.phase-title{flex:1}
+.phase-title h3{font-family:'Poppins',sans-serif;font-weight:800;font-size:var(--fs-xl);line-height:1.2}
+.phase-title small{font-size:var(--fs-xs);opacity:.88;font-weight:700}
+.phase-duration{background:rgba(0,0,0,.15);border-radius:20px;padding:5px 14px;font-size:var(--fs-sm);font-weight:700;white-space:nowrap}
+.phase-body{padding:28px 36px}
+.phase-intro{font-size:var(--fs-md);line-height:1.75;margin-bottom:18px}
+.phase-goal{display:inline-block;margin-bottom:16px;padding:8px 16px;background:#fff;border:2px solid var(--black);border-radius:999px;box-shadow:2px 2px 0 var(--black);font-size:var(--fs-sm);font-weight:700}
+.phase-consigne{font-size:var(--fs-md);line-height:1.7;margin-bottom:18px;padding:14px 20px;border:2px solid var(--black);border-radius:12px;box-shadow:var(--shadow)}
 .phase-consigne.yellow{background:#FFFDE7}.phase-consigne.pink{background:#FCE4EC}.phase-consigne.turq{background:#E0F7FA}.phase-consigne.orange{background:#FFF3E0}.phase-consigne.mint{background:#F1F8E9}.phase-consigne.violet{background:#EDE7F6}
-.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin-top:14px}
-.card{border:2px solid var(--black);border-radius:12px;padding:14px 16px;box-shadow:3px 3px 0 var(--black);transition:transform .15s,box-shadow .15s;position:relative;background:#fff}.card:hover{transform:translateY(-2px);box-shadow:5px 5px 0 var(--black)}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin-top:16px}
+.card{border:2px solid var(--black);border-radius:14px;padding:18px 20px;box-shadow:3px 3px 0 var(--black);transition:transform .15s,box-shadow .15s;position:relative;background:#fff}
+.card:hover{transform:translateY(-2px);box-shadow:5px 5px 0 var(--black)}
 .card.red{background:#FFEBEE}.card.yellow{background:#FFFDE7}.card.turq{background:#E0F7FA}.card.mint{background:#F1F8E9}.card.orange{background:#FFF3E0}.card.pink{background:#FCE4EC}.card.violet{background:#EDE7F6}
-.card-icon{font-size:1.5rem;margin-bottom:6px}.card h4{font-family:'Poppins',sans-serif;font-size:.82rem;font-weight:700;margin-bottom:4px}.card p{font-size:.75rem;line-height:1.45;color:#444}
-.tip-box{border:2px solid var(--black);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);margin-top:18px}.tip-box-header{background:var(--black);color:var(--yellow);padding:9px 16px;font-family:'Poppins',sans-serif;font-weight:700;font-size:.8rem;display:flex;align-items:center;gap:8px}.tip-box-body{padding:14px 16px;background:#FFFDE7;font-size:.79rem;line-height:1.6;color:#333}.tip-box-body ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px}
-.ux-blocks{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:16px}.ux-block{border:3px solid var(--black);border-radius:16px;padding:16px;background:#fff;box-shadow:var(--shadow);cursor:pointer;transition:.15s}.ux-block:hover{transform:translateY(-2px);box-shadow:6px 6px 0 var(--black)}.ux-block.active{background:#FFFDE7}
-.ux-block h4{font-family:'Poppins',sans-serif;font-size:.9rem;margin-bottom:6px}.ux-block p{font-size:.75rem;line-height:1.4;color:#444}
-.ux-panel{display:none;margin-top:16px;border:3px solid var(--black);border-radius:16px;box-shadow:var(--shadow-lg);overflow:hidden}.ux-panel.active{display:block}.ux-panel-header{padding:14px 18px;background:var(--black);color:var(--yellow);font-family:'Poppins',sans-serif;font-weight:900}.ux-panel-body{padding:18px;background:#fff}
-.ux-choice-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin:12px 0 4px}.ux-choice{border:2px solid var(--black);border-radius:12px;padding:12px 10px;background:#fff;font-size:.8rem;font-weight:700;box-shadow:2px 2px 0 var(--black);cursor:pointer;transition:.12s;line-height:1.25}.ux-choice:hover{transform:translateY(-1px);box-shadow:3px 3px 0 var(--black)}.ux-choice.selected{background:var(--yellow);box-shadow:3px 3px 0 var(--black)}
-.auto-summary{margin-top:18px;background:#E8F5E9;border:3px solid var(--black);border-radius:16px;padding:18px;box-shadow:var(--shadow-lg);font-size:.86rem;line-height:1.65}
-.summary-chip{display:inline-block;background:#fff;border:2px solid var(--black);border-radius:999px;padding:4px 10px;margin:3px;font-size:.76rem;font-weight:800;box-shadow:2px 2px 0 var(--black)}
-
-/* ══ PHASE 0 · ACTIVITÉS COMPLÈTES ACCESSIBLES ═══════════ */
-.activity-note{background:#FFFDE7;border:2px solid var(--black);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow);font-size:.82rem;line-height:1.55;margin:12px 0}.transition-box{background:#FFF3E0;border:2px solid var(--black);border-radius:12px;padding:13px 15px;box-shadow:var(--shadow);font-size:.83rem;line-height:1.55;margin:18px 0}.transition-box strong{font-family:'Poppins',sans-serif}.transition-box.turq{background:#E0F7FA}.transition-box.pink{background:#FCE4EC}.transition-box.mint{background:#F1F8E9}.transition-box.violet{background:#EDE7F6}.transition-box.yellow{background:#FFFDE7}
-.phase0-activity{display:none;margin-top:16px;border:3px solid var(--black);border-radius:16px;box-shadow:var(--shadow-lg);overflow:hidden;background:#fff}
+.card-icon{font-size:1.8rem;margin-bottom:8px}
+.card h4{font-family:'Poppins',sans-serif;font-size:var(--fs-sm);font-weight:700;margin-bottom:5px}
+.card p{font-size:var(--fs-sm);line-height:1.55;color:#444}
+.tip-box{border:2px solid var(--black);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);margin-top:20px}
+.tip-box-header{background:var(--black);color:var(--yellow);padding:11px 18px;font-family:'Poppins',sans-serif;font-weight:700;font-size:var(--fs-sm);display:flex;align-items:center;gap:8px}
+.tip-box-body{padding:18px 20px;background:#FFFDE7;font-size:var(--fs-md);line-height:1.7;color:#333}
+.tip-box-body ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:7px}
+.ux-blocks{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+.ux-block{border:3px solid var(--black);border-radius:18px;padding:20px;background:#fff;box-shadow:var(--shadow);cursor:pointer;transition:.15s}
+.ux-block:hover{transform:translateY(-2px);box-shadow:6px 6px 0 var(--black)}.ux-block.active{background:#FFFDE7}
+.ux-block h4{font-family:'Poppins',sans-serif;font-size:var(--fs-lg);margin-bottom:8px}
+.ux-block p{font-size:var(--fs-sm);line-height:1.5;color:#444}
+.ux-panel{display:none;margin-top:18px;border:3px solid var(--black);border-radius:18px;box-shadow:var(--shadow-lg);overflow:hidden}
+.ux-panel.active{display:block}
+.ux-panel-header{padding:16px 20px;background:var(--black);color:var(--yellow);font-family:'Poppins',sans-serif;font-weight:900;font-size:var(--fs-md)}
+.ux-panel-body{padding:20px;background:#fff}
+.ux-choice-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin:14px 0 6px}
+.ux-choice{border:2px solid var(--black);border-radius:14px;padding:14px 12px;background:#fff;font-size:var(--fs-sm);font-weight:700;box-shadow:2px 2px 0 var(--black);cursor:pointer;transition:.12s;line-height:1.3}
+.ux-choice:hover{transform:translateY(-1px);box-shadow:3px 3px 0 var(--black)}.ux-choice.selected{background:var(--yellow)}
+.auto-summary{margin-top:20px;background:#E8F5E9;border:3px solid var(--black);border-radius:18px;padding:22px 28px;box-shadow:var(--shadow-lg);font-size:var(--fs-md);line-height:1.75}
+.summary-chip{display:inline-block;background:#fff;border:2px solid var(--black);border-radius:999px;padding:5px 12px;margin:3px;font-size:var(--fs-xs);font-weight:800;box-shadow:2px 2px 0 var(--black)}
+.activity-note{background:#FFFDE7;border:2px solid var(--black);border-radius:14px;padding:14px 18px;box-shadow:var(--shadow);font-size:var(--fs-md);line-height:1.65;margin:14px 0}
+.transition-box{background:#FFF3E0;border:2px solid var(--black);border-radius:14px;padding:16px 22px;box-shadow:var(--shadow);font-size:var(--fs-md);line-height:1.65;margin:20px 0}
+.transition-box strong{font-family:'Poppins',sans-serif}
+.transition-box.turq{background:#E0F7FA}.transition-box.pink{background:#FCE4EC}.transition-box.mint{background:#F1F8E9}.transition-box.violet{background:#EDE7F6}.transition-box.yellow{background:#FFFDE7}
+.phase0-activity{display:none;margin-top:18px;border:3px solid var(--black);border-radius:18px;box-shadow:var(--shadow-lg);overflow:hidden;background:#fff}
 .phase0-activity.active{display:block}
-.phase0-activity-head{background:var(--black);color:var(--yellow);padding:14px 18px;font-family:'Poppins',sans-serif;font-weight:900;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.phase0-activity-head small{color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.72rem;opacity:.9}
-.phase0-activity-body{padding:18px}
-.p0-minihelp{font-size:.8rem;line-height:1.55;color:#333;margin-bottom:12px}
-.p0-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
-.p0-card{border:2px solid var(--black);border-radius:14px;background:#fff;box-shadow:3px 3px 0 var(--black);padding:12px;transition:.12s}
+.phase0-activity-head{background:var(--black);color:var(--yellow);padding:16px 20px;font-family:'Poppins',sans-serif;font-weight:900;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:var(--fs-md)}
+.phase0-activity-head small{color:#fff;font-family:'Nunito',sans-serif;font-weight:700;font-size:var(--fs-xs);opacity:.9}
+.phase0-activity-body{padding:24px 28px}
+.p0-minihelp{font-size:var(--fs-md);line-height:1.65;color:#333;margin-bottom:14px}
+.p0-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.p0-card{border:2px solid var(--black);border-radius:16px;background:#fff;box-shadow:3px 3px 0 var(--black);padding:14px 16px;transition:.12s}
 .p0-card:hover{transform:translateY(-1px);box-shadow:4px 4px 0 var(--black)}
-.p0-card-title{font-family:'Poppins',sans-serif;font-weight:800;font-size:.82rem;line-height:1.25}
-.p0-card-desc{font-size:.72rem;color:#555;line-height:1.35;margin-top:4px}
-.p0-rating{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
-.p0-rate{border:2px solid var(--black);border-radius:999px;background:#fff;padding:5px 9px;font-size:.68rem;font-weight:800;cursor:pointer;box-shadow:1px 1px 0 var(--black)}
+.p0-card-title{font-family:'Poppins',sans-serif;font-weight:800;font-size:var(--fs-sm);line-height:1.3}
+.p0-card-desc{font-size:var(--fs-xs);color:#555;line-height:1.4;margin-top:5px}
+.p0-rating{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.p0-rate{border:2px solid var(--black);border-radius:999px;background:#fff;padding:6px 12px;font-size:var(--fs-xs);font-weight:800;cursor:pointer;box-shadow:1px 1px 0 var(--black);transition:.1s}
 .p0-rate:hover{transform:translateY(-1px)}
-.p0-rate.active{background:var(--yellow)}
-.p0-rate.high.active{background:#C8E6C9}
-.p0-rate.mid.active{background:#FFF9C4}
-.p0-rate.low.active{background:#E0F7FA}
-.p0-cat{margin-top:18px}
-.p0-cat:first-child{margin-top:0}
-.p0-cat-title{display:inline-flex;align-items:center;gap:8px;background:var(--black);color:var(--yellow);border-radius:999px;padding:7px 12px;font-family:'Poppins',sans-serif;font-weight:900;font-size:.78rem;margin-bottom:10px}
-.p0-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-.p0-btn{background:var(--yellow);border:2.5px solid var(--black);border-radius:10px;padding:10px 14px;font-family:'Poppins',sans-serif;font-weight:900;font-size:.78rem;cursor:pointer;box-shadow:3px 3px 0 var(--black)}
+.p0-rate.active{background:var(--yellow)}.p0-rate.high.active{background:#C8E6C9}.p0-rate.mid.active{background:#FFF9C4}.p0-rate.low.active{background:#E0F7FA}
+.p0-cat{margin-top:22px}.p0-cat:first-child{margin-top:0}
+.p0-cat-title{display:inline-flex;align-items:center;gap:8px;background:var(--black);color:var(--yellow);border-radius:999px;padding:8px 16px;font-family:'Poppins',sans-serif;font-weight:900;font-size:var(--fs-sm);margin-bottom:12px}
+.p0-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.p0-btn{background:var(--yellow);border:2.5px solid var(--black);border-radius:12px;padding:11px 18px;font-family:'Poppins',sans-serif;font-weight:900;font-size:var(--fs-sm);cursor:pointer;box-shadow:3px 3px 0 var(--black)}
 .p0-btn.secondary{background:#fff}
 .p0-btn:hover{transform:translateY(-1px);box-shadow:4px 4px 0 var(--black)}
-.p0-summary-box{background:#E8F5E9;border:3px solid var(--black);border-radius:16px;padding:16px;box-shadow:var(--shadow-lg);font-size:.83rem;line-height:1.6;margin-top:16px}
-.p0-summary-box h4{font-family:'Poppins',sans-serif;font-weight:900;margin-bottom:8px}
-.p0-chip{display:inline-block;background:#fff;border:2px solid var(--black);border-radius:999px;padding:4px 9px;margin:3px;font-size:.72rem;font-weight:800;box-shadow:2px 2px 0 var(--black)}
+.p0-summary-box{background:#E8F5E9;border:3px solid var(--black);border-radius:18px;padding:20px 24px;box-shadow:var(--shadow-lg);font-size:var(--fs-md);line-height:1.7;margin-top:18px}
+.p0-summary-box h4{font-family:'Poppins',sans-serif;font-weight:900;margin-bottom:10px;font-size:var(--fs-lg)}
+.p0-chip{display:inline-block;background:#fff;border:2px solid var(--black);border-radius:999px;padding:5px 11px;margin:3px;font-size:var(--fs-xs);font-weight:800;box-shadow:2px 2px 0 var(--black)}
 .p0-chip.green{background:#E8F5E9}.p0-chip.yellow{background:#FFFDE7}.p0-chip.blue{background:#E0F7FA}.p0-chip.pink{background:#FCE4EC}
-.perso-quiz-card{background:#fff;border:3px solid var(--black);border-radius:16px;box-shadow:var(--shadow-lg);padding:18px;text-align:center}
-.perso-progress{height:12px;background:#eee;border:2px solid var(--black);border-radius:999px;overflow:hidden;margin-bottom:14px}
+.perso-quiz-card{background:#fff;border:3px solid var(--black);border-radius:18px;box-shadow:var(--shadow-lg);padding:24px 28px;text-align:center}
+.perso-progress{height:14px;background:#eee;border:2px solid var(--black);border-radius:999px;overflow:hidden;margin-bottom:18px}
 .perso-progress-fill{height:100%;background:var(--turq);width:0%;transition:.25s}
-.perso-question-emoji{font-size:2.2rem;margin-bottom:8px}
-.perso-badge{display:inline-block;border:2px solid var(--black);border-radius:999px;padding:5px 10px;font-family:'Poppins',sans-serif;font-weight:900;font-size:.72rem;margin-bottom:10px}
-.perso-qtext{font-family:'Poppins',sans-serif;font-weight:900;font-size:1.05rem;line-height:1.35;margin:8px auto 14px;max-width:680px}
-.perso-scale{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
-@media(max-width:760px){.perso-scale{grid-template-columns:1fr}.p0-grid{grid-template-columns:1fr}}
-.perso-scale button{border:2px solid var(--black);border-radius:12px;background:#fff;padding:10px 6px;font-family:'Poppins',sans-serif;font-weight:800;font-size:.72rem;cursor:pointer;box-shadow:2px 2px 0 var(--black)}
+.perso-question-emoji{font-size:2.6rem;margin-bottom:10px}
+.perso-badge{display:inline-block;border:2px solid var(--black);border-radius:999px;padding:6px 14px;font-family:'Poppins',sans-serif;font-weight:900;font-size:var(--fs-xs);margin-bottom:12px}
+.perso-qtext{font-family:'Poppins',sans-serif;font-weight:900;font-size:1.22rem;line-height:1.4;margin:10px auto 18px;max-width:780px}
+.perso-scale{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.perso-scale button{border:2px solid var(--black);border-radius:14px;background:#fff;padding:13px 8px;font-family:'Poppins',sans-serif;font-weight:800;font-size:var(--fs-sm);cursor:pointer;box-shadow:2px 2px 0 var(--black);transition:.12s;line-height:1.3}
 .perso-scale button:hover,.perso-scale button.selected{background:var(--yellow);transform:translateY(-1px)}
-.perso-result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
-.perso-result-card{border:2px solid var(--black);border-radius:14px;padding:12px;background:#fff;box-shadow:3px 3px 0 var(--black)}
-.perso-result-card h4{font-family:'Poppins',sans-serif;font-size:.84rem;margin-bottom:6px}
-.perso-result-card p{font-size:.75rem;line-height:1.45;color:#444}
-
-.miroir-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;border:3px solid var(--black);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);margin-top:12px}.miroir-header{padding:10px 16px;font-family:'Poppins',sans-serif;font-weight:800;font-size:.85rem;text-align:center;border-bottom:2px solid var(--black)}.miroir-header.left{background:var(--turq);color:#fff;border-right:1.5px solid var(--black)}.miroir-header.right{background:var(--orange);color:#fff;border-left:1.5px solid var(--black)}.miroir-row{display:contents}.miroir-cell{padding:8px 14px;font-size:.8rem;border-bottom:1px solid #e0e0e0;display:flex;align-items:center;gap:6px}.miroir-cell.left{background:#E0F7FA;border-right:1.5px solid #ccc}.miroir-cell.right{background:#FFF3E0}
-.enq-label{display:block;font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:700;margin-bottom:5px;color:var(--black)}.enq-input{width:100%;border:2px solid var(--black);border-radius:8px;padding:9px 12px;font-family:'Montserrat',sans-serif;font-size:.82rem;background:#fff;outline:none;transition:box-shadow .15s;box-shadow:2px 2px 0 var(--black)}.enq-input:focus{box-shadow:4px 4px 0 var(--turq);border-color:var(--turq)}
-.enq-textarea{width:100%;border:2px solid var(--black);border-radius:8px;padding:9px 12px;font-family:'Montserrat',sans-serif;font-size:.82rem;background:#fff;outline:none;resize:vertical;transition:box-shadow .15s;box-shadow:2px 2px 0 var(--black)}.enq-textarea:focus{box-shadow:4px 4px 0 var(--turq);border-color:var(--turq)}
-.btn-engage{background:var(--yellow);color:var(--black);border:2.5px solid var(--black);border-radius:8px;padding:11px 20px;font-family:'Poppins',sans-serif;font-weight:800;font-size:.88rem;cursor:pointer;box-shadow:3px 3px 0 var(--black);transition:transform .1s,box-shadow .1s}.btn-engage:hover{transform:translateY(-2px);box-shadow:5px 5px 0 var(--black)}
-.pitch-box{display:none;margin-top:12px;padding:14px;border:2px solid var(--black);border-radius:10px;background:#fff;box-shadow:var(--shadow)}.pitch-level{display:inline-block;margin-bottom:8px;padding:5px 10px;border-radius:20px;border:2px solid var(--black);background:var(--yellow);font-family:'Poppins',sans-serif;font-weight:800;font-size:.72rem}
-.eval-items{display:flex;flex-direction:column;gap:12px;margin-top:12px}.eval-item{display:flex;flex-direction:column;gap:4px}.eval-item label{font-size:.82rem;font-weight:700;display:flex;align-items:center;gap:8px}.star-row{display:flex;gap:4px;margin-top:2px}.star{font-size:1.2rem;cursor:pointer;transition:transform .1s;filter:grayscale(1);opacity:.4}.star:hover,.star.active{filter:none;opacity:1;transform:scale(1.15)}
-.scenario-block{border:2px solid var(--black);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:14px}.scenario-header{background:var(--black);color:var(--yellow);padding:10px 16px;font-family:'Poppins',sans-serif;font-weight:700;font-size:.82rem;display:flex;align-items:center;gap:8px}.scenario-body{padding:14px 16px;background:#FFFDE7}.scenario-situation{font-size:.83rem;font-weight:600;margin-bottom:10px;line-height:1.5}.scenario-choices{display:flex;flex-direction:column;gap:7px}.choice{display:flex;align-items:flex-start;gap:8px;padding:8px 12px;border:2px solid var(--black);border-radius:8px;background:#fff;cursor:pointer;font-size:.78rem;font-weight:500;transition:all .15s;box-shadow:2px 2px 0 var(--black)}.choice:hover{transform:translateX(3px)}.choice-letter{font-family:'Poppins',sans-serif;font-weight:800;font-size:.85rem;min-width:22px;height:22px;display:flex;align-items:center;justify-content:center;background:var(--black);color:var(--yellow);border-radius:4px;flex-shrink:0}.choice-feedback{display:none;margin-top:8px;padding:8px 10px;border-radius:6px;font-size:.73rem;font-weight:600;border:1.5px solid var(--black)}.choice-feedback.good{background:#E8F5E9;display:block}.choice-feedback.bad{background:#FFEBEE;display:block}
-.struct-btn{background:#fff;border:2px solid var(--black);border-radius:8px;padding:8px 14px;font-family:'Poppins',sans-serif;font-weight:700;font-size:.78rem;cursor:pointer;box-shadow:2px 2px 0 var(--black);transition:all .15s}.struct-btn:hover{transform:translateY(-1px);box-shadow:3px 3px 0 var(--black)}.struct-btn.selected{background:var(--turq);color:#fff}
-.metier-row{display:flex;gap:8px;align-items:center}.metier-row input{flex:1}.metier-del{background:#FFEBEE;border:2px solid var(--black);border-radius:6px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.9rem;flex-shrink:0;box-shadow:2px 2px 0 var(--black)}.metier-del:hover{background:var(--red);color:#fff}
-.enq-tab{flex:1;padding:12px 8px;background:#f5f5f5;border:none;font-family:'Poppins',sans-serif;font-weight:700;font-size:.72rem;cursor:pointer;transition:background .15s;display:flex;align-items:center;justify-content:center;gap:6px;text-align:center}.enq-tab span{background:var(--black);color:var(--yellow);width:20px;height:20px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.68rem;flex-shrink:0}.enq-tab.active{background:var(--turq);color:#fff}.enq-tab.active span{background:#fff;color:var(--turq)}
-.enq-panel{display:block}.enq-panel.hidden{display:none}.qblock{border:2px solid var(--black);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:14px}.qblock-header{padding:11px 16px;font-family:'Poppins',sans-serif;font-weight:800;font-size:.82rem;color:#fff;display:flex;align-items:center;gap:8px;border-bottom:2px solid var(--black)}.q-counter{margin-left:auto;background:rgba(255,255,255,.2);border-radius:20px;padding:2px 10px;font-size:.7rem}.qblock-body{background:#fff}.qitem{display:flex;align-items:flex-start;gap:10px;padding:10px 16px;font-size:.8rem;line-height:1.4;border-bottom:1px solid #f0f0f0;cursor:pointer;transition:background .1s}.qitem:last-child{border-bottom:none}.qitem:hover{background:#f9f9f9}.qitem.selected{background:#E0F7FA}.qcheck{font-size:1rem;flex-shrink:0;margin-top:-1px}
-.chk-section-title{font-family:'Poppins',sans-serif;font-weight:800;font-size:.78rem;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;color:var(--black);padding-bottom:4px;border-bottom:2px dashed #ccc}.chk-item{display:flex;align-items:flex-start;gap:10px;padding:9px 12px;margin-bottom:6px;background:#fff;border:2px solid var(--black);border-radius:8px;font-size:.78rem;line-height:1.4;cursor:pointer;box-shadow:2px 2px 0 var(--black);transition:all .15s}.chk-item.checked{background:#E8F5E9;border-color:var(--mint);box-shadow:2px 2px 0 var(--mint)}.chk-box{font-size:1rem;flex-shrink:0}
-.attract-btn{background:#fff;border:2px solid var(--black);border-radius:8px;padding:7px 12px;font-family:'Poppins',sans-serif;font-weight:600;font-size:.75rem;cursor:pointer;box-shadow:2px 2px 0 var(--black);transition:all .15s}.attract-btn:hover{transform:translateY(-1px);box-shadow:3px 3px 0 var(--black)}.attract-btn.selected{background:var(--turq);color:#fff;border-color:var(--black)}
-.footer{background:var(--black);color:var(--yellow);text-align:center;padding:16px;font-family:'Poppins',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.perso-result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:14px}
+.perso-result-card{border:2px solid var(--black);border-radius:16px;padding:16px 18px;background:#fff;box-shadow:3px 3px 0 var(--black)}
+.perso-result-card h4{font-family:'Poppins',sans-serif;font-size:var(--fs-md);margin-bottom:8px}
+.perso-result-card p{font-size:var(--fs-sm);line-height:1.55;color:#444}
+.miroir-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;border:3px solid var(--black);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);margin-top:14px}
+.miroir-header{padding:12px 18px;font-family:'Poppins',sans-serif;font-weight:800;font-size:var(--fs-md);text-align:center;border-bottom:2px solid var(--black)}
+.miroir-header.left{background:var(--turq);color:#fff;border-right:1.5px solid var(--black)}.miroir-header.right{background:var(--orange);color:#fff;border-left:1.5px solid var(--black)}
+.miroir-row{display:contents}
+.miroir-cell{padding:10px 16px;font-size:var(--fs-sm);border-bottom:1px solid #e0e0e0;display:flex;align-items:center;gap:6px}
+.miroir-cell.left{background:#E0F7FA;border-right:1.5px solid #ccc}.miroir-cell.right{background:#FFF3E0}
+.enq-label{display:block;font-family:'Poppins',sans-serif;font-size:var(--fs-sm);font-weight:700;margin-bottom:6px;color:var(--black)}
+.enq-input{width:100%;border:2px solid var(--black);border-radius:10px;padding:11px 14px;font-family:'Nunito',sans-serif;font-size:var(--fs-md);background:#fff;outline:none;transition:box-shadow .15s;box-shadow:2px 2px 0 var(--black)}
+.enq-input:focus{box-shadow:4px 4px 0 var(--turq);border-color:var(--turq)}
+.enq-textarea{width:100%;border:2px solid var(--black);border-radius:10px;padding:11px 14px;font-family:'Nunito',sans-serif;font-size:var(--fs-md);background:#fff;outline:none;resize:vertical;transition:box-shadow .15s;box-shadow:2px 2px 0 var(--black)}
+.enq-textarea:focus{box-shadow:4px 4px 0 var(--turq);border-color:var(--turq)}
+.btn-engage{background:var(--yellow);color:var(--black);border:2.5px solid var(--black);border-radius:10px;padding:12px 24px;font-family:'Poppins',sans-serif;font-weight:800;font-size:var(--fs-md);cursor:pointer;box-shadow:3px 3px 0 var(--black);transition:transform .1s,box-shadow .1s}
+.btn-engage:hover{transform:translateY(-2px);box-shadow:5px 5px 0 var(--black)}
+.pitch-box{display:none;margin-top:14px;padding:16px;border:2px solid var(--black);border-radius:12px;background:#fff;box-shadow:var(--shadow)}
+.pitch-level{display:inline-block;margin-bottom:10px;padding:6px 12px;border-radius:20px;border:2px solid var(--black);background:var(--yellow);font-family:'Poppins',sans-serif;font-weight:800;font-size:var(--fs-xs)}
+.eval-items{display:flex;flex-direction:column;gap:14px;margin-top:14px}
+.eval-item{display:flex;flex-direction:column;gap:6px}
+.eval-item label{font-size:var(--fs-md);font-weight:700;display:flex;align-items:center;gap:8px}
+.star-row{display:flex;gap:5px;margin-top:2px}
+.star{font-size:1.4rem;cursor:pointer;transition:transform .1s;filter:grayscale(1);opacity:.4}
+.star:hover,.star.active{filter:none;opacity:1;transform:scale(1.15)}
+.scenario-block{border:2px solid var(--black);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:16px}
+.scenario-header{background:var(--black);color:var(--yellow);padding:12px 18px;font-family:'Poppins',sans-serif;font-weight:700;font-size:var(--fs-sm);display:flex;align-items:center;gap:8px}
+.scenario-body{padding:16px 20px;background:#FFFDE7}
+.scenario-situation{font-size:var(--fs-md);font-weight:600;margin-bottom:12px;line-height:1.55}
+.scenario-choices{display:flex;flex-direction:column;gap:9px}
+.choice{display:flex;align-items:flex-start;gap:10px;padding:11px 14px;border:2px solid var(--black);border-radius:10px;background:#fff;cursor:pointer;font-size:var(--fs-md);font-weight:600;transition:all .15s;box-shadow:2px 2px 0 var(--black)}
+.choice:hover{transform:translateX(3px)}
+.choice-letter{font-family:'Poppins',sans-serif;font-weight:800;font-size:var(--fs-md);min-width:24px;height:24px;display:flex;align-items:center;justify-content:center;background:var(--black);color:var(--yellow);border-radius:4px;flex-shrink:0}
+.choice-feedback{display:none;margin-top:10px;padding:10px 14px;border-radius:8px;font-size:var(--fs-sm);font-weight:600;border:1.5px solid var(--black)}
+.choice-feedback.good{background:#E8F5E9;display:block}.choice-feedback.bad{background:#FFEBEE;display:block}
+.struct-btn{background:#fff;border:2px solid var(--black);border-radius:10px;padding:9px 16px;font-family:'Poppins',sans-serif;font-weight:700;font-size:var(--fs-sm);cursor:pointer;box-shadow:2px 2px 0 var(--black);transition:all .15s}
+.struct-btn:hover{transform:translateY(-1px);box-shadow:3px 3px 0 var(--black)}.struct-btn.selected{background:var(--turq);color:#fff}
+.metier-row{display:flex;gap:10px;align-items:center}.metier-row input{flex:1}
+.metier-del{background:#FFEBEE;border:2px solid var(--black);border-radius:8px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1rem;flex-shrink:0;box-shadow:2px 2px 0 var(--black)}
+.metier-del:hover{background:var(--red);color:#fff}
+.enq-tab{flex:1;padding:15px 10px;background:#f5f5f5;border:none;font-family:'Poppins',sans-serif;font-weight:700;font-size:var(--fs-xs);cursor:pointer;transition:background .15s;display:flex;align-items:center;justify-content:center;gap:7px;text-align:center}
+.enq-tab span{background:var(--black);color:var(--yellow);width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:var(--fs-xs);flex-shrink:0}
+.enq-tab.active{background:var(--turq);color:#fff}.enq-tab.active span{background:#fff;color:var(--turq)}
+.enq-panel{display:block}.enq-panel.hidden{display:none}
+.qblock{border:2px solid var(--black);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:16px}
+.qblock-header{padding:13px 18px;font-family:'Poppins',sans-serif;font-weight:800;font-size:var(--fs-sm);color:#fff;display:flex;align-items:center;gap:8px;border-bottom:2px solid var(--black)}
+.q-counter{margin-left:auto;background:rgba(255,255,255,.2);border-radius:20px;padding:3px 12px;font-size:var(--fs-xs)}
+.qblock-body{background:#fff}
+.qitem{display:flex;align-items:flex-start;gap:10px;padding:13px 18px;font-size:var(--fs-md);line-height:1.55;border-bottom:1px solid #f0f0f0;cursor:pointer;transition:background .1s}
+.qitem:last-child{border-bottom:none}.qitem:hover{background:#f9f9f9}.qitem.selected{background:#E0F7FA}
+.qcheck{font-size:1.1rem;flex-shrink:0;margin-top:-1px}
+.chk-section-title{font-family:'Poppins',sans-serif;font-weight:800;font-size:var(--fs-sm);text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;color:var(--black);padding-bottom:5px;border-bottom:2px dashed #ccc}
+.chk-item{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;margin-bottom:7px;background:#fff;border:2px solid var(--black);border-radius:10px;font-size:var(--fs-md);line-height:1.5;cursor:pointer;box-shadow:2px 2px 0 var(--black);transition:all .15s}
+.chk-item.checked{background:#E8F5E9;border-color:var(--mint);box-shadow:2px 2px 0 var(--mint)}
+.chk-box{font-size:1.1rem;flex-shrink:0}
+.attract-btn{background:#fff;border:2px solid var(--black);border-radius:10px;padding:10px 16px;font-family:'Poppins',sans-serif;font-weight:700;font-size:var(--fs-sm);cursor:pointer;box-shadow:2px 2px 0 var(--black);transition:all .15s}
+.attract-btn:hover{transform:translateY(-1px);box-shadow:3px 3px 0 var(--black)}.attract-btn.selected{background:var(--turq);color:#fff;border-color:var(--black)}
+.footer{background:var(--black);color:var(--yellow);text-align:center;padding:22px;font-family:'Poppins',sans-serif;font-size:var(--fs-sm);font-weight:700;letter-spacing:1px;text-transform:uppercase}
 .hidden{display:none!important}
+@media(max-width:900px){
+  .main{padding:24px 24px 60px}
+  .header-inner{padding:28px 24px 24px}
+  .phase-body{padding:22px 24px}
+  .perso-scale{grid-template-columns:1fr}
+  .intro-card{grid-template-columns:1fr}
+  .p0-grid{grid-template-columns:1fr}
+}
+
+/* ── LAPTOP LAYOUT ─────────────────────── */
+@media(min-width:1024px){
+  .cards-grid{grid-template-columns:repeat(4,1fr)}
+  .perso-result-grid{grid-template-columns:repeat(3,1fr)}
+  .p0-grid{grid-template-columns:repeat(3,1fr)}
+  .ux-blocks{grid-template-columns:repeat(4,1fr)}
+  .ux-choice-grid{grid-template-columns:repeat(4,1fr)}
+}
+@media(max-width:900px){
+  .main{padding:24px 24px 60px}
+  .header-inner{padding:28px 24px 24px}
+  .phase-body{padding:22px 24px}
+  .perso-scale{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -118,7 +195,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--bla
   <div class="header-inner">
     <div class="header-badge">🧭</div>
     <div class="header-text">
-      <h1>Se connaître<br><span>et se préparer à l’entreprise</span></h1>
+      <h1>Se connaître<br><span>et se préparer à l'entreprise</span></h1>
       <div class="header-meta">
         <span class="tag solid">LS4YOU</span>
         <span class="tag">Connaissance de soi</span>
@@ -137,7 +214,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--bla
       <h2>🎯 Description de l'atelier</h2>
       <p>
         Les participants commencent par mieux se connaître à travers un travail très visuel sur leur <strong>personnalité</strong>,
-        leurs <strong>besoins</strong>, leurs <strong>forces</strong> et leurs <strong>valeurs</strong>, sans obligation d’écrire.
+        leurs <strong>besoins</strong>, leurs <strong>forces</strong> et leurs <strong>valeurs</strong>, sans obligation d'écrire.
         Ils travaillent ensuite leur <strong>image de soi</strong>, leur <strong>marque personnelle</strong> et leur
         <strong>posture professionnelle</strong> pour préparer une visite, une immersion, un stage ou une rencontre avec un employeur.
       </p>
@@ -150,13 +227,12 @@ body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--bla
         <div class="meta-pill turq">🏢 Présentiel / distanciel</div>
         <div class="meta-pill mint">🎓 Posture + auto-marketing</div>
       </div>
-      <div style="margin-top:12px;font-size:.82rem;line-height:1.6;color:#444">
+      <div style="margin-top:14px;font-size:var(--fs-md);line-height:1.7;color:#444">
         Se connaître · image de soi · marque personnelle · savoir-être · scénarios · enquête métier
       </div>
     </div>
   </div>
 
-  <!-- PHASE 0 · ACTIVITÉS COMPLÈTES PAR BLOCS CLIQUABLES -->
   <div class="phase" id="phase0">
     <div class="phase-header violet">
       <div class="phase-icon">🧭</div>
@@ -168,67 +244,40 @@ body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--bla
     </div>
     <div class="phase-body">
       <div class="phase-intro">
-        Avant de parler de métier, d’entreprise ou de posture professionnelle, il est essentiel de mieux se connaître.
-        La <strong>personnalité</strong> correspond à la manière dont je fonctionne au quotidien : ma façon d’entrer en relation,
-        mon rythme, ma manière de réfléchir, d’agir ou de réagir. Les <strong>forces</strong> sont ce que je fais bien,
-        ce sur quoi je peux m’appuyer concrètement. Les <strong>valeurs</strong> représentent ce qui est important pour moi,
+        Avant de parler de métier, d'entreprise ou de posture professionnelle, il est essentiel de mieux se connaître.
+        La <strong>personnalité</strong> correspond à la manière dont je fonctionne au quotidien : ma façon d'entrer en relation,
+        mon rythme, ma manière de réfléchir, d'agir ou de réagir. Les <strong>forces</strong> sont ce que je fais bien,
+        ce sur quoi je peux m'appuyer concrètement. Les <strong>valeurs</strong> représentent ce qui est important pour moi,
         ce qui donne du sens à mes choix et ce que je ne veux pas retrouver dans un environnement de travail.
-        Les <strong>besoins</strong> sont les conditions qui m’aident à apprendre, à progresser, à me sentir en confiance
+        Les <strong>besoins</strong> sont les conditions qui m'aident à apprendre, à progresser, à me sentir en confiance
         et à tenir dans la durée.
         <br><br>
         Ces tests permettent de mieux comprendre le type de projet qui peut me correspondre, le métier qui peut avoir du sens
-        pour moi, et l’entreprise ou l’environnement professionnel dans lequel je pourrais réellement m’épanouir.
+        pour moi, et l'entreprise ou l'environnement professionnel dans lequel je pourrais réellement m'épanouir.
       </div>
-      <div class="phase-goal">🎯 Objectif : comprendre comment ma personnalité, mes forces, mes valeurs et mes besoins peuvent guider une première direction de projet, le choix d’un métier et l’identification d’un environnement professionnel adapté.</div>
+      <div class="phase-goal">🎯 Objectif : comprendre comment ma personnalité, mes forces, mes valeurs et mes besoins peuvent guider une première direction de projet, le choix d'un métier et l'identification d'un environnement professionnel adapté.</div>
       <div class="phase-consigne violet">
         👉 <strong>Consigne :</strong> Clique sur un bloc, puis réponds avec les boutons.
         Tu peux changer tes réponses à tout moment. La synthèse se construit automatiquement au fil de tes choix.
       </div>
-
       <div class="ux-blocks">
-        <div class="ux-block active" onclick="openPhase0Activity('personnalite', this)">
-          <h4>🧠 Personnalité</h4>
-          <p>Mini-test complet en 20 questions avec réponses par clic.</p>
-        </div>
-        <div class="ux-block" onclick="openPhase0Activity('forces', this)">
-          <h4>💪 Forces</h4>
-          <p>Repérer mes forces personnelles et celles à valoriser.</p>
-        </div>
-        <div class="ux-block" onclick="openPhase0Activity('valeurs', this)">
-          <h4>💎 Valeurs</h4>
-          <p>Identifier ce qui compte vraiment pour moi.</p>
-        </div>
-        <div class="ux-block" onclick="openPhase0Activity('besoins', this)">
-          <h4>🌱 Besoins</h4>
-          <p>Comprendre ce qui m’aide à avancer et à réussir.</p>
-        </div>
+        <div class="ux-block active" onclick="openPhase0Activity('personnalite', this)"><h4>🧠 Personnalité</h4><p>Mini-test complet en 20 questions avec réponses par clic.</p></div>
+        <div class="ux-block" onclick="openPhase0Activity('forces', this)"><h4>💪 Forces</h4><p>Repérer mes forces personnelles et celles à valoriser.</p></div>
+        <div class="ux-block" onclick="openPhase0Activity('valeurs', this)"><h4>💎 Valeurs</h4><p>Identifier ce qui compte vraiment pour moi.</p></div>
+        <div class="ux-block" onclick="openPhase0Activity('besoins', this)"><h4>🌱 Besoins</h4><p>Comprendre ce qui m'aide à avancer et à réussir.</p></div>
       </div>
-
       <div class="phase0-activity active" id="p0-activity-personnalite">
-        <div class="phase0-activity-head">
-          <span>🧠 Activité complète · Personnalité</span>
-          <small>20 questions · réponses par clic</small>
-        </div>
+        <div class="phase0-activity-head"><span>🧠 Activité complète · Personnalité</span><small>20 questions · réponses par clic</small></div>
         <div class="phase0-activity-body">
-          <div class="p0-minihelp">
-            Réponds spontanément. Il n’y a pas de bonne ou mauvaise réponse.
-            Le résultat sert à ouvrir la discussion avec le conseiller.
-          </div>
+          <div class="p0-minihelp">Réponds spontanément. Il n'y a pas de bonne ou mauvaise réponse. Le résultat sert à ouvrir la discussion avec le conseiller.</div>
           <div id="persoQuizMount"></div>
           <div id="persoResultMount" class="p0-summary-box" style="display:none;"></div>
         </div>
       </div>
-
       <div class="phase0-activity" id="p0-activity-forces">
-        <div class="phase0-activity-head">
-          <span>💪 Activité complète · Forces personnelles</span>
-          <small>Je repère ce que je peux mobiliser</small>
-        </div>
+        <div class="phase0-activity-head"><span>💪 Activité complète · Forces personnelles</span><small>Je repère ce que je peux mobiliser</small></div>
         <div class="phase0-activity-body">
-          <div class="p0-minihelp">
-            Pour chaque force, choisis le niveau qui te correspond le mieux.
-            Tu peux sélectionner seulement ce qui te parle.
-          </div>
+          <div class="p0-minihelp">Pour chaque force, choisis le niveau qui te correspond le mieux. Tu peux sélectionner seulement ce qui te parle.</div>
           <div id="forcesMount"></div>
           <div class="p0-actions">
             <button class="p0-btn" onclick="showPhase0Summary('forces')">Voir ma synthèse forces</button>
@@ -237,16 +286,10 @@ body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--bla
           <div id="forcesSummary" class="p0-summary-box"></div>
         </div>
       </div>
-
       <div class="phase0-activity" id="p0-activity-valeurs">
-        <div class="phase0-activity-head">
-          <span>💎 Activité complète · Valeurs personnelles</span>
-          <small>Présente · importante · centrale</small>
-        </div>
+        <div class="phase0-activity-head"><span>💎 Activité complète · Valeurs personnelles</span><small>Présente · importante · centrale</small></div>
         <div class="phase0-activity-body">
-          <div class="p0-minihelp">
-            Pour chaque valeur, indique si elle est simplement présente, importante ou centrale pour toi.
-          </div>
+          <div class="p0-minihelp">Pour chaque valeur, indique si elle est simplement présente, importante ou centrale pour toi.</div>
           <div id="valeursMount"></div>
           <div class="p0-actions">
             <button class="p0-btn" onclick="showPhase0Summary('valeurs')">Voir mon bilan valeurs</button>
@@ -255,19 +298,11 @@ body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--bla
           <div id="valeursSummary" class="p0-summary-box"></div>
         </div>
       </div>
-
-      <div class="transition-box pink">
-
+      <div class="transition-box pink"></div>
       <div class="phase0-activity" id="p0-activity-besoins">
-        <div class="phase0-activity-head">
-          <span>🌱 Activité complète · Besoins personnels</span>
-          <small>Faible · moyen · fort</small>
-        </div>
+        <div class="phase0-activity-head"><span>🌱 Activité complète · Besoins personnels</span><small>Faible · moyen · fort</small></div>
         <div class="phase0-activity-body">
-          <div class="p0-minihelp">
-            Identifie les besoins qui comptent actuellement pour toi.
-            Les besoins forts peuvent aider à adapter ton accompagnement ou ton projet.
-          </div>
+          <div class="p0-minihelp">Identifie les besoins qui comptent actuellement pour toi. Les besoins forts peuvent aider à adapter ton accompagnement ou ton projet.</div>
           <div id="besoinsMount"></div>
           <div class="p0-actions">
             <button class="p0-btn" onclick="showPhase0Summary('besoins')">Voir ma synthèse besoins</button>
@@ -276,7 +311,6 @@ body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--bla
           <div id="besoinsSummary" class="p0-summary-box"></div>
         </div>
       </div>
-
       <div class="auto-summary" id="profil-auto">
         <strong>🧩 Synthèse inclusive automatique :</strong><br><br>
         Clique sur les blocs ci-dessus pour commencer. Les éléments importants apparaîtront ici automatiquement.
@@ -284,62 +318,38 @@ body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--bla
     </div>
   </div>
 
-  <!-- PHASE 1 -->
   <div class="phase" id="phase1">
-    <div class="phase-header turq">
-      <div class="phase-icon">🪞</div>
-      <div class="phase-title">
-        <h3>Phase 1 · Le jeu du miroir</h3>
-        <small>Prendre conscience de l’image que j’envoie</small>
-      </div>
-      <div class="phase-duration">15 min</div>
-    </div>
+    <div class="phase-header turq"><div class="phase-icon">🪞</div><div class="phase-title"><h3>Phase 1 · Le jeu du miroir</h3><small>Prendre conscience de l'image que j'envoie</small></div><div class="phase-duration">15 min</div></div>
     <div class="phase-body">
-      <div class="phase-intro">Cette phase permet de comparer l’image que tu as de toi-même avec l’image que les autres peuvent percevoir.</div>
+      <div class="phase-intro">Cette phase permet de comparer l'image que tu as de toi-même avec l'image que les autres peuvent percevoir.</div>
       <div class="phase-goal">🎯 Objectif : prendre conscience de mon image perçue</div>
-      <div class="phase-consigne turq">👉 <strong>Consigne :</strong> En binôme, écris 3 mots qui te décrivent selon toi, puis imagine 3 mots qu’un autre pourrait utiliser pour te décrire dans un contexte professionnel.</div>
+      <div class="phase-consigne turq">👉 <strong>Consigne :</strong> En binôme, écris 3 mots qui te décrivent selon toi, puis imagine 3 mots qu'un autre pourrait utiliser pour te décrire dans un contexte professionnel.</div>
       <div class="miroir-grid">
         <div class="miroir-header left">🤔 Comment je me vois</div>
         <div class="miroir-header right">👀 Comment on me voit</div>
-        <div class="miroir-row">
-          <div class="miroir-cell left">Exemples : « discret », « motivé », « timide »…</div>
-          <div class="miroir-cell right">Exemples : « souriant », « sérieux », « à l’heure »…</div>
-        </div>
-        <div class="miroir-row">
-          <div class="miroir-cell left" style="font-size:.75rem;color:#666;font-style:italic;">Les qualités qu’on s’accorde</div>
-          <div class="miroir-cell right" style="font-size:.75rem;color:#666;font-style:italic;">Les signaux qu’on envoie</div>
-        </div>
+        <div class="miroir-row"><div class="miroir-cell left">Exemples : « discret », « motivé », « timide »…</div><div class="miroir-cell right">Exemples : « souriant », « sérieux », « à l'heure »…</div></div>
+        <div class="miroir-row"><div class="miroir-cell left" style="font-size:var(--fs-xs);color:#666;font-style:italic;">Les qualités qu'on s'accorde</div><div class="miroir-cell right" style="font-size:var(--fs-xs);color:#666;font-style:italic;">Les signaux qu'on envoie</div></div>
       </div>
     </div>
   </div>
 
-  <div class="transition-box pink">
-    👉 Après avoir identifié l’image perçue, on transforme les points forts en message clair : qu’est-ce que je peux apporter à une équipe, à une entreprise ou à un public ?
-  </div>
+  <div class="transition-box pink">👉 Après avoir identifié l'image perçue, on transforme les points forts en message clair : qu'est-ce que je peux apporter à une équipe, à une entreprise ou à un public ?</div>
 
-  <!-- PHASE 2 -->
   <div class="phase" id="phase2">
-    <div class="phase-header pink">
-      <div class="phase-icon">🌟</div>
-      <div class="phase-title">
-        <h3>Phase 2 · Mon image de marque personnelle</h3>
-        <small>Transformer mes points forts en valeur utile</small>
-      </div>
-      <div class="phase-duration">20 min</div>
-    </div>
+    <div class="phase-header pink"><div class="phase-icon">🌟</div><div class="phase-title"><h3>Phase 2 · Mon image de marque personnelle</h3><small>Transformer mes points forts en valeur utile</small></div><div class="phase-duration">20 min</div></div>
     <div class="phase-body">
-      <div class="phase-intro">Cette phase t’aide à transformer tes qualités en valeur utile pour les autres.</div>
-      <div class="phase-goal">🎯 Objectif : formuler ce que j’apporte</div>
+      <div class="phase-intro">Cette phase t'aide à transformer tes qualités en valeur utile pour les autres.</div>
+      <div class="phase-goal">🎯 Objectif : formuler ce que j'apporte</div>
       <div class="phase-consigne orange">👉 <strong>Consigne :</strong> Identifie tes points forts, à qui ils peuvent être utiles et quels besoins ils peuvent couvrir.</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
         <div class="tip-box" style="margin-top:0">
-          <div class="tip-box-header">1️⃣ Ce que j’ai en moi</div>
+          <div class="tip-box-header">1️⃣ Ce que j'ai en moi</div>
           <div class="tip-box-body">
             <label class="enq-label">Mes 3 points forts</label>
             <input class="enq-input" id="force1" placeholder="Ex : organisé">
-            <input class="enq-input" id="force2" placeholder="Ex : à l’écoute" style="margin-top:8px;">
-            <input class="enq-input" id="force3" placeholder="Ex : calme / motivé / fiable" style="margin-top:8px;">
-            <label class="enq-label" style="margin-top:12px;">Mes valeurs importantes</label>
+            <input class="enq-input" id="force2" placeholder="Ex : à l'écoute" style="margin-top:10px;">
+            <input class="enq-input" id="force3" placeholder="Ex : calme / motivé / fiable" style="margin-top:10px;">
+            <label class="enq-label" style="margin-top:14px;">Mes valeurs importantes</label>
             <input class="enq-input" id="valeurs" placeholder="Ex : respect, entraide, sérieux">
           </div>
         </div>
@@ -348,8 +358,8 @@ body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--bla
           <div class="tip-box-body">
             <label class="enq-label">À qui mes qualités peuvent être utiles ?</label>
             <input class="enq-input" id="cible" placeholder="Ex : collègues, clients, équipe, usagers">
-            <label class="enq-label" style="margin-top:12px;">Quels besoins je peux aider à couvrir ?</label>
-            <textarea class="enq-textarea" id="besoins" rows="4" placeholder="Ex : bien accueillir, rassurer, s’organiser..."></textarea>
+            <label class="enq-label" style="margin-top:14px;">Quels besoins je peux aider à couvrir ?</label>
+            <textarea class="enq-textarea" id="besoins" rows="4" placeholder="Ex : bien accueillir, rassurer, s'organiser..."></textarea>
           </div>
         </div>
       </div>
@@ -357,115 +367,97 @@ body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--bla
         <div class="tip-box-header">3️⃣ Ma phrase de marque personnelle</div>
         <div class="tip-box-body">
           <button class="btn-engage" onclick="generatePitch()">Créer ma phrase 💬</button>
-          <button class="btn-engage" onclick="copyPitch()" style="margin-left:8px;">Copier 📋</button>
+          <button class="btn-engage" onclick="copyPitch()" style="margin-left:10px;">Copier 📋</button>
           <div id="pitchResult" class="pitch-box">
             <div class="pitch-level" id="pitchLevel">Niveau</div>
-            <div id="pitchText" style="font-size:.84rem;line-height:1.6;font-weight:700;"></div>
-            <div id="pitchCoach" style="margin-top:10px;font-size:.78rem;line-height:1.5;"></div>
+            <div id="pitchText" style="font-size:var(--fs-md);line-height:1.7;font-weight:700;"></div>
+            <div id="pitchCoach" style="margin-top:12px;font-size:var(--fs-sm);line-height:1.6;"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="transition-box yellow">
-    👉 Une fois que je sais mieux me présenter, il faut vérifier comment cette présentation se traduit dans les gestes, l’attitude, le langage et les codes attendus en entreprise.
-  </div>
+  <div class="transition-box yellow">👉 Une fois que je sais mieux me présenter, il faut vérifier comment cette présentation se traduit dans les gestes, l'attitude, le langage et les codes attendus en entreprise.</div>
 
-  <!-- PHASE 3 -->
   <div class="phase" id="phase3">
-    <div class="phase-header yellow">
-      <div class="phase-icon">🔍</div>
-      <div class="phase-title">
-        <h3>Phase 3 · Le savoir-être en entreprise</h3>
-        <small>Identifier les attentes concrètes des professionnels</small>
-      </div>
-      <div class="phase-duration">20 min</div>
-    </div>
+    <div class="phase-header yellow"><div class="phase-icon">🔍</div><div class="phase-title"><h3>Phase 3 · Le savoir-être en entreprise</h3><small>Identifier les attentes concrètes des professionnels</small></div><div class="phase-duration">20 min</div></div>
     <div class="phase-body">
-      <div class="phase-intro">Cette phase permet d’identifier les attitudes attendues dans un cadre professionnel.</div>
+      <div class="phase-intro">Cette phase permet d'identifier les attitudes attendues dans un cadre professionnel.</div>
       <div class="phase-goal">🎯 Objectif : identifier les codes du savoir-être professionnel</div>
       <div class="phase-consigne yellow">👉 <strong>Consigne :</strong> Observe les différents éléments du savoir-être en entreprise puis évalue-toi honnêtement.</div>
       <div class="cards-grid">
-        <div class="card yellow"><div class="card-icon">🧠</div><h4>L’attitude prime</h4><p>Être motivé, volontaire, présent.</p></div>
-        <div class="card turq"><div class="card-icon">🕐</div><h4>La ponctualité</h4><p>5 minutes en avance, c’est idéal.</p></div>
+        <div class="card yellow"><div class="card-icon">🧠</div><h4>L'attitude prime</h4><p>Être motivé, volontaire, présent.</p></div>
+        <div class="card turq"><div class="card-icon">🕐</div><h4>La ponctualité</h4><p>5 minutes en avance, c'est idéal.</p></div>
         <div class="card mint"><div class="card-icon">📱</div><h4>Le téléphone</h4><p>Rangé pendant toute la visite.</p></div>
         <div class="card orange"><div class="card-icon">👗</div><h4>La tenue</h4><p>Propre, simple, adaptée au lieu.</p></div>
         <div class="card red"><div class="card-icon">🤝</div><h4>Le bonjour</h4><p>Regard, politesse, présence.</p></div>
         <div class="card yellow"><div class="card-icon">💬</div><h4>Le langage</h4><p>Poli, clair, sans familiarité.</p></div>
-        <div class="card turq"><div class="card-icon">👂</div><h4>L’écoute active</h4><p>Rester présent, suivre, prendre des notes.</p></div>
+        <div class="card turq"><div class="card-icon">👂</div><h4>L'écoute active</h4><p>Rester présent, suivre, prendre des notes.</p></div>
         <div class="card mint"><div class="card-icon">❓</div><h4>Poser des questions</h4><p>Montrer sa curiosité et son intérêt.</p></div>
       </div>
-      <div style="margin-top:16px;background:#fff;border:2px solid var(--black);border-radius:10px;padding:14px 18px;box-shadow:var(--shadow);">
-        <strong style="font-family:'Poppins',sans-serif;font-size:.82rem;">⭐ Auto-évaluation</strong>
+      <div style="margin-top:20px;background:#fff;border:2px solid var(--black);border-radius:12px;padding:18px 22px;box-shadow:var(--shadow);">
+        <strong style="font-family:'Poppins',sans-serif;font-size:var(--fs-md);">⭐ Auto-évaluation</strong>
         <div class="eval-items">
           <div class="eval-item"><label>🕐 Ponctualité</label><div class="star-row"><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span></div></div>
           <div class="eval-item"><label>💬 Langage professionnel</label><div class="star-row"><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span></div></div>
           <div class="eval-item"><label>👗 Tenue vestimentaire</label><div class="star-row"><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span></div></div>
-          <div class="eval-item"><label>👂 Écoute & posture</label><div class="star-row"><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span></div></div>
+          <div class="eval-item"><label>👂 Écoute &amp; posture</label><div class="star-row"><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span></div></div>
         </div>
       </div>
     </div>
   </div>
 
-    <div class="network-hero">
-👉 Tu sais maintenant ce que tu peux apporter.
+  <div class="transition-box yellow">
+    👉 Tu sais maintenant ce que tu peux apporter.<br>
+    👉 L'étape suivante consiste à comprendre ce que les entreprises attendent concrètement au quotidien, au-delà des compétences : posture, attitude, comportement.
+  </div>
 
-👉 L’étape suivante consiste à comprendre ce que les entreprises attendent concrètement au quotidien, au-delà des compétences : posture, attitude, comportement.
-</div>
-
-  <!-- PHASE 4 -->
   <div class="phase" id="phase4">
-    <div class="phase-header turq">
-      <div class="phase-icon">🎭</div>
-      <div class="phase-title"><h3>Phase 4 · Scénarios : bonne ou mauvaise posture ?</h3><small>Mise en situation — débat collectif</small></div>
-      <div class="phase-duration">25 min</div>
-    </div>
+    <div class="phase-header turq"><div class="phase-icon">🎭</div><div class="phase-title"><h3>Phase 4 · Scénarios : bonne ou mauvaise posture ?</h3><small>Mise en situation — débat collectif</small></div><div class="phase-duration">25 min</div></div>
     <div class="phase-body">
       <div class="phase-intro">Cette phase propose des situations réalistes pour réfléchir à la bonne posture à adopter.</div>
-      <div class="phase-goal">🎯 Objectif : s’entraîner à réagir dans des situations concrètes</div>
+      <div class="phase-goal">🎯 Objectif : s'entraîner à réagir dans des situations concrètes</div>
       <div class="phase-consigne turq">👉 <strong>Consigne :</strong> Pour chaque situation, prends quelques secondes pour réfléchir avant de répondre.</div>
       <div id="scenarioContainer">
-        <div class="scenario-block"><div class="scenario-header">🎬 Scénario 1 · Tu arrives en retard</div><div class="scenario-body"><div class="scenario-situation">Tu arrives avec 10 minutes de retard. Que fais-tu en entrant ?</div><div class="scenario-choices" id="sc1"><div class="choice" data-correct="false"><span class="choice-letter">A</span><span>Tu entres discrètement sans rien dire.</span></div><div class="choice" data-correct="true"><span class="choice-letter">B</span><span>Tu t’excuses brièvement et clairement.</span></div><div class="choice" data-correct="false"><span class="choice-letter">C</span><span>Tu racontes toute l’histoire en détail.</span></div></div><div id="fb-sc1" class="choice-feedback hidden"></div></div></div>
-        <div class="scenario-block"><div class="scenario-header">🎬 Scénario 2 · Tu décroches pendant la visite</div><div class="scenario-body"><div class="scenario-situation">La visite dure, tu t’ennuies un peu. Que fais-tu ?</div><div class="scenario-choices" id="sc2"><div class="choice" data-correct="false"><span class="choice-letter">A</span><span>Tu regardes ton téléphone.</span></div><div class="choice" data-correct="true"><span class="choice-letter">B</span><span>Tu restes présent, tu écoutes, tu notes.</span></div><div class="choice" data-correct="false"><span class="choice-letter">C</span><span>Tu rigoles avec la personne à côté.</span></div></div><div id="fb-sc2" class="choice-feedback hidden"></div></div></div>
-        <div class="scenario-block"><div class="scenario-header">🎬 Scénario 3 · Tu n’as pas compris</div><div class="scenario-body"><div class="scenario-situation">La réponse du professionnel est trop technique. Que fais-tu ?</div><div class="scenario-choices" id="sc3"><div class="choice" data-correct="false"><span class="choice-letter">A</span><span>Tu fais semblant d’avoir compris.</span></div><div class="choice" data-correct="false"><span class="choice-letter">B</span><span>Tu passes à la suite.</span></div><div class="choice" data-correct="true"><span class="choice-letter">C</span><span>Tu demandes poliment qu’on reformule.</span></div></div><div id="fb-sc3" class="choice-feedback hidden"></div></div></div>
-        <div class="scenario-block"><div class="scenario-header">🎬 Scénario 4 · Tu n’as pas eu toutes tes réponses</div><div class="scenario-body"><div class="scenario-situation">La visite se termine, il reste des questions. Que fais-tu ?</div><div class="scenario-choices" id="sc4"><div class="choice" data-correct="false"><span class="choice-letter">A</span><span>Tu inventes des réponses plus tard.</span></div><div class="choice" data-correct="true"><span class="choice-letter">B</span><span>Tu remercies et demandes si tu peux revenir par mail.</span></div><div class="choice" data-correct="false"><span class="choice-letter">C</span><span>Tu montres ta déception.</span></div></div><div id="fb-sc4" class="choice-feedback hidden"></div></div></div>
+        <div class="scenario-block"><div class="scenario-header">🎬 Scénario 1 · Tu arrives en retard</div><div class="scenario-body"><div class="scenario-situation">Tu arrives avec 10 minutes de retard. Que fais-tu en entrant ?</div><div class="scenario-choices" id="sc1"><div class="choice" data-correct="false"><span class="choice-letter">A</span><span>Tu entres discrètement sans rien dire.</span></div><div class="choice" data-correct="true"><span class="choice-letter">B</span><span>Tu t'excuses brièvement et clairement.</span></div><div class="choice" data-correct="false"><span class="choice-letter">C</span><span>Tu racontes toute l'histoire en détail.</span></div></div><div id="fb-sc1" class="choice-feedback hidden"></div></div></div>
+        <div class="scenario-block"><div class="scenario-header">🎬 Scénario 2 · Tu décroches pendant la visite</div><div class="scenario-body"><div class="scenario-situation">La visite dure, tu t'ennuies un peu. Que fais-tu ?</div><div class="scenario-choices" id="sc2"><div class="choice" data-correct="false"><span class="choice-letter">A</span><span>Tu regardes ton téléphone.</span></div><div class="choice" data-correct="true"><span class="choice-letter">B</span><span>Tu restes présent, tu écoutes, tu notes.</span></div><div class="choice" data-correct="false"><span class="choice-letter">C</span><span>Tu rigoles avec la personne à côté.</span></div></div><div id="fb-sc2" class="choice-feedback hidden"></div></div></div>
+        <div class="scenario-block"><div class="scenario-header">🎬 Scénario 3 · Tu n'as pas compris</div><div class="scenario-body"><div class="scenario-situation">La réponse du professionnel est trop technique. Que fais-tu ?</div><div class="scenario-choices" id="sc3"><div class="choice" data-correct="false"><span class="choice-letter">A</span><span>Tu fais semblant d'avoir compris.</span></div><div class="choice" data-correct="false"><span class="choice-letter">B</span><span>Tu passes à la suite.</span></div><div class="choice" data-correct="true"><span class="choice-letter">C</span><span>Tu demandes poliment qu'on reformule.</span></div></div><div id="fb-sc3" class="choice-feedback hidden"></div></div></div>
+        <div class="scenario-block"><div class="scenario-header">🎬 Scénario 4 · Tu n'as pas eu toutes tes réponses</div><div class="scenario-body"><div class="scenario-situation">La visite se termine, il reste des questions. Que fais-tu ?</div><div class="scenario-choices" id="sc4"><div class="choice" data-correct="false"><span class="choice-letter">A</span><span>Tu inventes des réponses plus tard.</span></div><div class="choice" data-correct="true"><span class="choice-letter">B</span><span>Tu remercies et demandes si tu peux revenir par mail.</span></div><div class="choice" data-correct="false"><span class="choice-letter">C</span><span>Tu montres ta déception.</span></div></div><div id="fb-sc4" class="choice-feedback hidden"></div></div></div>
       </div>
     </div>
   </div>
 </div>
 
-  <div class="network-hero">
-👉 Passer à l’étape suivante.
-
-👉 Comprendre un métier ne se fait pas seulement en ligne ou en formation.
-C’est en rencontrant des professionnels, en observant et en posant des questions que tu peux vraiment te projeter.
-
-👉 L’enquête métier va te permettre de tester, vérifier et affiner ton projet.
+<div class="transition-box turq" style="max-width:var(--max-w);margin:0 auto;padding:20px 48px;">
+  👉 Comprendre un métier ne se fait pas seulement en ligne ou en formation.<br>
+  C'est en rencontrant des professionnels, en observant et en posant des questions que tu peux vraiment te projeter.<br>
+  👉 L'enquête métier va te permettre de tester, vérifier et affiner ton projet.
 </div>
 
-<!-- PHASE 5 : ENQUÊTE MÉTIER -->
 <div style="background:var(--black);padding:0;margin-top:0;">
-  <div style="max-width:960px;margin:0 auto;padding:28px 20px 12px;display:flex;align-items:center;gap:16px;">
-    <div style="background:var(--turq);border:3px solid rgba(255,255,255,.3);border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0;">🔍</div>
-    <div><div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:1.5rem;color:#fff;line-height:1.1;">Préparer mon <span style="color:var(--yellow)">enquête métier</span></div>
-      <div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap;">
-        <span style="background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.3);border-radius:20px;padding:3px 11px;font-size:.72rem;font-weight:600;color:#fff;">Outil de préparation</span>
-        <span style="background:var(--turq);border:1.5px solid var(--black);border-radius:20px;padding:3px 11px;font-size:.72rem;font-weight:600;color:#fff;box-shadow:2px 2px 0 rgba(0,0,0,.3);">Avant la visite</span>
-        <span style="background:var(--yellow);border:1.5px solid rgba(0,0,0,.3);border-radius:20px;padding:3px 11px;font-size:.72rem;font-weight:600;color:var(--black);">Individuel</span>
+  <div style="max-width:var(--max-w);margin:0 auto;padding:36px 48px 16px;display:flex;align-items:center;gap:20px;">
+    <div style="background:var(--turq);border:3px solid rgba(255,255,255,.3);border-radius:50%;width:64px;height:64px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;flex-shrink:0;">🔍</div>
+    <div>
+      <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:1.8rem;color:#fff;line-height:1.1;">Préparer mon <span style="color:var(--yellow)">enquête métier</span></div>
+      <div style="margin-top:8px;display:flex;gap:10px;flex-wrap:wrap;">
+        <span style="background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.3);border-radius:20px;padding:4px 14px;font-size:var(--fs-xs);font-weight:700;color:#fff;">Outil de préparation</span>
+        <span style="background:var(--turq);border:1.5px solid var(--black);border-radius:20px;padding:4px 14px;font-size:var(--fs-xs);font-weight:700;color:#fff;box-shadow:2px 2px 0 rgba(0,0,0,.3);">Avant la visite</span>
+        <span style="background:var(--yellow);border:1.5px solid rgba(0,0,0,.3);border-radius:20px;padding:4px 14px;font-size:var(--fs-xs);font-weight:700;color:var(--black);">Individuel</span>
       </div>
     </div>
   </div>
-  <div style="max-width:960px;margin:0 auto;padding:0 20px 18px;"><p style="font-size:.82rem;color:rgba(255,255,255,.7);line-height:1.6;">Une enquête métier, ce n’est ni un entretien d’embauche, ni un questionnaire scolaire. C’est un échange authentique avec un professionnel pour découvrir la réalité d’un métier de l’intérieur.</p></div>
+  <div style="max-width:var(--max-w);margin:0 auto;padding:0 48px 22px;"><p style="font-size:var(--fs-md);color:rgba(255,255,255,.75);line-height:1.7;">Une enquête métier, ce n'est ni un entretien d'embauche, ni un questionnaire scolaire. C'est un échange authentique avec un professionnel pour découvrir la réalité d'un métier de l'intérieur.</p></div>
 </div>
-<div style="max-width:960px;margin:0 auto;padding:28px 20px 60px;">
-  <div class="phase" id="phase5" style="margin-bottom:20px;">
-    <div class="phase-header violet"><div class="phase-icon">🧭</div><div class="phase-title"><h3>Phase 5 · Préparer mon enquête métier</h3><small>Transformer l’atelier en action concrète vers l’entreprise</small></div><div class="phase-duration">30 à 45 min</div></div>
+
+<div style="max-width:var(--max-w);margin:0 auto;padding:36px 48px 80px;">
+  <div class="phase" id="phase5" style="margin-bottom:24px;">
+    <div class="phase-header violet"><div class="phase-icon">🧭</div><div class="phase-title"><h3>Phase 5 · Préparer mon enquête métier</h3><small>Transformer l'atelier en action concrète vers l'entreprise</small></div><div class="phase-duration">30 à 45 min</div></div>
     <div class="phase-body">
       <div class="phase-intro">Cette phase te permet de préparer une rencontre avec un professionnel de façon sérieuse et utile.</div>
       <div class="phase-goal">🎯 Objectif : préparer une rencontre professionnelle utile</div>
       <div class="phase-consigne violet">👉 <strong>Consigne :</strong> Complète les différentes étapes pour préparer ton enquête métier : la structure, les questions, le départ, les notes et le bilan.</div>
-      <div style="display:flex;gap:0;border:3px solid var(--black);border-radius:12px;overflow:hidden;box-shadow:var(--shadow-lg);margin-bottom:28px;">
+      <div style="display:flex;gap:0;border:3px solid var(--black);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-lg);margin-bottom:32px;">
         <button class="enq-tab active" onclick="switchTab('tab-info')" id="btn-tab-info"><span>1</span> Infos structure</button>
         <button class="enq-tab" onclick="switchTab('tab-questions')" id="btn-tab-questions" style="border-left:3px solid var(--black);"><span>2</span> Mes questions</button>
         <button class="enq-tab" onclick="switchTab('tab-checklist')" id="btn-tab-checklist" style="border-left:3px solid var(--black);"><span>3</span> Check départ</button>
@@ -474,74 +466,71 @@ C’est en rencontrant des professionnels, en observant et en posant des questio
       </div>
 
       <div id="tab-info" class="enq-panel">
-        <div class="phase-goal">🎯 Objectif : identifier clairement où je vais et qui je rencontre</div>
-        <div class="phase-consigne turq">👉 <strong>Consigne :</strong> Renseigne la structure, la personne rencontrée, le ou les métiers visés et ce que tu sais déjà.</div>
-        <div style="margin-bottom:18px;"><label class="enq-label">Type de structure visitée</label><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;" id="struct-type-btns"><button class="struct-btn" onclick="selectStruct(this,'🏭 Entreprise')">🏭 Entreprise</button><button class="struct-btn" onclick="selectStruct(this,'🤝 Association')">🤝 Association</button><button class="struct-btn" onclick="selectStruct(this,'🏛️ Institution / Service public')">🏛️ Institution / Service public</button><button class="struct-btn" onclick="selectStruct(this,'🛒 Commerce')">🛒 Commerce</button><button class="struct-btn" onclick="selectStruct(this,'🔧 Artisan')">🔧 Artisan</button></div><div id="struct-selected" style="display:none;margin-top:8px;font-size:.8rem;font-weight:700;padding:7px 12px;border:2px solid var(--black);border-radius:8px;background:#E0F7FA;box-shadow:2px 2px 0 var(--black);"></div></div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+        <div class="phase-goal">🎯 Identifier clairement où je vais et qui je rencontre</div>
+        <div class="phase-consigne turq">👉 Renseigne la structure, la personne rencontrée, le ou les métiers visés et ce que tu sais déjà.</div>
+        <div style="margin-bottom:20px;"><label class="enq-label">Type de structure visitée</label><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px;" id="struct-type-btns"><button class="struct-btn" onclick="selectStruct(this,'🏭 Entreprise')">🏭 Entreprise</button><button class="struct-btn" onclick="selectStruct(this,'🤝 Association')">🤝 Association</button><button class="struct-btn" onclick="selectStruct(this,'🏛️ Institution / Service public')">🏛️ Institution</button><button class="struct-btn" onclick="selectStruct(this,'🛒 Commerce')">🛒 Commerce</button><button class="struct-btn" onclick="selectStruct(this,'🔧 Artisan')">🔧 Artisan</button></div><div id="struct-selected" style="display:none;margin-top:10px;font-size:var(--fs-md);font-weight:700;padding:9px 14px;border:2px solid var(--black);border-radius:10px;background:#E0F7FA;box-shadow:2px 2px 0 var(--black);"></div></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
           <div><label class="enq-label">Nom de la structure</label><input class="enq-input" id="ent-nom" placeholder="Ex : entreprise, mairie, association…"></div>
-          <div><label class="enq-label">Secteur / Domaine d'activité</label><input class="enq-input" id="ent-secteur" placeholder="Ex : bâtiment, social, restauration…"></div>
+          <div><label class="enq-label">Secteur / Domaine</label><input class="enq-input" id="ent-secteur" placeholder="Ex : bâtiment, social, restauration…"></div>
           <div><label class="enq-label">Adresse / Localisation</label><input class="enq-input" id="ent-adresse" placeholder="Adresse ou lieu de rendez-vous"></div>
-          <div><label class="enq-label">Date & heure de la visite</label><input class="enq-input" id="ent-date" placeholder="Ex : mardi 10 juin à 10h00"></div>
+          <div><label class="enq-label">Date &amp; heure de la visite</label><input class="enq-input" id="ent-date" placeholder="Ex : mardi 10 juin à 10h00"></div>
           <div><label class="enq-label">Nom de la personne rencontrée</label><input class="enq-input" id="ent-contact" placeholder="Prénom + nom"></div>
-          <div><label class="enq-label">Son poste / rôle</label><input class="enq-input" id="ent-poste" placeholder="Ex : chef d’équipe, RH, artisan…"></div>
+          <div><label class="enq-label">Son poste / rôle</label><input class="enq-input" id="ent-poste" placeholder="Ex : chef d'équipe, RH, artisan…"></div>
         </div>
-        <div style="margin-top:14px;"><label class="enq-label">Ce que je sais déjà sur cette structure</label><textarea class="enq-textarea" id="ent-connais" rows="3"></textarea></div>
-        <div style="margin-top:16px;"><label class="enq-label">Le(s) métier(s) que j’explore lors de cette visite</label><div id="metiers-list" style="display:flex;flex-direction:column;gap:8px;margin-top:6px;"></div><button onclick="addMetier()" style="margin-top:8px;background:#fff;border:2px dashed var(--black);border-radius:8px;padding:8px 16px;font-family:'Poppins',sans-serif;font-weight:700;font-size:.78rem;cursor:pointer;width:100%;">＋ Ajouter un métier à explorer</button></div>
-        <div style="margin-top:16px;text-align:right;"><button class="btn-engage" onclick="switchTab('tab-questions')">Suivant : mes questions →</button></div>
+        <div style="margin-top:16px;"><label class="enq-label">Ce que je sais déjà sur cette structure</label><textarea class="enq-textarea" id="ent-connais" rows="3"></textarea></div>
+        <div style="margin-top:18px;"><label class="enq-label">Le(s) métier(s) que j'explore lors de cette visite</label><div id="metiers-list" style="display:flex;flex-direction:column;gap:10px;margin-top:8px;"></div><button onclick="addMetier()" style="margin-top:10px;background:#fff;border:2px dashed var(--black);border-radius:10px;padding:10px 18px;font-family:'Poppins',sans-serif;font-weight:700;font-size:var(--fs-sm);cursor:pointer;width:100%;">＋ Ajouter un métier à explorer</button></div>
+        <div style="margin-top:18px;text-align:right;"><button class="btn-engage" onclick="switchTab('tab-questions')">Suivant : mes questions →</button></div>
       </div>
 
       <div id="tab-questions" class="enq-panel hidden">
-        <div class="phase-goal">🎯 Objectif : sélectionner les questions les plus utiles</div>
-        <div class="phase-consigne yellow">👉 <strong>Consigne :</strong> Coche les questions qui t’intéressent le plus. Prépare idéalement <strong>8 à 12 questions maximum</strong>.</div>
-        <div class="qblock"><div class="qblock-header" style="background:var(--turq);"><span>📋</span> Le contenu du poste et les missions <span class="q-counter" id="counter-1">0 sélectionnée(s)</span></div><div class="qblock-body" id="qgroup-1"><div class="qitem" onclick="toggleQ(this,'1')"><span class="qcheck">☐</span> Quelles sont vos principales tâches au quotidien ?</div><div class="qitem" onclick="toggleQ(this,'1')"><span class="qcheck">☐</span> À quoi ressemble une journée type dans votre métier ?</div><div class="qitem" onclick="toggleQ(this,'1')"><span class="qcheck">☐</span> Y a-t-il des tâches qu’on n’imagine pas forcément ?</div><div class="qitem" onclick="toggleQ(this,'1')"><span class="qcheck">☐</span> Qu’est-ce qui prend le plus de temps dans votre travail ?</div><div class="qitem qitem-custom" onclick="addCustomQ('qgroup-1','1')" style="border:2px dashed #aaa;background:#f9f9f9;color:#888;justify-content:center;">＋ Ajouter ma propre question…</div></div></div>
-        <div class="qblock"><div class="qblock-header" style="background:var(--mint);"><span>🎓</span> L'accès au métier <span class="q-counter" id="counter-2">0 sélectionnée(s)</span></div><div class="qblock-body" id="qgroup-2"><div class="qitem" onclick="toggleQ(this,'2')"><span class="qcheck">☐</span> Quel a été votre parcours pour accéder à ce métier ?</div><div class="qitem" onclick="toggleQ(this,'2')"><span class="qcheck">☐</span> Existe-t-il plusieurs voies pour y accéder ?</div><div class="qitem" onclick="toggleQ(this,'2')"><span class="qcheck">☐</span> Quels diplômes ou expériences sont les plus utiles ?</div><div class="qitem" onclick="toggleQ(this,'2')"><span class="qcheck">☐</span> Qu’est-ce qui aide à entrer dans ce secteur quand on débute ?</div><div class="qitem qitem-custom" onclick="addCustomQ('qgroup-2','2')" style="border:2px dashed #aaa;background:#f9f9f9;color:#888;justify-content:center;">＋ Ajouter ma propre question…</div></div></div>
-        <div class="qblock"><div class="qblock-header" style="background:var(--orange);"><span>🧠</span> Les compétences clés <span class="q-counter" id="counter-3">0 sélectionnée(s)</span></div><div class="qblock-body" id="qgroup-3"><div class="qitem" onclick="toggleQ(this,'3')"><span class="qcheck">☐</span> Quelles sont les compétences techniques indispensables ?</div><div class="qitem" onclick="toggleQ(this,'3')"><span class="qcheck">☐</span> Quelles qualités humaines font la différence ?</div><div class="qitem" onclick="toggleQ(this,'3')"><span class="qcheck">☐</span> Qu’est-ce qui distingue les bons professionnels ?</div><div class="qitem" onclick="toggleQ(this,'3')"><span class="qcheck">☐</span> Quelles compétences peut-on développer sur le terrain ?</div><div class="qitem qitem-custom" onclick="addCustomQ('qgroup-3','3')" style="border:2px dashed #aaa;background:#f9f9f9;color:#888;justify-content:center;">＋ Ajouter ma propre question…</div></div></div>
-        <div class="qblock"><div class="qblock-header" style="background:var(--violet);color:#fff;"><span>🌍</span> L'environnement et les conditions de travail <span class="q-counter" id="counter-4">0 sélectionnée(s)</span></div><div class="qblock-body" id="qgroup-4"><div class="qitem" onclick="toggleQ(this,'4')"><span class="qcheck">☐</span> Comment se déroule le travail en équipe ?</div><div class="qitem" onclick="toggleQ(this,'4')"><span class="qcheck">☐</span> Quels sont les horaires ou le rythme de travail ?</div><div class="qitem" onclick="toggleQ(this,'4')"><span class="qcheck">☐</span> Quels outils ou équipements utilisez-vous ?</div><div class="qitem" onclick="toggleQ(this,'4')"><span class="qcheck">☐</span> Qu’est-ce qui est le plus exigeant dans l’environnement de travail ?</div><div class="qitem qitem-custom" onclick="addCustomQ('qgroup-4','4')" style="border:2px dashed #aaa;background:#f9f9f9;color:#888;justify-content:center;">＋ Ajouter ma propre question…</div></div></div>
-        <div class="qblock"><div class="qblock-header" style="background:#EF5350;color:#fff;"><span>⚠️</span> Les contraintes du métier <span class="q-counter" id="counter-5">0 sélectionnée(s)</span></div><div class="qblock-body" id="qgroup-5"><div class="qitem" onclick="toggleQ(this,'5')"><span class="qcheck">☐</span> Qu’aimez-vous le moins dans votre métier ?</div><div class="qitem" onclick="toggleQ(this,'5')"><span class="qcheck">☐</span> Qu’auriez-vous aimé savoir avant de commencer ?</div><div class="qitem" onclick="toggleQ(this,'5')"><span class="qcheck">☐</span> Y a-t-il des contraintes physiques, mentales ou horaires ?</div><div class="qitem" onclick="toggleQ(this,'5')"><span class="qcheck">☐</span> Quels profils ont du mal à tenir dans ce métier ?</div><div class="qitem qitem-custom" onclick="addCustomQ('qgroup-5','5')" style="border:2px dashed #aaa;background:#f9f9f9;color:#888;justify-content:center;">＋ Ajouter ma propre question…</div></div></div>
-        <div class="qblock"><div class="qblock-header" style="background:#26A69A;color:#fff;"><span>💶</span> La rémunération <span class="q-counter" id="counter-6">0 sélectionnée(s)</span></div><div class="qblock-body" id="qgroup-6"><div class="qitem" onclick="toggleQ(this,'6')"><span class="qcheck">☐</span> Quel est le salaire à l’entrée dans ce métier ?</div><div class="qitem" onclick="toggleQ(this,'6')"><span class="qcheck">☐</span> Y a-t-il des primes ou avantages ?</div><div class="qitem" onclick="toggleQ(this,'6')"><span class="qcheck">☐</span> Comment évolue la rémunération avec l’expérience ?</div><div class="qitem qitem-custom" onclick="addCustomQ('qgroup-6','6')" style="border:2px dashed #aaa;background:#f9f9f9;color:#888;justify-content:center;">＋ Ajouter ma propre question…</div></div></div>
-        <div class="qblock"><div class="qblock-header" style="background:var(--black);color:var(--yellow);"><span>🌟</span> Les conseils du professionnel <span class="q-counter" id="counter-7">0 sélectionnée(s)</span></div><div class="qblock-body" id="qgroup-7"><div class="qitem" onclick="toggleQ(this,'7')"><span class="qcheck">☐</span> Quels conseils donneriez-vous à quelqu’un qui veut se lancer ?</div><div class="qitem" onclick="toggleQ(this,'7')"><span class="qcheck">☐</span> Par quoi commencer quand on s’intéresse à ce métier ?</div><div class="qitem" onclick="toggleQ(this,'7')"><span class="qcheck">☐</span> Quels contacts, sites ou ressources recommandez-vous ?</div><div class="qitem" onclick="toggleQ(this,'7')"><span class="qcheck">☐</span> Que regarder en priorité quand on visite une structure comme la vôtre ?</div><div class="qitem qitem-custom" onclick="addCustomQ('qgroup-7','7')" style="border:2px dashed #aaa;background:#f9f9f9;color:#888;justify-content:center;">＋ Ajouter ma propre question…</div></div></div>
-        <div id="q-total-bar" style="background:var(--yellow);border:3px solid var(--black);border-radius:12px;padding:14px 20px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:8px;"><div><span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:1.1rem;" id="total-q-count">0</span><span style="font-size:.82rem;font-weight:600;"> question(s) sélectionnée(s) </span><span style="font-size:.78rem;color:#666;" id="q-advice">— Vise 8 à 12 questions idéalement.</span></div><button class="btn-engage" onclick="switchTab('tab-checklist')">Suivant : check départ →</button></div>
+        <div class="phase-consigne yellow">👉 Coche les questions qui t'intéressent. Prépare idéalement <strong>8 à 12 questions maximum</strong>.</div>
+        <div class="qblock"><div class="qblock-header" style="background:var(--turq);"><span>📋</span> Le contenu du poste et les missions <span class="q-counter" id="counter-1">0</span></div><div class="qblock-body" id="qgroup-1"><div class="qitem" onclick="toggleQ(this,'1')"><span class="qcheck">☐</span> Quelles sont vos principales tâches au quotidien ?</div><div class="qitem" onclick="toggleQ(this,'1')"><span class="qcheck">☐</span> À quoi ressemble une journée type dans votre métier ?</div><div class="qitem" onclick="toggleQ(this,'1')"><span class="qcheck">☐</span> Y a-t-il des tâches qu'on n'imagine pas forcément ?</div><div class="qitem" onclick="toggleQ(this,'1')"><span class="qcheck">☐</span> Qu'est-ce qui prend le plus de temps dans votre travail ?</div><div class="qitem qitem-custom" onclick="addCustomQ('qgroup-1','1')" style="border:2px dashed #aaa;background:#f9f9f9;color:#888;justify-content:center;">＋ Ajouter ma propre question…</div></div></div>
+        <div class="qblock"><div class="qblock-header" style="background:var(--mint);"><span>🎓</span> L'accès au métier <span class="q-counter" id="counter-2">0</span></div><div class="qblock-body" id="qgroup-2"><div class="qitem" onclick="toggleQ(this,'2')"><span class="qcheck">☐</span> Quel a été votre parcours pour accéder à ce métier ?</div><div class="qitem" onclick="toggleQ(this,'2')"><span class="qcheck">☐</span> Existe-t-il plusieurs voies pour y accéder ?</div><div class="qitem" onclick="toggleQ(this,'2')"><span class="qcheck">☐</span> Quels diplômes ou expériences sont les plus utiles ?</div><div class="qitem" onclick="toggleQ(this,'2')"><span class="qcheck">☐</span> Qu'est-ce qui aide à entrer dans ce secteur quand on débute ?</div><div class="qitem qitem-custom" onclick="addCustomQ('qgroup-2','2')" style="border:2px dashed #aaa;background:#f9f9f9;color:#888;justify-content:center;">＋ Ajouter ma propre question…</div></div></div>
+        <div class="qblock"><div class="qblock-header" style="background:var(--orange);"><span>🧠</span> Les compétences clés <span class="q-counter" id="counter-3">0</span></div><div class="qblock-body" id="qgroup-3"><div class="qitem" onclick="toggleQ(this,'3')"><span class="qcheck">☐</span> Quelles sont les compétences techniques indispensables ?</div><div class="qitem" onclick="toggleQ(this,'3')"><span class="qcheck">☐</span> Quelles qualités humaines font la différence ?</div><div class="qitem" onclick="toggleQ(this,'3')"><span class="qcheck">☐</span> Qu'est-ce qui distingue les bons professionnels ?</div><div class="qitem" onclick="toggleQ(this,'3')"><span class="qcheck">☐</span> Quelles compétences peut-on développer sur le terrain ?</div><div class="qitem qitem-custom" onclick="addCustomQ('qgroup-3','3')" style="border:2px dashed #aaa;background:#f9f9f9;color:#888;justify-content:center;">＋ Ajouter ma propre question…</div></div></div>
+        <div class="qblock"><div class="qblock-header" style="background:var(--violet);color:#fff;"><span>🌍</span> L'environnement et les conditions <span class="q-counter" id="counter-4">0</span></div><div class="qblock-body" id="qgroup-4"><div class="qitem" onclick="toggleQ(this,'4')"><span class="qcheck">☐</span> Comment se déroule le travail en équipe ?</div><div class="qitem" onclick="toggleQ(this,'4')"><span class="qcheck">☐</span> Quels sont les horaires ou le rythme de travail ?</div><div class="qitem" onclick="toggleQ(this,'4')"><span class="qcheck">☐</span> Quels outils ou équipements utilisez-vous ?</div><div class="qitem" onclick="toggleQ(this,'4')"><span class="qcheck">☐</span> Qu'est-ce qui est le plus exigeant dans l'environnement ?</div><div class="qitem qitem-custom" onclick="addCustomQ('qgroup-4','4')" style="border:2px dashed #aaa;background:#f9f9f9;color:#888;justify-content:center;">＋ Ajouter ma propre question…</div></div></div>
+        <div class="qblock"><div class="qblock-header" style="background:#EF5350;color:#fff;"><span>⚠️</span> Les contraintes du métier <span class="q-counter" id="counter-5">0</span></div><div class="qblock-body" id="qgroup-5"><div class="qitem" onclick="toggleQ(this,'5')"><span class="qcheck">☐</span> Qu'aimez-vous le moins dans votre métier ?</div><div class="qitem" onclick="toggleQ(this,'5')"><span class="qcheck">☐</span> Qu'auriez-vous aimé savoir avant de commencer ?</div><div class="qitem" onclick="toggleQ(this,'5')"><span class="qcheck">☐</span> Y a-t-il des contraintes physiques, mentales ou horaires ?</div><div class="qitem" onclick="toggleQ(this,'5')"><span class="qcheck">☐</span> Quels profils ont du mal à tenir dans ce métier ?</div><div class="qitem qitem-custom" onclick="addCustomQ('qgroup-5','5')" style="border:2px dashed #aaa;background:#f9f9f9;color:#888;justify-content:center;">＋ Ajouter ma propre question…</div></div></div>
+        <div class="qblock"><div class="qblock-header" style="background:#26A69A;color:#fff;"><span>💶</span> La rémunération <span class="q-counter" id="counter-6">0</span></div><div class="qblock-body" id="qgroup-6"><div class="qitem" onclick="toggleQ(this,'6')"><span class="qcheck">☐</span> Quel est le salaire à l'entrée dans ce métier ?</div><div class="qitem" onclick="toggleQ(this,'6')"><span class="qcheck">☐</span> Y a-t-il des primes ou avantages ?</div><div class="qitem" onclick="toggleQ(this,'6')"><span class="qcheck">☐</span> Comment évolue la rémunération avec l'expérience ?</div><div class="qitem qitem-custom" onclick="addCustomQ('qgroup-6','6')" style="border:2px dashed #aaa;background:#f9f9f9;color:#888;justify-content:center;">＋ Ajouter ma propre question…</div></div></div>
+        <div class="qblock"><div class="qblock-header" style="background:var(--black);color:var(--yellow);"><span>🌟</span> Les conseils du professionnel <span class="q-counter" id="counter-7">0</span></div><div class="qblock-body" id="qgroup-7"><div class="qitem" onclick="toggleQ(this,'7')"><span class="qcheck">☐</span> Quels conseils donneriez-vous à quelqu'un qui veut se lancer ?</div><div class="qitem" onclick="toggleQ(this,'7')"><span class="qcheck">☐</span> Par quoi commencer quand on s'intéresse à ce métier ?</div><div class="qitem" onclick="toggleQ(this,'7')"><span class="qcheck">☐</span> Quels contacts, sites ou ressources recommandez-vous ?</div><div class="qitem" onclick="toggleQ(this,'7')"><span class="qcheck">☐</span> Que regarder en priorité lors d'une visite comme celle-ci ?</div><div class="qitem qitem-custom" onclick="addCustomQ('qgroup-7','7')" style="border:2px dashed #aaa;background:#f9f9f9;color:#888;justify-content:center;">＋ Ajouter ma propre question…</div></div></div>
+        <div id="q-total-bar" style="background:var(--yellow);border:3px solid var(--black);border-radius:14px;padding:16px 22px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-top:10px;"><div><span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:1.3rem;" id="total-q-count">0</span><span style="font-size:var(--fs-md);font-weight:600;"> question(s) sélectionnée(s) </span><span style="font-size:var(--fs-sm);color:#666;" id="q-advice">— Vise 8 à 12 questions idéalement.</span></div><button class="btn-engage" onclick="switchTab('tab-checklist')">Suivant : check départ →</button></div>
       </div>
 
       <div id="tab-checklist" class="enq-panel hidden">
-        <div class="phase-goal">🎯 Objectif : vérifier que tout est prêt avant le départ</div>
-        <div class="phase-consigne mint">👉 <strong>Consigne :</strong> Coche chaque point honnêtement.</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-          <div><div class="chk-section-title">📋 Préparation</div><div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>J’ai noté le nom, le poste et le lieu exact</strong></div></div><div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>J’ai préparé mes questions</strong></div></div><div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>Je me suis renseigné(e) sur la structure</strong></div></div><div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>J’ai prévu de quoi prendre des notes</strong></div></div><div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>Je connais l’itinéraire</strong></div></div></div>
-          <div><div class="chk-section-title">👗 Tenue & attitude</div><div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>Ma tenue est propre et adaptée</strong></div></div><div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>Je pars avec assez d’avance</strong></div></div><div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>Mon téléphone sera silencieux</strong></div></div><div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>Je sais pourquoi je fais cette enquête</strong></div></div><div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>Je suis prêt(e) à remercier mon interlocuteur</strong></div></div></div>
+        <div class="phase-consigne mint">👉 Coche chaque point honnêtement avant de partir.</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+          <div><div class="chk-section-title">📋 Préparation</div><div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>J'ai noté le nom, le poste et le lieu exact</strong></div></div><div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>J'ai préparé mes questions</strong></div></div><div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>Je me suis renseigné(e) sur la structure</strong></div></div><div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>J'ai prévu de quoi prendre des notes</strong></div></div><div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>Je connais l'itinéraire</strong></div></div></div>
+          <div><div class="chk-section-title">👗 Tenue &amp; attitude</div><div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>Ma tenue est propre et adaptée</strong></div></div><div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>Je pars avec assez d'avance</strong></div></div><div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>Mon téléphone sera silencieux</strong></div></div><div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>Je sais pourquoi je fais cette enquête</strong></div></div><div class="chk-item" onclick="toggleChk(this)"><span class="chk-box">☐</span><div><strong>Je suis prêt(e) à remercier mon interlocuteur</strong></div></div></div>
         </div>
-        <div style="margin-top:20px;background:#f5f5f5;border:2px solid var(--black);border-radius:10px;padding:14px 18px;box-shadow:var(--shadow);"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;"><span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:.82rem;">Progression</span><span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:.9rem;" id="chk-count">0 / 10</span></div><div style="background:#e0e0e0;border:2px solid var(--black);border-radius:6px;height:14px;overflow:hidden;"><div id="chk-bar" style="height:100%;background:var(--mint);width:0%;transition:width .3s;border-radius:4px;"></div></div><div id="chk-msg" style="margin-top:8px;font-size:.78rem;color:#666;font-weight:600;"></div></div>
-        <div style="margin-top:16px;text-align:right;"><button class="btn-engage" onclick="switchTab('tab-notes')">Suivant : mes notes →</button></div>
+        <div style="margin-top:22px;background:#f5f5f5;border:2px solid var(--black);border-radius:12px;padding:16px 20px;box-shadow:var(--shadow);"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;"><span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:var(--fs-md);">Progression</span><span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:var(--fs-lg);" id="chk-count">0 / 10</span></div><div style="background:#e0e0e0;border:2px solid var(--black);border-radius:8px;height:16px;overflow:hidden;"><div id="chk-bar" style="height:100%;background:var(--mint);width:0%;transition:width .3s;border-radius:6px;"></div></div><div id="chk-msg" style="margin-top:10px;font-size:var(--fs-sm);color:#666;font-weight:600;"></div></div>
+        <div style="margin-top:18px;text-align:right;"><button class="btn-engage" onclick="switchTab('tab-notes')">Suivant : mes notes →</button></div>
       </div>
 
       <div id="tab-notes" class="enq-panel hidden">
-        <div class="phase-goal">🎯 Objectif : garder une trace utile de la visite</div>
-        <div class="phase-consigne orange">👉 <strong>Consigne :</strong> Remplis cette partie pendant ou juste après la visite.</div>
-        <div style="display:flex;flex-direction:column;gap:14px;">
-          <div><label class="enq-label">🔑 Les 3 informations les plus importantes que j’ai apprises</label><textarea class="enq-textarea" id="notes-top3" rows="4"></textarea></div>
-          <div><label class="enq-label">😮 Ce qui m’a surpris</label><textarea class="enq-textarea" id="notes-surprise" rows="3"></textarea></div>
+        <div class="phase-consigne orange">👉 Remplis cette partie pendant ou juste après la visite.</div>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div><label class="enq-label">🔑 Les 3 informations les plus importantes que j'ai apprises</label><textarea class="enq-textarea" id="notes-top3" rows="4"></textarea></div>
+          <div><label class="enq-label">😮 Ce qui m'a surpris</label><textarea class="enq-textarea" id="notes-surprise" rows="3"></textarea></div>
           <div><label class="enq-label">💪 Les compétences qui me semblent accessibles</label><textarea class="enq-textarea" id="notes-forces" rows="3"></textarea></div>
           <div><label class="enq-label">📈 Les compétences que je devrais développer</label><textarea class="enq-textarea" id="notes-dev" rows="3"></textarea></div>
-          <div><label class="enq-label">🌡️ Ce métier m’attire-t-il toujours autant ?</label><div style="display:flex;gap:10px;margin-top:6px;flex-wrap:wrap;" id="attractivite"><button class="attract-btn" onclick="setAttract(this,'🔥 Encore plus motivé(e) !')">🔥 Encore plus</button><button class="attract-btn" onclick="setAttract(this,'✅ Toujours autant')">✅ Toujours autant</button><button class="attract-btn" onclick="setAttract(this,'🤔 Je dois y réfléchir')">🤔 À réfléchir</button><button class="attract-btn" onclick="setAttract(this,'❌ Moins qu’avant')">❌ Moins qu’avant</button></div><div id="attract-result" style="display:none;margin-top:8px;font-size:.8rem;font-weight:700;padding:8px 12px;border:2px solid var(--black);border-radius:8px;background:#FFFDE7;"></div></div>
+          <div><label class="enq-label">🌡️ Ce métier m'attire-t-il toujours autant ?</label><div style="display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;" id="attractivite"><button class="attract-btn" onclick="setAttract(this,'🔥 Encore plus motivé(e) !')">🔥 Encore plus</button><button class="attract-btn" onclick="setAttract(this,'✅ Toujours autant')">✅ Toujours autant</button><button class="attract-btn" onclick="setAttract(this,'🤔 Je dois y réfléchir')">🤔 À réfléchir</button><button class="attract-btn" onclick="setAttract(this,'❌ Moins qu'avant')">❌ Moins qu'avant</button></div><div id="attract-result" style="display:none;margin-top:10px;font-size:var(--fs-md);font-weight:700;padding:10px 14px;border:2px solid var(--black);border-radius:10px;background:#FFFDE7;"></div></div>
         </div>
-        <div style="margin-top:16px;text-align:right;"><button class="btn-engage" onclick="switchTab('tab-bilan')">Suivant : mon bilan →</button></div>
+        <div style="margin-top:18px;text-align:right;"><button class="btn-engage" onclick="switchTab('tab-bilan')">Suivant : mon bilan →</button></div>
       </div>
 
       <div id="tab-bilan" class="enq-panel hidden">
-        <div class="phase-goal">🎯 Objectif : relier la visite à la suite de mon parcours</div>
-        <div class="phase-consigne pink">👉 <strong>Consigne :</strong> Fais une synthèse de ce que tu retiens, indique si cette visite confirme ou fait évoluer ton projet, puis note une prochaine action.</div>
-        <div style="display:flex;flex-direction:column;gap:14px;">
+        <div class="phase-consigne pink">👉 Fais une synthèse, indique si la visite confirme ton projet, puis note une prochaine action.</div>
+        <div style="display:flex;flex-direction:column;gap:16px;">
           <div><label class="enq-label">✍️ En 2 ou 3 phrases, ce que je retiens de cette enquête</label><textarea class="enq-textarea" id="bilan-synthese" rows="4"></textarea></div>
-          <div><label class="enq-label">🔄 Est-ce que cette visite change quelque chose dans mon projet ?</label><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:6px;" id="impact-btns"><button class="attract-btn" onclick="setImpact(this,'✅ Ça confirme mon projet !')">✅ Confirme mon projet</button><button class="attract-btn" onclick="setImpact(this,'🔀 Je nuance un peu mon projet')">🔀 Je nuance un peu</button><button class="attract-btn" onclick="setImpact(this,'🔄 Je reconsidère une piste')">🔄 Je reconsidère une piste</button><button class="attract-btn" onclick="setImpact(this,'💡 Je découvre une nouvelle piste')">💡 Nouvelle piste</button></div><div id="impact-result" style="display:none;margin-top:8px;font-size:.8rem;font-weight:700;padding:8px 12px;border:2px solid var(--black);border-radius:8px;background:#E0F7FA;"></div></div>
+          <div><label class="enq-label">🔄 Est-ce que cette visite change quelque chose dans mon projet ?</label><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px;" id="impact-btns"><button class="attract-btn" onclick="setImpact(this,'✅ Ça confirme mon projet !')">✅ Confirme mon projet</button><button class="attract-btn" onclick="setImpact(this,'🔀 Je nuance un peu')">🔀 Je nuance un peu</button><button class="attract-btn" onclick="setImpact(this,'🔄 Je reconsidère une piste')">🔄 Je reconsidère</button><button class="attract-btn" onclick="setImpact(this,'💡 Nouvelle piste découverte')">💡 Nouvelle piste</button></div><div id="impact-result" style="display:none;margin-top:10px;font-size:var(--fs-md);font-weight:700;padding:10px 14px;border:2px solid var(--black);border-radius:10px;background:#E0F7FA;"></div></div>
           <div><label class="enq-label">🚀 Ma prochaine action concrète</label><input class="enq-input" id="bilan-action" placeholder="Ex : contacter un autre pro, chercher une immersion…"></div>
           <div><label class="enq-label">📅 Je partage ce bilan avec mon conseiller le…</label><input class="enq-input" id="bilan-rdv" placeholder="Date du prochain rendez-vous"></div>
         </div>
-        <div style="margin-top:22px;"><button style="width:100%;background:var(--black);color:var(--yellow);border:3px solid var(--black);border-radius:10px;padding:14px;font-family:'Poppins',sans-serif;font-weight:800;font-size:.9rem;cursor:pointer;box-shadow:var(--shadow);" onclick="generateRecap()">📄 Générer ma fiche récapitulative d’enquête</button></div>
-        <div id="recap-output" style="display:none;margin-top:18px;background:#FFFDF7;border:3px solid var(--black);border-radius:12px;padding:22px;box-shadow:var(--shadow-lg);font-size:.82rem;line-height:1.7;"></div>
+        <div style="margin-top:24px;"><button style="width:100%;background:var(--black);color:var(--yellow);border:3px solid var(--black);border-radius:12px;padding:16px;font-family:'Poppins',sans-serif;font-weight:800;font-size:var(--fs-lg);cursor:pointer;box-shadow:var(--shadow);" onclick="generateRecap()">📄 Générer ma fiche récapitulative d'enquête</button></div>
+        <div id="recap-output" style="display:none;margin-top:20px;background:#FFFDF7;border:3px solid var(--black);border-radius:14px;padding:26px;box-shadow:var(--shadow-lg);font-size:var(--fs-md);line-height:1.75;"></div>
       </div>
     </div>
   </div>
 </div>
+
 <div class="footer">LS4YOU · Mission Locale Pays Basque · Se connaître, image de soi, posture professionnelle et enquête métier</div>
 
 <script>
@@ -556,27 +545,22 @@ const PERSO_DIMENSIONS = {
   N: { name: "Émotivité", color: "#a3195b", bg: "#f3e5f5", icon: "🌊", emoji: "💭" },
 };
 const PERSO_QUESTIONS = [
-  // OUVERTURE
   { dim:"O", dir:1,  emoji:"🎨", label:"Créativité",  text:"J'aime imaginer des idées nouvelles et créer des choses." },
   { dim:"O", dir:1,  emoji:"🌍", label:"Curiosité",   text:"Je suis curieux·se, j'aime découvrir de nouvelles choses." },
   { dim:"O", dir:-1, emoji:"🔄", label:"Routine",     text:"Je préfère toujours faire les mêmes choses plutôt qu'essayer du nouveau." },
   { dim:"O", dir:1,  emoji:"💭", label:"Réflexion",   text:"J'aime réfléchir à des questions difficiles ou originales." },
-  // ORGANISATION
   { dim:"C", dir:1,  emoji:"📋", label:"Rigueur",     text:"Quand j'ai quelque chose à faire, je vais jusqu'au bout." },
   { dim:"C", dir:1,  emoji:"🗂️", label:"Ordre",       text:"J'aime que mes affaires soient organisées et à leur place." },
   { dim:"C", dir:-1, emoji:"😴", label:"Effort",      text:"Je fais souvent le minimum pour m'en sortir." },
   { dim:"C", dir:1,  emoji:"🏁", label:"Persévérance",text:"Je tiens mes engagements, même quand c'est difficile." },
-  // EXTRAVERSION
   { dim:"E", dir:1,  emoji:"🗣️", label:"Contact",     text:"Je me fais facilement des ami·e·s et j'aime rencontrer des gens." },
   { dim:"E", dir:1,  emoji:"⚡", label:"Énergie",     text:"J'ai souvent de l'énergie et j'aime être actif·ve." },
   { dim:"E", dir:-1, emoji:"🏠", label:"Solitude",    text:"Je préfère être seul·e plutôt qu'en groupe." },
   { dim:"E", dir:1,  emoji:"🎤", label:"Prise de parole", text:"Je n'ai pas de mal à prendre la parole devant les autres." },
-  // AGRÉABILITÉ
   { dim:"A", dir:1,  emoji:"🤝", label:"Aide",        text:"J'aime aider les autres quand ils en ont besoin." },
   { dim:"A", dir:1,  emoji:"💛", label:"Confiance",   text:"En général, je fais confiance aux gens autour de moi." },
   { dim:"A", dir:-1, emoji:"⚔️", label:"Conflits",   text:"J'aime les discussions qui tournent à l'affrontement." },
   { dim:"A", dir:1,  emoji:"🌱", label:"Empathie",    text:"Je comprends facilement ce que ressentent les autres." },
-  // NÉVROSISME
   { dim:"N", dir:1,  emoji:"😟", label:"Inquiétude",  text:"Je m'inquiète facilement quand les choses ne se passent pas comme prévu." },
   { dim:"N", dir:1,  emoji:"💥", label:"Stress",      text:"Je suis facilement stressé·e par les imprévus ou les changements." },
   { dim:"N", dir:-1, emoji:"🧘", label:"Calme",       text:"Je reste calme et serein·e même sous pression." },
@@ -605,41 +589,11 @@ const PERSO_INSIGHTS = {
   }
 };
 const PHASE0_FORCES = {
-  1: [
-    "J'ai de l'humilité.",
-    "Je suis courageux(se).",
-    "Je suis prudent(e).",
-    "J'ai du bon sens.",
-    "Je suis honnête.",
-    "Je suis capable de pardonner."
-  ],
-  2: [
-    "J'aime apprendre de nouvelles choses.",
-    "Je suis créatif(ve).",
-    "Je suis curieux(se).",
-    "Je suis ouvert(e) d'esprit."
-  ],
-  3: [
-    "Je travaille bien en équipe.",
-    "Je suis à l'écoute des autres.",
-    "Je suis généreux(se).",
-    "Je suis capable de mener un groupe.",
-    "Je suis capable d'humanité.",
-    "Je suis affectueux(se)."
-  ],
-  4: [
-    "Je suis capable d'éprouver de la reconnaissance.",
-    "Je sais me montrer responsable.",
-    "Je suis persévérant(e).",
-    "Je prends des initiatives.",
-    "Je suis énergique.",
-    "Je suis positif(ve)."
-  ],
-  5: [
-    "Je suis patient(e).",
-    "Je suis capable de m'exprimer.",
-    "Je sais exprimer mes émotions."
-  ]
+  1: ["J'ai de l'humilité.","Je suis courageux(se).","Je suis prudent(e).","J'ai du bon sens.","Je suis honnête.","Je suis capable de pardonner."],
+  2: ["J'aime apprendre de nouvelles choses.","Je suis créatif(ve).","Je suis curieux(se).","Je suis ouvert(e) d'esprit."],
+  3: ["Je travaille bien en équipe.","Je suis à l'écoute des autres.","Je suis généreux(se).","Je suis capable de mener un groupe.","Je suis capable d'humanité.","Je suis affectueux(se)."],
+  4: ["Je suis capable d'éprouver de la reconnaissance.","Je sais me montrer responsable.","Je suis persévérant(e).","Je prends des initiatives.","Je suis énergique.","Je suis positif(ve)."],
+  5: ["Je suis patient(e).","Je suis capable de m'exprimer.","Je sais exprimer mes émotions."]
 };
 const PHASE0_VALEURS = {
   'soi': { items: [
@@ -678,64 +632,15 @@ const PHASE0_VALEURS = {
   ]}
 };
 const PHASE0_BESOINS = {
-  'social':     { emoji: '👥', items: [
-    "Passer du temps avec des ami·e·s",
-    "Avoir des ami·e·s sur qui compter",
-    "Rencontrer de nouveaux·elles ami·e·s",
-    "Rire et s'amuser",
-    "Être apprécié·e par les autres"
-  ]},
-  'estime':     { emoji: '⭐', items: [
-    "Me sentir à la hauteur",
-    "Avoir confiance en moi",
-    "Être reconnu·e",
-    "Connaître ma valeur",
-    "M'aimer moi-même"
-  ]},
-  'famille':    { emoji: '🏠', items: [
-    "Être soutenu·e par ma famille",
-    "M'entendre avec ma famille",
-    "Me sentir aimé·e par ma famille",
-    "Parler avec ma famille",
-    "Passer du temps avec mes parents"
-  ]},
-  'emo':        { emoji: '💛', items: [
-    "Parler de quelque chose qui me pèse",
-    "Exprimer mes émotions",
-    "Arranger un conflit",
-    "Comprendre mes émotions",
-    "Gérer mon stress"
-  ]},
-  'temps':      { emoji: '🌿', items: [
-    "Avoir du silence",
-    "Être seul·e",
-    "Me détendre",
-    "Me sentir serein·e",
-    "Respirer profondément"
-  ]},
-  'securite':   { emoji: '🔒', items: [
-    "Être valorisé·e",
-    "Me sentir en sécurité",
-    "Être réconforté·e",
-    "Avoir un cadre et des règles",
-    "Être autonome"
-  ]},
-  'physio':     { emoji: '🌱', items: [
-    "Manger",
-    "Boire",
-    "Dormir",
-    "Aller aux toilettes",
-    "Faire une activité physique"
-  ]},
-  'particulier':{ emoji: '⚡', items: [
-    "Être respecté·e",
-    "Avoir le temps de réfléchir",
-    "Avoir du changement",
-    "Être aidé·e",
-    "Dire un secret / me confier"
-  ]}
+  'social':     { emoji: '👥', items: ["Passer du temps avec des ami·e·s","Avoir des ami·e·s sur qui compter","Rencontrer de nouveaux·elles ami·e·s","Rire et s'amuser","Être apprécié·e par les autres"]},
+  'estime':     { emoji: '⭐', items: ["Me sentir à la hauteur","Avoir confiance en moi","Être reconnu·e","Connaître ma valeur","M'aimer moi-même"]},
+  'famille':    { emoji: '🏠', items: ["Être soutenu·e par ma famille","M'entendre avec ma famille","Me sentir aimé·e par ma famille","Parler avec ma famille","Passer du temps avec mes parents"]},
+  'emo':        { emoji: '💛', items: ["Parler de quelque chose qui me pèse","Exprimer mes émotions","Arranger un conflit","Comprendre mes émotions","Gérer mon stress"]},
+  'temps':      { emoji: '🌿', items: ["Avoir du silence","Être seul·e","Me détendre","Me sentir serein·e","Respirer profondément"]},
+  'securite':   { emoji: '🔒', items: ["Être valorisé·e","Me sentir en sécurité","Être réconforté·e","Avoir un cadre et des règles","Être autonome"]},
+  'physio':     { emoji: '🌱', items: ["Manger","Boire","Dormir","Aller aux toilettes","Faire une activité physique"]},
+  'particulier':{ emoji: '⚡', items: ["Être respecté·e","Avoir le temps de réfléchir","Avoir du changement","Être aidé·e","Dire un secret / me confier"]}
 };
-
 const p0State = {
   persoAnswers: Array(PERSO_QUESTIONS.length).fill(null),
   persoCurrent: 0,
@@ -744,19 +649,11 @@ const p0State = {
   besoins: {},
   persoScores: null
 };
-
 const P0_CAT_LABELS = {
-  forces: {
-    1:"Sagesse & recul", 2:"Curiosité & créativité", 3:"Relation aux autres", 4:"Action & engagement", 5:"Expression & émotions"
-  },
-  valeurs: {
-    soi:"Rapport à soi", relation:"Relations aux autres", societe:"Engagement & société", action:"Action & dépassement", esprit:"Esprit & curiosité"
-  },
-  besoins: {
-    social:"Social", estime:"Estime de soi", famille:"Famille", emo:"Émotions", temps:"Calme & récupération", securite:"Sécurité", physio:"Physiologique", particulier:"Besoins particuliers"
-  }
+  forces: { 1:"Sagesse & recul", 2:"Curiosité & créativité", 3:"Relation aux autres", 4:"Action & engagement", 5:"Expression & émotions" },
+  valeurs: { soi:"Rapport à soi", relation:"Relations aux autres", societe:"Engagement & société", action:"Action & dépassement", esprit:"Esprit & curiosité" },
+  besoins: { social:"Social", estime:"Estime de soi", famille:"Famille", emo:"Émotions", temps:"Calme & récupération", securite:"Sécurité", physio:"Physiologique", particulier:"Besoins particuliers" }
 };
-
 function openPhase0Activity(name, block){
   document.querySelectorAll('.phase0-activity').forEach(p=>p.classList.remove('active'));
   const panel = document.getElementById('p0-activity-'+name);
@@ -764,15 +661,12 @@ function openPhase0Activity(name, block){
   document.querySelectorAll('#phase0 .ux-block').forEach(b=>b.classList.remove('active'));
   if(block) block.classList.add('active');
 }
-
 function p0ChipList(arr, color=''){
   return arr && arr.length ? arr.slice(0,8).map(x=>`<span class="p0-chip ${color}">${x}</span>`).join(' ') : '<span class="p0-chip">à préciser</span>';
 }
-
 function cleanP0Text(txt){
-  return (txt||'').replace(/^Je suis /,'').replace(/^J'ai /,'').replace(/^J’aime /,'').replace(/^J'aime /,'').replace(/^Je sais /,'').replace(/\.$/,'');
+  return (txt||'').replace(/^Je suis /,'').replace(/^J'ai /,'').replace(/^J'aime /,'').replace(/^J'aime /,'').replace(/^Je sais /,'').replace(/\.$/,'');
 }
-
 function renderPersoQuiz(){
   const mount=document.getElementById('persoQuizMount');
   if(!mount) return;
@@ -784,14 +678,14 @@ function renderPersoQuiz(){
   mount.innerHTML=`
     <div class="perso-quiz-card">
       <div class="perso-progress"><div class="perso-progress-fill" style="width:${pct}%"></div></div>
-      <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:.78rem;margin-bottom:8px;">Question ${i+1} / ${PERSO_QUESTIONS.length}</div>
+      <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:var(--fs-sm);margin-bottom:8px;">Question ${i+1} / ${PERSO_QUESTIONS.length}</div>
       <div class="perso-question-emoji">${q.emoji}</div>
       <div class="perso-badge" style="background:${dim.bg};color:${dim.color}">${dim.icon} ${q.label}</div>
       <div class="perso-qtext">${q.text}</div>
       <div class="perso-scale">
         ${[1,2,3,4,5].map(v=>`
           <button class="${selected===v?'selected':''}" onclick="answerPerso(${v})">
-            <div style="font-size:1.25rem">${['😐','🙁','😶','🙂','😁'][v-1]}</div>
+            <div style="font-size:1.4rem">${['😐','🙁','😶','🙂','😁'][v-1]}</div>
             ${['Pas du tout','Plutôt non','Pas sûr·e','Plutôt oui','Tout à fait'][v-1]}
           </button>
         `).join('')}
@@ -803,28 +697,13 @@ function renderPersoQuiz(){
     </div>
   `;
 }
-
-function answerPerso(val){
-  p0State.persoAnswers[p0State.persoCurrent]=val;
-  renderPersoQuiz();
-}
-
+function answerPerso(val){ p0State.persoAnswers[p0State.persoCurrent]=val; renderPersoQuiz(); }
 function nextPerso(){
-  if(p0State.persoAnswers[p0State.persoCurrent]===null){
-    alert("Choisis une réponse pour continuer.");
-    return;
-  }
-  if(p0State.persoCurrent < PERSO_QUESTIONS.length-1){
-    p0State.persoCurrent++;
-    renderPersoQuiz();
-  } else {
-    showPersoResults();
-  }
+  if(p0State.persoAnswers[p0State.persoCurrent]===null){alert("Choisis une réponse pour continuer.");return;}
+  if(p0State.persoCurrent < PERSO_QUESTIONS.length-1){p0State.persoCurrent++;renderPersoQuiz();}
+  else{showPersoResults();}
 }
-function prevPerso(){
-  if(p0State.persoCurrent>0){p0State.persoCurrent--;renderPersoQuiz();}
-}
-
+function prevPerso(){if(p0State.persoCurrent>0){p0State.persoCurrent--;renderPersoQuiz();}}
 function computePersoScores(){
   const scores={O:0,C:0,E:0,A:0,N:0}, counts={O:0,C:0,E:0,A:0,N:0};
   PERSO_QUESTIONS.forEach((q,i)=>{
@@ -836,7 +715,6 @@ function computePersoScores(){
   Object.keys(scores).forEach(d=>{norm[d]=counts[d]?Math.round((scores[d]/(counts[d]*5))*100):50;});
   return norm;
 }
-
 function showPersoResults(){
   const scores=computePersoScores();
   p0State.persoScores=scores;
@@ -859,14 +737,13 @@ function showPersoResults(){
         </div>`;
       }).join('')}
     </div>
-    <div style="margin-top:12px">
+    <div style="margin-top:14px">
       👉 <strong>Ce que cela peut indiquer :</strong><br>
       Tu peux explorer des environnements liés à ${top.map(d=>PERSO_INSIGHTS[d][scores[d]>=50?'high':'low'].jobs.slice(0,3).join(', ')).join(' · ')}.
     </div>
   `;
   updateGlobalProfilSummary();
 }
-
 function renderP0RatingCard(id, title, desc, levels, stateName){
   const current=p0State[stateName][id] || '';
   return `<div class="p0-card" id="card-${stateName}-${id}">
@@ -877,7 +754,6 @@ function renderP0RatingCard(id, title, desc, levels, stateName){
     </div>
   </div>`;
 }
-
 function setP0Level(stateName,id,val){
   p0State[stateName][id] = (p0State[stateName][id]===val) ? '' : val;
   if(stateName==='forces') renderForces();
@@ -886,7 +762,6 @@ function setP0Level(stateName,id,val){
   showPhase0Summary(stateName);
   updateGlobalProfilSummary();
 }
-
 function renderForces(){
   const mount=document.getElementById('forcesMount'); if(!mount)return;
   const levels=[{val:'un peu',label:'Un peu',cls:'low'},{val:'oui',label:'Oui',cls:'mid'},{val:'fort',label:'Point fort',cls:'high'}];
@@ -899,7 +774,6 @@ function renderForces(){
     </div>
   `).join('');
 }
-
 function renderValeurs(){
   const mount=document.getElementById('valeursMount'); if(!mount)return;
   const levels=[{val:'presente',label:'Présente',cls:'low'},{val:'importante',label:'Importante',cls:'mid'},{val:'centrale',label:'Centrale',cls:'high'}];
@@ -912,7 +786,6 @@ function renderValeurs(){
     </div>
   `).join('');
 }
-
 function renderBesoins(){
   const mount=document.getElementById('besoinsMount'); if(!mount)return;
   const levels=[{val:'faible',label:'Un peu',cls:'low'},{val:'moyen',label:'Moyen',cls:'mid'},{val:'fort',label:'Fort',cls:'high'}];
@@ -925,7 +798,6 @@ function renderBesoins(){
     </div>
   `).join('');
 }
-
 function getPhase0Selections(stateName, level){
   const out=[];
   const st=p0State[stateName];
@@ -947,7 +819,6 @@ function getPhase0Selections(stateName, level){
   });
   return out;
 }
-
 function showPhase0Summary(type){
   if(type==='forces'){
     const strong=getPhase0Selections('forces','fort');
@@ -975,7 +846,6 @@ function showPhase0Summary(type){
   }
   updateGlobalProfilSummary();
 }
-
 function resetPhase0(type){
   if(!confirm("Réinitialiser cette activité ?")) return;
   p0State[type]={};
@@ -984,7 +854,6 @@ function resetPhase0(type){
   if(type==='besoins'){renderBesoins();document.getElementById('besoinsSummary').innerHTML='';}
   updateGlobalProfilSummary();
 }
-
 function updateGlobalProfilSummary(){
   const perso = p0State.persoScores ? Object.keys(p0State.persoScores).sort((a,b)=>p0State.persoScores[b]-p0State.persoScores[a]).filter(d=>d!=='N').slice(0,2).map(d=>PERSO_DIMENSIONS[d].name) : [];
   const forces = getPhase0Selections('forces','fort');
@@ -1002,7 +871,6 @@ function updateGlobalProfilSummary(){
     👉 <strong>Direction possible pour mon projet :</strong><br>${direction}
   `;
 }
-
 function initPhase0CompleteActivities(){
   renderPersoQuiz();
   renderForces();
@@ -1011,32 +879,32 @@ function initPhase0CompleteActivities(){
   updateGlobalProfilSummary();
 }
 function generatePitch(){
-  const f1=document.getElementById('force1').value.trim(), f2=document.getElementById('force2').value.trim(), f3=document.getElementById('force3').value.trim(), valeurs=document.getElementById('valeurs').value.trim(), cible=document.getElementById('cible').value.trim(), besoins=document.getElementById('besoins').value.trim();
+  const f1=document.getElementById('force1').value.trim(),f2=document.getElementById('force2').value.trim(),f3=document.getElementById('force3').value.trim(),valeurs=document.getElementById('valeurs').value.trim(),cible=document.getElementById('cible').value.trim(),besoins=document.getElementById('besoins').value.trim();
   if(!f1||!cible){alert("Complète au moins un point fort et à qui il peut être utile.");return;}
   let niveau=1;if(f1&&cible)niveau=2;if(f1&&f2&&cible)niveau=3;if(f1&&f2&&f3&&valeurs&&cible&&besoins)niveau=4;
-  let pitch=`Je suis quelqu’un de ${f1}`; if(f2)pitch+=`, ${f2}`; if(f3)pitch+=` et ${f3}`; pitch+=`. Je peux être utile pour ${cible}`; if(besoins)pitch+=` en aidant à ${besoins}`; pitch+=`.`; if(valeurs)pitch+=` Ce qui est important pour moi : ${valeurs}.`;
-  const levelText={1:"Niveau 1 · J’identifie une force",2:"Niveau 2 · Je relie ma force à un public",3:"Niveau 3 · Je commence à me présenter clairement",4:"Niveau 4 · Ma marque personnelle est solide"};
+  let pitch=`Je suis quelqu'un de ${f1}`;if(f2)pitch+=`, ${f2}`;if(f3)pitch+=` et ${f3}`;pitch+=`. Je peux être utile pour ${cible}`;if(besoins)pitch+=` en aidant à ${besoins}`;pitch+=`.`;if(valeurs)pitch+=` Ce qui est important pour moi : ${valeurs}.`;
+  const levelText={1:"Niveau 1 · J'identifie une force",2:"Niveau 2 · Je relie ma force à un public",3:"Niveau 3 · Je commence à me présenter clairement",4:"Niveau 4 · Ma marque personnelle est solide"};
   const coachText={1:"Ajoute à qui cette qualité peut être utile.",2:"Ajoute 1 ou 2 autres points forts pour être plus convaincant.",3:"Ajoute les besoins que tu peux aider à couvrir.",4:"Très bien : tu peux réutiliser cette phrase en visite ou en entretien."};
   document.getElementById('pitchResult').style.display='block';document.getElementById('pitchLevel').textContent=levelText[niveau];document.getElementById('pitchText').textContent=pitch;document.getElementById('pitchCoach').textContent="💡 "+coachText[niveau];
 }
-function copyPitch(){const text=document.getElementById('pitchText').textContent.trim();if(!text){alert("Génère d’abord ta phrase.");return;}navigator.clipboard.writeText(text).then(()=>alert("Pitch copié.")).catch(()=>alert("Impossible de copier automatiquement."));}
-
-const feedbacks={sc1:{good:"✅ Bonne réaction : tu assumes simplement et tu passes à la suite.",bad:"❌ Pas idéal : soit tu ne dis rien, soit tu te justifies trop. Le mieux, c’est une excuse simple."},sc2:{good:"✅ Bonne posture : tu restes présent, même si c’est difficile.",bad:"❌ Cela donne une mauvaise image. La personne t’accorde du temps."},sc3:{good:"✅ Très bon réflexe : demander une reformulation montre ton sérieux.",bad:"❌ Tu risques de repartir sans comprendre l’essentiel."},sc4:{good:"✅ Très bon réflexe : tu prolonges l’échange avec respect.",bad:"❌ Cela ferme la relation ou fausse ton retour."}};
+function copyPitch(){const text=document.getElementById('pitchText').textContent.trim();if(!text){alert("Génère d'abord ta phrase.");return;}navigator.clipboard.writeText(text).then(()=>alert("Pitch copié.")).catch(()=>alert("Impossible de copier automatiquement."));}
+const feedbacks={sc1:{good:"✅ Bonne réaction : tu assumes simplement et tu passes à la suite.",bad:"❌ Pas idéal : soit tu ne dis rien, soit tu te justifies trop. Le mieux, c'est une excuse simple."},sc2:{good:"✅ Bonne posture : tu restes présent, même si c'est difficile.",bad:"❌ Cela donne une mauvaise image. La personne t'accorde du temps."},sc3:{good:"✅ Très bon réflexe : demander une reformulation montre ton sérieux.",bad:"❌ Tu risques de repartir sans comprendre l'essentiel."},sc4:{good:"✅ Très bon réflexe : tu prolonges l'échange avec respect.",bad:"❌ Cela ferme la relation ou fausse ton retour."}};
 function chooseScenario(el,scenId,isGood){const container=document.getElementById(scenId);if(container.dataset.answered)return;container.dataset.answered='1';container.querySelectorAll('.choice').forEach(c=>{c.style.pointerEvents='none';c.style.opacity='0.6'});el.style.opacity='1';el.style.borderColor=isGood?'var(--mint)':'var(--red)';el.style.background=isGood?'#E8F5E9':'#FFEBEE';const fb=document.getElementById('fb-'+scenId);fb.textContent=isGood?feedbacks[scenId].good:feedbacks[scenId].bad;fb.className='choice-feedback '+(isGood?'good':'bad');fb.classList.remove('hidden')}
 function shuffleChoices(){document.querySelectorAll('.scenario-choices').forEach(container=>{const choices=Array.from(container.querySelectorAll('.choice'));for(let i=choices.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[choices[i],choices[j]]=[choices[j],choices[i]];}container.innerHTML='';choices.forEach((choice,index)=>{choice.querySelector('.choice-letter').textContent=String.fromCharCode(65+index);choice.onclick=()=>chooseScenario(choice,container.id,choice.dataset.correct==="true");container.appendChild(choice);});});}
 function shuffleScenarios(){const container=document.getElementById('scenarioContainer');if(!container)return;const blocks=Array.from(container.querySelectorAll('.scenario-block'));for(let i=blocks.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[blocks[i],blocks[j]]=[blocks[j],blocks[i]];}blocks.forEach(block=>container.appendChild(block));}
 function switchTab(id){document.querySelectorAll('.enq-panel').forEach(p=>p.classList.add('hidden'));document.getElementById(id).classList.remove('hidden');document.querySelectorAll('.enq-tab').forEach(t=>t.classList.remove('active'));document.getElementById('btn-'+id).classList.add('active');}
 function selectStruct(btn,label){document.querySelectorAll('.struct-btn').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');const r=document.getElementById('struct-selected');r.style.display='block';r.textContent='→ '+label}
-let metierCount=0;function addMetier(){metierCount++;const list=document.getElementById('metiers-list');const row=document.createElement('div');row.className='metier-row';row.id='metier-row-'+metierCount;row.innerHTML=`<input class="enq-input" id="metier-${metierCount}" placeholder="Ex : agent d’accueil, cuisinier, éducateur…"><div class="metier-del" onclick="removeMetier(${metierCount})">✕</div>`;list.appendChild(row)}
+let metierCount=0;function addMetier(){metierCount++;const list=document.getElementById('metiers-list');const row=document.createElement('div');row.className='metier-row';row.id='metier-row-'+metierCount;row.innerHTML=`<input class="enq-input" id="metier-${metierCount}" placeholder="Ex : agent d'accueil, cuisinier, éducateur…"><div class="metier-del" onclick="removeMetier(${metierCount})">✕</div>`;list.appendChild(row)}
 function removeMetier(id){const row=document.getElementById('metier-row-'+id);if(row)row.remove();}
 function getMetiers(){return [...document.querySelectorAll('#metiers-list input')].map(i=>i.value.trim()).filter(Boolean)}
-const qCounts={'1':0,'2':0,'3':0,'4':0,'5':0,'6':0,'7':0};function toggleQ(el,gid){if(el.classList.contains('qitem-custom'))return;el.classList.toggle('selected');const chk=el.querySelector('.qcheck');const on=el.classList.contains('selected');chk.textContent=on?'☑':'☐';qCounts[gid]=document.querySelectorAll('#qgroup-'+gid+' .qitem.selected').length;document.getElementById('counter-'+gid).textContent=qCounts[gid]+' sélectionnée(s)';updateQTotal()}
+const qCounts={'1':0,'2':0,'3':0,'4':0,'5':0,'6':0,'7':0};
+function toggleQ(el,gid){if(el.classList.contains('qitem-custom'))return;el.classList.toggle('selected');const chk=el.querySelector('.qcheck');const on=el.classList.contains('selected');chk.textContent=on?'☑':'☐';qCounts[gid]=document.querySelectorAll('#qgroup-'+gid+' .qitem.selected').length;document.getElementById('counter-'+gid).textContent=qCounts[gid]+' sélectionnée(s)';updateQTotal()}
 function updateQTotal(){const total=Object.values(qCounts).reduce((a,b)=>a+b,0);document.getElementById('total-q-count').textContent=total;const adv=document.getElementById('q-advice');if(total<8)adv.textContent='— Vise 8 à 12 questions idéalement.';else if(total<=12)adv.textContent='— Parfait ! Tu as un bon nombre de questions. ✅';else adv.textContent='— Attention, tu en as un peu trop. Affine ta sélection.'}
 function addCustomQ(groupId,gid){const text=prompt('Ta question personnalisée :');if(!text||!text.trim())return;const group=document.getElementById(groupId);const addBtn=group.querySelector('.qitem-custom');const newQ=document.createElement('div');newQ.className='qitem';newQ.innerHTML='<span class="qcheck">☐</span>'+text.trim();newQ.onclick=function(){toggleQ(newQ,gid)};group.insertBefore(newQ,addBtn)}
 function toggleChk(el){el.classList.toggle('checked');const box=el.querySelector('.chk-box');const on=el.classList.contains('checked');box.textContent=on?'☑':'☐';const allChk=document.querySelectorAll('#tab-checklist .chk-item');const done=document.querySelectorAll('#tab-checklist .chk-item.checked').length;const pct=Math.round(done/allChk.length*100);document.getElementById('chk-count').textContent=done+' / '+allChk.length;document.getElementById('chk-bar').style.width=pct+'%';const msgs=['','Bon début !','Continue !','Tu avances bien !','Presque prêt(e) !','Presque prêt(e) !','Presque prêt(e) !','Presque prêt(e) !','Presque prêt(e) !','Encore un peu !','✅ Tu es 100% prêt(e) pour la visite !'];document.getElementById('chk-msg').textContent=msgs[done]||''}
 function setAttract(btn,label){document.querySelectorAll('#attractivite .attract-btn').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');const r=document.getElementById('attract-result');r.style.display='block';r.textContent='→ '+label}
 function setImpact(btn,label){document.querySelectorAll('#impact-btns .attract-btn').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');const r=document.getElementById('impact-result');r.style.display='block';r.textContent='→ '+label}
-function generateRecap(){const nom=document.getElementById('ent-nom').value||'—',secteur=document.getElementById('ent-secteur').value||'—',contact=document.getElementById('ent-contact').value||'—',poste=document.getElementById('ent-poste').value||'—',date=document.getElementById('ent-date').value||'—',metiers=getMetiers(),metierStr=metiers.length?metiers.join(' · '):'—',structEl=document.querySelector('.struct-btn.selected'),structType=structEl?structEl.textContent:'—',top3=document.getElementById('notes-top3').value||'—',surprise=document.getElementById('notes-surprise').value||'—',forces=document.getElementById('notes-forces').value||'—',dev=document.getElementById('notes-dev').value||'—',synthese=document.getElementById('bilan-synthese').value||'—',action=document.getElementById('bilan-action').value||'—',rdv=document.getElementById('bilan-rdv').value||'—',attractEl=document.querySelector('#attractivite .attract-btn.selected'),attract=attractEl?attractEl.textContent:'—',impactEl=document.querySelector('#impact-btns .attract-btn.selected'),impact=impactEl?impactEl.textContent:'—';const qSelected=[...document.querySelectorAll('.qitem.selected')].map(q=>q.textContent.replace('☑','').trim());const out=document.getElementById('recap-output');out.style.display='block';out.innerHTML=`<div style="background:var(--black);color:var(--yellow);font-family:'Poppins',sans-serif;font-weight:900;font-size:.95rem;padding:12px 16px;border-radius:8px;margin-bottom:16px;">📄 FICHE D'ENQUÊTE MÉTIER — ${nom.toUpperCase()}</div><table style="width:100%;border-collapse:collapse;font-size:.8rem;margin-bottom:16px;"><tr><td style="padding:5px 8px;font-weight:700;width:200px;background:#f5f5f5;border:1px solid #ddd;">Structure</td><td style="padding:5px 8px;border:1px solid #ddd;">${nom} <em style="color:#888;font-size:.75rem;">(${structType})</em></td></tr><tr><td style="padding:5px 8px;font-weight:700;background:#f5f5f5;border:1px solid #ddd;">Secteur / Domaine</td><td style="padding:5px 8px;border:1px solid #ddd;">${secteur}</td></tr><tr><td style="padding:5px 8px;font-weight:700;background:#f5f5f5;border:1px solid #ddd;">Personne rencontrée</td><td style="padding:5px 8px;border:1px solid #ddd;">${contact} — ${poste}</td></tr><tr><td style="padding:5px 8px;font-weight:700;background:#f5f5f5;border:1px solid #ddd;">Date de visite</td><td style="padding:5px 8px;border:1px solid #ddd;">${date}</td></tr><tr><td style="padding:5px 8px;font-weight:700;background:#f5f5f5;border:1px solid #ddd;">Métier(s) explorés</td><td style="padding:5px 8px;border:1px solid #ddd;">${metierStr}</td></tr></table>${qSelected.length?`<div style="margin-bottom:12px;"><strong style="font-family:'Poppins',sans-serif;font-size:.8rem;">Questions sélectionnées (${qSelected.length}) :</strong><ul style="margin-top:6px;padding-left:16px;">${qSelected.map(q=>`<li style="margin-bottom:3px;">${q}</li>`).join('')}</ul></div>`:''}<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;"><div style="background:#E0F7FA;border:1.5px solid #ccc;border-radius:8px;padding:10px 12px;"><strong style="font-size:.78rem;font-family:'Poppins',sans-serif;">🔑 Points clés retenus</strong><p style="margin-top:4px;font-size:.77rem;white-space:pre-wrap;">${top3}</p></div><div style="background:#FFF9E6;border:1.5px solid #ccc;border-radius:8px;padding:10px 12px;"><strong style="font-size:.78rem;font-family:'Poppins',sans-serif;">😮 Surprises</strong><p style="margin-top:4px;font-size:.77rem;">${surprise}</p></div><div style="background:#E8F5E9;border:1.5px solid #ccc;border-radius:8px;padding:10px 12px;"><strong style="font-size:.78rem;font-family:'Poppins',sans-serif;">💪 Mes points forts</strong><p style="margin-top:4px;font-size:.77rem;">${forces}</p></div><div style="background:#FBE9E7;border:1.5px solid #ccc;border-radius:8px;padding:10px 12px;"><strong style="font-size:.78rem;font-family:'Poppins',sans-serif;">📈 À développer</strong><p style="margin-top:4px;font-size:.77rem;">${dev}</p></div></div><div style="background:#F3E5F5;border:1.5px solid #ccc;border-radius:8px;padding:10px 12px;margin-bottom:10px;"><strong style="font-size:.78rem;font-family:'Poppins',sans-serif;">✍️ Synthèse personnelle</strong><p style="margin-top:4px;font-size:.77rem;">${synthese}</p></div><div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px;"><div style="background:#E8F5E9;border:1.5px solid #ccc;border-radius:8px;padding:8px 12px;flex:1;min-width:180px;"><strong style="font-size:.77rem;">🌡️ Attractivité :</strong> ${attract}</div><div style="background:#E3F2FD;border:1.5px solid #ccc;border-radius:8px;padding:8px 12px;flex:1;min-width:180px;"><strong style="font-size:.77rem;">🔄 Impact sur mon projet :</strong> ${impact}</div></div><div style="background:var(--yellow);border:2px solid var(--black);border-radius:8px;padding:10px 14px;font-family:'Poppins',sans-serif;font-weight:700;font-size:.82rem;">🚀 Prochaine action : ${action} <span style="font-weight:400;margin-left:10px;">📅 RDV conseiller : ${rdv}</span></div>`}
+function generateRecap(){const nom=document.getElementById('ent-nom').value||'—',secteur=document.getElementById('ent-secteur').value||'—',contact=document.getElementById('ent-contact').value||'—',poste=document.getElementById('ent-poste').value||'—',date=document.getElementById('ent-date').value||'—',metiers=getMetiers(),metierStr=metiers.length?metiers.join(' · '):'—',structEl=document.querySelector('.struct-btn.selected'),structType=structEl?structEl.textContent:'—',top3=document.getElementById('notes-top3').value||'—',surprise=document.getElementById('notes-surprise').value||'—',forces=document.getElementById('notes-forces').value||'—',dev=document.getElementById('notes-dev').value||'—',synthese=document.getElementById('bilan-synthese').value||'—',action=document.getElementById('bilan-action').value||'—',rdv=document.getElementById('bilan-rdv').value||'—',attractEl=document.querySelector('#attractivite .attract-btn.selected'),attract=attractEl?attractEl.textContent:'—',impactEl=document.querySelector('#impact-btns .attract-btn.selected'),impact=impactEl?impactEl.textContent:'—';const qSelected=[...document.querySelectorAll('.qitem.selected')].map(q=>q.textContent.replace('☑','').trim());const out=document.getElementById('recap-output');out.style.display='block';out.innerHTML=`<div style="background:var(--black);color:var(--yellow);font-family:'Poppins',sans-serif;font-weight:900;font-size:var(--fs-md);padding:12px 16px;border-radius:8px;margin-bottom:16px;">📄 FICHE D'ENQUÊTE MÉTIER — ${nom.toUpperCase()}</div><table style="width:100%;border-collapse:collapse;font-size:var(--fs-sm);margin-bottom:16px;"><tr><td style="padding:6px 10px;font-weight:700;width:210px;background:#f5f5f5;border:1px solid #ddd;">Structure</td><td style="padding:6px 10px;border:1px solid #ddd;">${nom} <em style="color:#888;font-size:var(--fs-xs);">(${structType})</em></td></tr><tr><td style="padding:6px 10px;font-weight:700;background:#f5f5f5;border:1px solid #ddd;">Secteur / Domaine</td><td style="padding:6px 10px;border:1px solid #ddd;">${secteur}</td></tr><tr><td style="padding:6px 10px;font-weight:700;background:#f5f5f5;border:1px solid #ddd;">Personne rencontrée</td><td style="padding:6px 10px;border:1px solid #ddd;">${contact} — ${poste}</td></tr><tr><td style="padding:6px 10px;font-weight:700;background:#f5f5f5;border:1px solid #ddd;">Date de visite</td><td style="padding:6px 10px;border:1px solid #ddd;">${date}</td></tr><tr><td style="padding:6px 10px;font-weight:700;background:#f5f5f5;border:1px solid #ddd;">Métier(s) explorés</td><td style="padding:6px 10px;border:1px solid #ddd;">${metierStr}</td></tr></table>${qSelected.length?`<div style="margin-bottom:12px;"><strong style="font-family:'Poppins',sans-serif;font-size:var(--fs-sm);">Questions sélectionnées (${qSelected.length}) :</strong><ul style="margin-top:6px;padding-left:18px;">${qSelected.map(q=>`<li style="margin-bottom:4px;">${q}</li>`).join('')}</ul></div>`:''}<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;"><div style="background:#E0F7FA;border:1.5px solid #ccc;border-radius:10px;padding:12px 14px;"><strong style="font-size:var(--fs-sm);font-family:'Poppins',sans-serif;">🔑 Points clés retenus</strong><p style="margin-top:5px;font-size:var(--fs-sm);white-space:pre-wrap;">${top3}</p></div><div style="background:#FFF9E6;border:1.5px solid #ccc;border-radius:10px;padding:12px 14px;"><strong style="font-size:var(--fs-sm);font-family:'Poppins',sans-serif;">😮 Surprises</strong><p style="margin-top:5px;font-size:var(--fs-sm);">${surprise}</p></div><div style="background:#E8F5E9;border:1.5px solid #ccc;border-radius:10px;padding:12px 14px;"><strong style="font-size:var(--fs-sm);font-family:'Poppins',sans-serif;">💪 Mes points forts</strong><p style="margin-top:5px;font-size:var(--fs-sm);">${forces}</p></div><div style="background:#FBE9E7;border:1.5px solid #ccc;border-radius:10px;padding:12px 14px;"><strong style="font-size:var(--fs-sm);font-family:'Poppins',sans-serif;">📈 À développer</strong><p style="margin-top:5px;font-size:var(--fs-sm);">${dev}</p></div></div><div style="background:#F3E5F5;border:1.5px solid #ccc;border-radius:10px;padding:12px 14px;margin-bottom:12px;"><strong style="font-size:var(--fs-sm);font-family:'Poppins',sans-serif;">✍️ Synthèse personnelle</strong><p style="margin-top:5px;font-size:var(--fs-sm);">${synthese}</p></div><div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px;"><div style="background:#E8F5E9;border:1.5px solid #ccc;border-radius:10px;padding:10px 14px;flex:1;min-width:200px;"><strong style="font-size:var(--fs-sm);">🌡️ Attractivité :</strong> ${attract}</div><div style="background:#E3F2FD;border:1.5px solid #ccc;border-radius:10px;padding:10px 14px;flex:1;min-width:200px;"><strong style="font-size:var(--fs-sm);">🔄 Impact sur mon projet :</strong> ${impact}</div></div><div style="background:var(--yellow);border:2px solid var(--black);border-radius:10px;padding:12px 16px;font-family:'Poppins',sans-serif;font-weight:700;font-size:var(--fs-md);">🚀 Prochaine action : ${action} <span style="font-weight:400;margin-left:12px;">📅 RDV conseiller : ${rdv}</span></div>`}
 document.addEventListener('DOMContentLoaded',()=>{initPhase0CompleteActivities();shuffleChoices();shuffleScenarios();if(document.getElementById('metiers-list'))addMetier();});
 </script>
 </body>
