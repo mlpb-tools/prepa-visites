@@ -51,7 +51,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--bla
 .summary-chip{display:inline-block;background:#fff;border:2px solid var(--black);border-radius:999px;padding:4px 10px;margin:3px;font-size:.76rem;font-weight:800;box-shadow:2px 2px 0 var(--black)}
 
 /* ══ PHASE 0 · ACTIVITÉS COMPLÈTES ACCESSIBLES ═══════════ */
-.activity-note{background:#FFFDE7;border:2px solid var(--black);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow);font-size:.82rem;line-height:1.55;margin:12px 0}
+.activity-note{background:#FFFDE7;border:2px solid var(--black);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow);font-size:.82rem;line-height:1.55;margin:12px 0}.transition-box{background:#FFF3E0;border:2px solid var(--black);border-radius:12px;padding:13px 15px;box-shadow:var(--shadow);font-size:.83rem;line-height:1.55;margin:18px 0}.transition-box strong{font-family:'Poppins',sans-serif}.transition-box.turq{background:#E0F7FA}.transition-box.pink{background:#FCE4EC}.transition-box.mint{background:#F1F8E9}.transition-box.violet{background:#EDE7F6}.transition-box.yellow{background:#FFFDE7}
 .phase0-activity{display:none;margin-top:16px;border:3px solid var(--black);border-radius:16px;box-shadow:var(--shadow-lg);overflow:hidden;background:#fff}
 .phase0-activity.active{display:block}
 .phase0-activity-head{background:var(--black);color:var(--yellow);padding:14px 18px;font-family:'Poppins',sans-serif;font-weight:900;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
@@ -168,18 +168,21 @@ body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--bla
     </div>
     <div class="phase-body">
       <div class="phase-intro">
-        Cette phase permet de partir de soi avant de parler de métier, de posture ou d’entreprise.
-        Le jeune clique sur un bloc, réalise l’activité complète associée, puis une synthèse inclusive se construit automatiquement.
+        Avant de parler de métier, d’entreprise ou de posture professionnelle, il est essentiel de mieux se connaître.
+        La <strong>personnalité</strong> correspond à la manière dont je fonctionne au quotidien : ma façon d’entrer en relation,
+        mon rythme, ma manière de réfléchir, d’agir ou de réagir. Les <strong>forces</strong> sont ce que je fais bien,
+        ce sur quoi je peux m’appuyer concrètement. Les <strong>valeurs</strong> représentent ce qui est important pour moi,
+        ce qui donne du sens à mes choix et ce que je ne veux pas retrouver dans un environnement de travail.
+        Les <strong>besoins</strong> sont les conditions qui m’aident à apprendre, à progresser, à me sentir en confiance
+        et à tenir dans la durée.
+        <br><br>
+        Ces tests permettent de mieux comprendre le type de projet qui peut me correspondre, le métier qui peut avoir du sens
+        pour moi, et l’entreprise ou l’environnement professionnel dans lequel je pourrais réellement m’épanouir.
       </div>
-      <div class="phase-goal">🎯 Objectif : clarifier une première direction de projet sans bloquer sur l’écrit</div>
+      <div class="phase-goal">🎯 Objectif : comprendre comment ma personnalité, mes forces, mes valeurs et mes besoins peuvent guider une première direction de projet, le choix d’un métier et l’identification d’un environnement professionnel adapté.</div>
       <div class="phase-consigne violet">
         👉 <strong>Consigne :</strong> Clique sur un bloc, puis réponds avec les boutons.
-        Tu n’as presque rien à écrire. Tu peux changer tes réponses à tout moment.
-      </div>
-
-      <div class="activity-note">
-        💡 <strong>Approche inclusive :</strong> les activités complètes sont conservées, mais transformées en choix visuels.
-        Les zones d’écriture sont remplacées par une synthèse automatique, plus facile à utiliser en collectif ou en individuel.
+        Tu peux changer tes réponses à tout moment. La synthèse se construit automatiquement au fil de tes choix.
       </div>
 
       <div class="ux-blocks">
@@ -253,6 +256,8 @@ body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--bla
         </div>
       </div>
 
+      <div class="transition-box pink">
+
       <div class="phase0-activity" id="p0-activity-besoins">
         <div class="phase0-activity-head">
           <span>🌱 Activité complète · Besoins personnels</span>
@@ -278,8 +283,6 @@ body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--bla
       </div>
     </div>
   </div>
-
-
 
   <!-- PHASE 1 -->
   <div class="phase" id="phase1">
@@ -308,6 +311,10 @@ body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--bla
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="transition-box pink">
+    👉 Après avoir identifié l’image perçue, on transforme les points forts en message clair : qu’est-ce que je peux apporter à une équipe, à une entreprise ou à un public ?
   </div>
 
   <!-- PHASE 2 -->
@@ -361,6 +368,10 @@ body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--bla
     </div>
   </div>
 
+  <div class="transition-box yellow">
+    👉 Une fois que je sais mieux me présenter, il faut vérifier comment cette présentation se traduit dans les gestes, l’attitude, le langage et les codes attendus en entreprise.
+  </div>
+
   <!-- PHASE 3 -->
   <div class="phase" id="phase3">
     <div class="phase-header yellow">
@@ -397,6 +408,12 @@ body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--bla
     </div>
   </div>
 
+    <div class="network-hero">
+👉 Tu sais maintenant ce que tu peux apporter.
+
+👉 L’étape suivante consiste à comprendre ce que les entreprises attendent concrètement au quotidien, au-delà des compétences : posture, attitude, comportement.
+</div>
+
   <!-- PHASE 4 -->
   <div class="phase" id="phase4">
     <div class="phase-header turq">
@@ -416,6 +433,15 @@ body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--bla
       </div>
     </div>
   </div>
+</div>
+
+  <div class="network-hero">
+👉 Passer à l’étape suivante.
+
+👉 Comprendre un métier ne se fait pas seulement en ligne ou en formation.
+C’est en rencontrant des professionnels, en observant et en posant des questions que tu peux vraiment te projeter.
+
+👉 L’enquête métier va te permettre de tester, vérifier et affiner ton projet.
 </div>
 
 <!-- PHASE 5 : ENQUÊTE MÉTIER -->
