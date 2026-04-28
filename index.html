@@ -6,242 +6,270 @@
 <title>LS4YOU – Se connaître, image de soi et posture professionnelle</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+
+/* =========================
+   🎨 DESIGN SYSTEM GLOBAL
+========================= */
 :root{
-  --red:#C62828;--yellow:#FFD54F;--turq:#00ACC1;--mint:#66BB6A;--orange:#FB8C00;--pink:#E91E8C;--violet:#7E57C2;--black:#1A1A1A;--white:#FFFDF7;
-  --shadow:4px 4px 0 var(--black);--shadow-lg:6px 6px 0 var(--black);
+  --red:#C62828;
+  --yellow:#FFD54F;
+  --turq:#00ACC1;
+  --mint:#66BB6A;
+  --orange:#FB8C00;
+  --pink:#E91E8C;
+  --violet:#7E57C2;
+  --black:#1A1A1A;
+  --white:#FFFDF7;
+
+  --shadow:4px 4px 0 var(--black);
+  --shadow-lg:6px 6px 0 var(--black);
 }
+
 *{margin:0;padding:0;box-sizing:border-box}
+
+/* =========================
+   BODY
+========================= */
 body{
   font-family:'Montserrat',sans-serif;
   background:var(--white);
   color:var(--black);
-  min-height:100vh;
-  font-size:18px;
+  line-height:1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header{
+  background:linear-gradient(135deg,var(--turq),var(--violet));
+  color:#fff;
+  position:relative;
+  overflow:hidden;
 }
 
 .header-inner{
-  max-width:1280px;
-  margin:0 auto;
-  padding:40px 40px 34px;
+  max-width:1200px;
+  margin:auto;
+  padding:40px 20px;
   display:flex;
   align-items:center;
-  gap:24px;
+  gap:20px;
+}
+
+.header-badge{
+  background:rgba(255,255,255,.15);
+  border:3px solid rgba(255,255,255,.3);
+  border-radius:50%;
+  width:80px;
+  height:80px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:36px;
 }
 
 .header-text h1{
   font-family:'Poppins',sans-serif;
-  font-size:2.8rem;
+  font-size:2.5rem;
   font-weight:900;
-  color:#fff;
-  line-height:1.05;
-  letter-spacing:-.5px;
+  line-height:1.1;
 }
 
-.header-badge{
-  width:78px;
-  height:78px;
-  font-size:36px;
+.header-text span{
+  opacity:.9;
+  font-weight:600;
 }
 
-.main{
-  max-width:1280px;
-  margin:0 auto;
-  padding:36px 40px 72px;
-}
-
-.intro-card{
-  padding:30px 36px;
-  gap:28px;
-}
-
-.intro-card h2{
-  font-size:1.25rem;
-}
-
-.intro-card p{
-  font-size:1rem;
-  line-height:1.7;
+/* TAGS */
+.header-meta{
+  margin-top:10px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
 }
 
 .tag{
-  font-size:.9rem;
-  padding:6px 16px;
+  background:#fff;
+  color:var(--black);
+  border:2px solid var(--black);
+  border-radius:999px;
+  padding:4px 12px;
+  font-size:.75rem;
+  font-weight:700;
+  box-shadow:2px 2px 0 var(--black);
 }
 
-.meta-pill{
-  font-size:.95rem;
-  padding:8px 14px;
+.tag.solid{
+  background:var(--yellow);
 }
 
+/* =========================
+   MAIN
+========================= */
+.main{
+  max-width:1200px;
+  margin:auto;
+  padding:30px 20px;
+}
+
+/* =========================
+   INTRO CARD
+========================= */
+.intro-card{
+  background:#fff;
+  border:3px solid var(--black);
+  border-radius:16px;
+  box-shadow:var(--shadow-lg);
+  padding:24px;
+  margin-bottom:30px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.intro-card h2{
+  font-family:'Poppins';
+  margin-bottom:10px;
+}
+
+/* =========================
+   PHASE BLOCK
+========================= */
+.phase{
+  margin-bottom:28px;
+  border:3px solid var(--black);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:var(--shadow-lg);
+  background:#fff;
+}
+
+/* HEADER PHASE */
 .phase-header{
-  padding:22px 32px;
-  gap:18px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:18px;
+  color:#fff;
+  font-family:'Poppins';
+  font-weight:800;
 }
+
+.phase-header.turq{background:var(--turq)}
+.phase-header.violet{background:var(--violet)}
+.phase-header.pink{background:var(--pink)}
+.phase-header.yellow{background:var(--yellow); color:var(--black)}
 
 .phase-icon{
-  font-size:2.2rem;
+  font-size:26px;
 }
 
 .phase-title h3{
-  font-size:1.35rem;
+  font-size:1.2rem;
 }
 
 .phase-title small{
-  font-size:.95rem;
+  font-weight:500;
+  font-size:.8rem;
 }
 
 .phase-duration{
-  font-size:.9rem;
-  padding:6px 16px;
+  margin-left:auto;
+  background:#fff;
+  color:var(--black);
+  border-radius:999px;
+  padding:5px 12px;
+  font-size:.7rem;
+  font-weight:700;
 }
 
+/* BODY */
 .phase-body{
-  padding:30px 34px;
+  padding:20px;
 }
 
-.phase-intro,
-.phase-consigne{
-  font-size:1rem;
-  line-height:1.75;
+.phase-intro{
+  margin-bottom:12px;
 }
 
 .phase-goal{
-  font-size:.95rem;
-  padding:8px 16px;
+  background:#f5f5f5;
+  border:2px solid var(--black);
+  padding:8px 12px;
+  border-radius:8px;
+  font-weight:600;
+  margin-bottom:12px;
 }
 
+.phase-consigne{
+  background:#FFF3E0;
+  border:2px solid var(--black);
+  padding:10px;
+  border-radius:8px;
+  margin-bottom:14px;
+}
+
+/* =========================
+   CARDS GRID
+========================= */
 .cards-grid{
-  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
-  gap:18px;
-}
-
-.card{
-  padding:18px 20px;
-}
-
-.card-icon{
-  font-size:2rem;
-}
-
-.card h4{
-  font-size:1.05rem;
-}
-
-.card p{
-  font-size:.95rem;
-  line-height:1.55;
-}
-
-.ux-blocks{
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:18px;
-}
-
-.ux-block{
-  padding:22px;
-}
-
-.ux-block h4{
-  font-size:1.15rem;
-}
-
-.ux-block p{
-  font-size:.95rem;
-}
-
-.ux-choice-grid{
-  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
   gap:14px;
 }
 
-.ux-choice{
-  font-size:1rem;
-  padding:16px 14px;
+.card{
+  background:#fff;
+  border:2px solid var(--black);
+  border-radius:12px;
+  padding:12px;
+  box-shadow:var(--shadow);
 }
 
-.p0-grid{
-  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-  gap:16px;
+.card-icon{
+  font-size:24px;
 }
 
-.p0-card{
-  padding:16px;
+.card h4{
+  font-family:'Poppins';
+  margin:6px 0;
 }
 
-.p0-card-title{
-  font-size:1rem;
+/* =========================
+   TRANSITIONS
+========================= */
+.transition-box{
+  background:#FFF3E0;
+  border:2px solid var(--black);
+  border-radius:10px;
+  padding:12px;
+  margin:20px 0;
+  font-weight:600;
 }
 
-.p0-card-desc{
-  font-size:.88rem;
-}
-
-.p0-rate{
-  font-size:.8rem;
-  padding:7px 12px;
-}
-
-.tip-box-header{
-  font-size:1rem;
-  padding:12px 20px;
-}
-
-.tip-box-body{
-  font-size:1rem;
-  line-height:1.7;
-  padding:18px 20px;
-}
-
-.auto-summary,
-.p0-summary-box{
-  font-size:1rem;
-  line-height:1.75;
-  padding:22px;
-}
-
-.enq-label{
-  font-size:.98rem;
-}
-
-.enq-input,
-.enq-textarea{
-  font-size:1rem;
-  padding:12px 14px;
-}
-
-.btn-engage,
-.p0-btn{
-  font-size:1rem;
-  padding:13px 22px;
-}
-
-.qitem,
-.chk-item,
-.choice{
-  font-size:.98rem;
-  padding:13px 18px;
-}
-
-.qblock-header,
-.scenario-header{
-  font-size:1rem;
-  padding:14px 20px;
-}
-
-.scenario-situation{
-  font-size:1rem;
-  line-height:1.65;
-}
-
-.enq-tab{
-  font-size:.9rem;
-  padding:16px 10px;
-}
-
+/* =========================
+   FOOTER
+========================= */
 .footer{
-  font-size:.9rem;
-  padding:22px;
+  background:var(--black);
+  color:var(--yellow);
+  text-align:center;
+  padding:20px;
+  font-family:'Poppins';
+  font-weight:700;
+  font-size:.8rem;
 }
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:900px){
+  .intro-card{
+    grid-template-columns:1fr;
+  }
+}
+
+</style>
 /* ══ PHASE 0 · ACTIVITÉS COMPLÈTES ACCESSIBLES ═══════════ */
 .activity-note{background:#FFFDE7;border:2px solid var(--black);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow);font-size:.82rem;line-height:1.55;margin:12px 0}.transition-box{background:#FFF3E0;border:2px solid var(--black);border-radius:12px;padding:13px 15px;box-shadow:var(--shadow);font-size:.83rem;line-height:1.55;margin:18px 0}.transition-box strong{font-family:'Poppins',sans-serif}.transition-box.turq{background:#E0F7FA}.transition-box.pink{background:#FCE4EC}.transition-box.mint{background:#F1F8E9}.transition-box.violet{background:#EDE7F6}.transition-box.yellow{background:#FFFDE7}
 .phase0-activity{display:none;margin-top:16px;border:3px solid var(--black);border-radius:16px;box-shadow:var(--shadow-lg);overflow:hidden;background:#fff}
